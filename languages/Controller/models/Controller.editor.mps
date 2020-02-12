@@ -78,6 +78,9 @@
       <node concept="3F0ifn" id="6zv7gR9XPKR" role="3EZMnx">
         <property role="3F0ifm" value="signal split" />
       </node>
+      <node concept="3F0A7n" id="3Z4nPTNSgBh" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
       <node concept="3F0ifn" id="6zv7gR9XPKX" role="3EZMnx">
         <property role="3F0ifm" value="{" />
         <node concept="3mYdg7" id="6zv7gR9XPKY" role="3F10Kt">
@@ -88,12 +91,6 @@
         </node>
       </node>
       <node concept="3EZMnI" id="6zv7gR9XPL0" role="3EZMnx">
-        <node concept="3F0ifn" id="6zv7gR9YgwO" role="3EZMnx">
-          <property role="3F0ifm" value="data:" />
-        </node>
-        <node concept="3F1sOY" id="6zv7gR9Ygxs" role="3EZMnx">
-          <ref role="1NtTu8" to="g6sh:6zv7gR9YDtt" resolve="data" />
-        </node>
         <node concept="3F0ifn" id="6zv7gR9XPLG" role="3EZMnx">
           <property role="3F0ifm" value="from:" />
         </node>
@@ -213,14 +210,11 @@
       <node concept="3F0ifn" id="6zv7gR9YI5r" role="3EZMnx">
         <property role="3F0ifm" value="signal" />
       </node>
+      <node concept="3F0A7n" id="3Z4nPTNSgBU" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
       <node concept="3F0ifn" id="6zv7gR9YI6b" role="3EZMnx">
         <property role="3F0ifm" value="{" />
-      </node>
-      <node concept="3F0ifn" id="6zv7gR9YI5D" role="3EZMnx">
-        <property role="3F0ifm" value="data:" />
-      </node>
-      <node concept="3F1sOY" id="6zv7gR9YI5T" role="3EZMnx">
-        <ref role="1NtTu8" to="g6sh:6zv7gR9YDtt" resolve="data" />
       </node>
       <node concept="l2Vlx" id="JSnFFpustG" role="2iSdaV" />
       <node concept="3F0ifn" id="JSnFFpustL" role="3EZMnx">
@@ -262,7 +256,7 @@
         <property role="3F0ifm" value="gain" />
       </node>
       <node concept="3F0A7n" id="6zv7gR9Y5mI" role="3EZMnx">
-        <ref role="1NtTu8" to="g6sh:6zv7gR9Y$O2" resolve="name" />
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
       <node concept="3F0ifn" id="6zv7gR9Y5mJ" role="3EZMnx">
         <property role="3F0ifm" value="{" />
@@ -512,16 +506,6 @@
       </node>
     </node>
   </node>
-  <node concept="24kQdi" id="6zv7gR9YMMo">
-    <property role="3GE5qa" value="core" />
-    <ref role="1XX52x" to="g6sh:6zv7gR9X4Wl" resolve="SignalData" />
-    <node concept="3EZMnI" id="6zv7gR9YRFT" role="2wV5jI">
-      <node concept="l2Vlx" id="6zv7gR9YRFU" role="2iSdaV" />
-      <node concept="3F0A7n" id="6zv7gR9YRFW" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-    </node>
-  </node>
   <node concept="24kQdi" id="6zv7gR9Zb_K">
     <property role="3GE5qa" value="pole-zero" />
     <ref role="1XX52x" to="g6sh:3HJYpKedmr7" resolve="Integrator" />
@@ -531,7 +515,7 @@
         <property role="3F0ifm" value="integrator" />
       </node>
       <node concept="3F0A7n" id="6zv7gR9Zb_P" role="3EZMnx">
-        <ref role="1NtTu8" to="g6sh:6zv7gR9Y$O2" resolve="name" />
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
       <node concept="3F0ifn" id="6zv7gR9Zb_Q" role="3EZMnx">
         <property role="3F0ifm" value="{" />
@@ -592,7 +576,7 @@
         <property role="3F0ifm" value="differentiator" />
       </node>
       <node concept="3F0A7n" id="6zv7gR9ZHuQ" role="3EZMnx">
-        <ref role="1NtTu8" to="g6sh:6zv7gR9Y$O2" resolve="name" />
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
       <node concept="3F0ifn" id="6zv7gR9ZHuR" role="3EZMnx">
         <property role="3F0ifm" value="{" />
@@ -696,7 +680,7 @@
         <property role="3F0ifm" value="sum" />
       </node>
       <node concept="3F0A7n" id="6zv7gRa0i3m" role="3EZMnx">
-        <ref role="1NtTu8" to="g6sh:6zv7gR9Y$O2" resolve="name" />
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
       <node concept="3F0ifn" id="6zv7gRa0i3n" role="3EZMnx">
         <property role="3F0ifm" value="(" />

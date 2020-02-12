@@ -7,14 +7,9 @@
   <imports />
   <registry>
     <language id="9356c85b-d8d9-4f77-a6c3-7a0852b5bf29" name="Controller">
-      <concept id="7556790644811386077" name="Controller.structure.IAmFunction" flags="ng" index="2x9l7g">
-        <property id="7556790644811386114" name="name" index="2x9l0f" />
-      </concept>
       <concept id="7556790644811405148" name="Controller.structure.IAmSignal" flags="ng" index="2x9oDh">
-        <child id="7556790644811405149" name="data" index="2x9oDg" />
         <child id="7556790644811405151" name="source" index="2x9oDi" />
       </concept>
-      <concept id="7556790644810993429" name="Controller.structure.SignalData" flags="ng" index="2xaP8o" />
       <concept id="7556790644811833496" name="Controller.structure.Sum" flags="ng" index="2yRzQl">
         <child id="7556790644811833501" name="inputs_add" index="2yRzQg" />
         <child id="7556790644811833548" name="output" index="2yRzR1" />
@@ -100,156 +95,160 @@
         <property role="TrG5h" value="y_out" />
       </node>
     </node>
-    <node concept="PmN52" id="1D32TeNwVWL" role="3VaOyC">
-      <property role="2x9l0f" value="kp" />
-      <node concept="3c6G89" id="1D32TeNwVWM" role="PmEae">
+    <node concept="PmN52" id="3Z4nPTNSJ63" role="3VaOyC">
+      <property role="TrG5h" value="kp block" />
+      <node concept="3c6G89" id="3Z4nPTNSJ65" role="PmEae">
         <property role="TrG5h" value="kp_in" />
       </node>
-      <node concept="3c6G89" id="1D32TeNwVWN" role="3c6Geb">
+      <node concept="3c6G89" id="3Z4nPTNSJ67" role="3c6Geb">
         <property role="TrG5h" value="kp_gain" />
       </node>
-      <node concept="3c6G8z" id="1D32TeNwVWO" role="PmEa8">
+      <node concept="3c6G8z" id="3Z4nPTNSJ69" role="PmEa8">
         <property role="TrG5h" value="kp_out" />
       </node>
     </node>
-    <node concept="PmN52" id="1D32TeNwVWZ" role="3VaOyC">
-      <property role="2x9l0f" value="ki" />
-      <node concept="3c6G89" id="1D32TeNwVX1" role="PmEae">
+    <node concept="PmN52" id="3Z4nPTNSJ7m" role="3VaOyC">
+      <property role="TrG5h" value="ki block" />
+      <node concept="3c6G89" id="3Z4nPTNSJ7o" role="PmEae">
         <property role="TrG5h" value="ki_in" />
       </node>
-      <node concept="3c6G89" id="1D32TeNwVX3" role="3c6Geb">
+      <node concept="3c6G89" id="3Z4nPTNSJ7q" role="3c6Geb">
         <property role="TrG5h" value="ki_gain" />
       </node>
-      <node concept="3c6G8z" id="1D32TeNwVX5" role="PmEa8">
+      <node concept="3c6G8z" id="3Z4nPTNSJ7s" role="PmEa8">
         <property role="TrG5h" value="ki_out" />
       </node>
     </node>
-    <node concept="PmN52" id="1D32TeNwVXH" role="3VaOyC">
-      <property role="2x9l0f" value="kd" />
-      <node concept="3c6G89" id="1D32TeNwVXJ" role="PmEae">
+    <node concept="PmN52" id="3Z4nPTNSQ92" role="3VaOyC">
+      <property role="TrG5h" value="kd_block" />
+      <node concept="3c6G89" id="3Z4nPTNSQ94" role="PmEae">
         <property role="TrG5h" value="kd_in" />
       </node>
-      <node concept="3c6G89" id="1D32TeNwVXL" role="3c6Geb">
+      <node concept="3c6G89" id="3Z4nPTNSQ96" role="3c6Geb">
         <property role="TrG5h" value="kd_gain" />
       </node>
-      <node concept="3c6G8z" id="1D32TeNwVXN" role="PmEa8">
+      <node concept="3c6G8z" id="3Z4nPTNSQ98" role="PmEa8">
         <property role="TrG5h" value="kd_out" />
       </node>
     </node>
-    <node concept="PmDXr" id="1D32TeNwW1j" role="3VaOyC">
-      <property role="2x9l0f" value="int" />
-      <node concept="3c6G89" id="1D32TeNwW1l" role="PmDSb">
+    <node concept="PmDXr" id="3Z4nPTNSQat" role="3VaOyC">
+      <property role="TrG5h" value="int_block" />
+      <node concept="3c6G89" id="3Z4nPTNSQav" role="PmDSb">
         <property role="TrG5h" value="int_in" />
       </node>
-      <node concept="3c6G8z" id="1D32TeNwW1n" role="PmD6I">
+      <node concept="3c6G8z" id="3Z4nPTNSQax" role="PmD6I">
         <property role="TrG5h" value="int_out" />
       </node>
     </node>
-    <node concept="PmD2F" id="1D32TeNwW1T" role="3VaOyC">
-      <property role="2x9l0f" value="dif" />
-      <node concept="3c6G89" id="1D32TeNwW1V" role="PmD35">
+    <node concept="PmD2F" id="3Z4nPTNSXbY" role="3VaOyC">
+      <property role="TrG5h" value="dif_block" />
+      <node concept="3c6G89" id="3Z4nPTNSXc0" role="PmD35">
         <property role="TrG5h" value="dif_in" />
       </node>
-      <node concept="3c6G8z" id="1D32TeNwW1X" role="PmD37">
+      <node concept="3c6G8z" id="3Z4nPTNSXc2" role="PmD37">
         <property role="TrG5h" value="dif_out" />
       </node>
     </node>
-    <node concept="2yRzQl" id="1D32TeNwW2_" role="3VaOyC">
-      <property role="2x9l0f" value="pid_sum" />
-      <node concept="3c6G89" id="1D32TeNwW2X" role="2yRzQg">
-        <property role="TrG5h" value="sum_p" />
-      </node>
-      <node concept="3c6G89" id="1D32TeNwW2Z" role="2yRzQg">
-        <property role="TrG5h" value="sum_i" />
-      </node>
-      <node concept="3c6G89" id="1D32TeNwW32" role="2yRzQg">
-        <property role="TrG5h" value="sum_d" />
-      </node>
-      <node concept="3c6G8z" id="1D32TeNwW2B" role="2yRzR1">
+    <node concept="2yRzQl" id="3Z4nPTNT4d$" role="3VaOyC">
+      <property role="TrG5h" value="sum_block" />
+      <node concept="3c6G8z" id="3Z4nPTNT4dA" role="2yRzR1">
         <property role="TrG5h" value="pid_sum_out" />
       </node>
+      <node concept="3c6G89" id="3Z4nPTNT4e1" role="2yRzQg">
+        <property role="TrG5h" value="sum_p" />
+      </node>
+      <node concept="3c6G89" id="3Z4nPTNT4e3" role="2yRzQg">
+        <property role="TrG5h" value="sum_i" />
+      </node>
+      <node concept="3c6G89" id="3Z4nPTNT4e6" role="2yRzQg">
+        <property role="TrG5h" value="sum_d" />
+      </node>
     </node>
-    <node concept="3bymMO" id="1D32TeNwVYr" role="2yRIpc">
-      <node concept="3iwpAv" id="1D32TeNwW6f" role="3iwpA2">
+    <node concept="3bymMO" id="3Z4nPTNSIPG" role="2yRIpc">
+      <property role="TrG5h" value="y_d_sig" />
+      <node concept="3iwpAv" id="3Z4nPTNSIQm" role="3iwpA2">
         <ref role="3iwpAs" node="1D32TeNw7Xx" resolve="y_err_d" />
       </node>
-      <node concept="2xaP8o" id="1D32TeNwVYt" role="2x9oDg">
-        <property role="TrG5h" value="y_d_data" />
-      </node>
-      <node concept="3iwpAv" id="1D32TeNwW6c" role="2x9oDi">
+      <node concept="3iwpAv" id="3Z4nPTNSIQj" role="2x9oDi">
         <ref role="3iwpAs" node="1D32TeNw7Xs" resolve="y_d" />
       </node>
     </node>
-    <node concept="3bymMO" id="1D32TeNwVYJ" role="2yRIpc">
-      <node concept="3iwpAv" id="1D32TeNwW6i" role="3iwpA2">
+    <node concept="3bymMO" id="3Z4nPTNSIRl" role="2yRIpc">
+      <property role="TrG5h" value="y_m_sig" />
+      <node concept="3iwpAv" id="3Z4nPTNSIRY" role="3iwpA2">
         <ref role="3iwpAs" node="1D32TeNw7Xw" resolve="y_err_m" />
       </node>
-      <node concept="2xaP8o" id="1D32TeNwVYN" role="2x9oDg">
-        <property role="TrG5h" value="y_m_data" />
-      </node>
-      <node concept="3iwpAv" id="1D32TeNwW6l" role="2x9oDi">
+      <node concept="3iwpAv" id="3Z4nPTNSIRV" role="2x9oDi">
         <ref role="3iwpAs" node="1D32TeNw7Xu" resolve="y_m" />
       </node>
     </node>
-    <node concept="2ZNVk4" id="1D32TeNwVZf" role="2yRIpc">
-      <node concept="3iwpAv" id="1D32TeNwVZA" role="2ZNVk1">
-        <ref role="3iwpAs" node="1D32TeNwVWM" resolve="kp_in" />
+    <node concept="2ZNVk4" id="3Z4nPTNSIT3" role="2yRIpc">
+      <property role="TrG5h" value="y_err_sig" />
+      <node concept="3iwpAv" id="3Z4nPTNSJ7T" role="2ZNVk1">
+        <ref role="3iwpAs" node="3Z4nPTNSJ65" resolve="kp_in" />
       </node>
-      <node concept="3iwpAv" id="1D32TeNwVZG" role="2ZNVk1">
-        <ref role="3iwpAs" node="1D32TeNwVX1" resolve="ki_in" />
+      <node concept="3iwpAv" id="3Z4nPTNSJ8o" role="2ZNVk1">
+        <ref role="3iwpAs" node="3Z4nPTNSJ7o" resolve="ki_in" />
       </node>
-      <node concept="3iwpAv" id="1D32TeNwVZO" role="2ZNVk1">
-        <ref role="3iwpAs" node="1D32TeNwVXJ" resolve="kd_in" />
+      <node concept="3iwpAv" id="3Z4nPTNSQ9W" role="2ZNVk1">
+        <ref role="3iwpAs" node="3Z4nPTNSQ94" resolve="kd_in" />
       </node>
-      <node concept="2xaP8o" id="1D32TeNwVZj" role="2x9oDg">
-        <property role="TrG5h" value="y_err_data" />
-      </node>
-      <node concept="3iwpAv" id="1D32TeNwW6o" role="2x9oDi">
+      <node concept="3iwpAv" id="3Z4nPTNSITC" role="2x9oDi">
         <ref role="3iwpAs" node="1D32TeNw7Xy" resolve="y_err" />
       </node>
     </node>
-    <node concept="3bymMO" id="1D32TeNwW09" role="2yRIpc">
-      <node concept="3iwpAv" id="1D32TeNwW6r" role="3iwpA2">
-        <ref role="3iwpAs" node="1D32TeNwW2X" resolve="sum_p" />
+    <node concept="3bymMO" id="3Z4nPTNSIUQ" role="2yRIpc">
+      <property role="TrG5h" value="kp_out_sig" />
+      <node concept="3iwpAv" id="3Z4nPTNT4ez" role="3iwpA2">
+        <ref role="3iwpAs" node="3Z4nPTNT4e1" resolve="sum_p" />
       </node>
-      <node concept="2xaP8o" id="1D32TeNwW0d" role="2x9oDg">
-        <property role="TrG5h" value="kp_out_data" />
-      </node>
-      <node concept="3iwpAv" id="1D32TeNwW36" role="2x9oDi">
-        <ref role="3iwpAs" node="1D32TeNwVWO" resolve="kp_out" />
+      <node concept="3iwpAv" id="3Z4nPTNSJ7Y" role="2x9oDi">
+        <ref role="3iwpAs" node="3Z4nPTNSJ69" resolve="kp_out" />
       </node>
     </node>
-    <node concept="3bymMO" id="1D32TeNwW3w" role="2yRIpc">
-      <node concept="3iwpAv" id="1D32TeNwW6u" role="3iwpA2">
-        <ref role="3iwpAs" node="1D32TeNwW2Z" resolve="sum_i" />
+    <node concept="3bymMO" id="3Z4nPTNSIWm" role="2yRIpc">
+      <property role="TrG5h" value="ki_out_sig" />
+      <node concept="3iwpAv" id="3Z4nPTNT4eA" role="3iwpA2">
+        <ref role="3iwpAs" node="3Z4nPTNSQav" resolve="int_in" />
       </node>
-      <node concept="2xaP8o" id="1D32TeNwW3$" role="2x9oDg">
-        <property role="TrG5h" value="int_out_data" />
-      </node>
-      <node concept="3iwpAv" id="1D32TeNwW3Y" role="2x9oDi">
-        <ref role="3iwpAs" node="1D32TeNwVX5" resolve="ki_out" />
+      <node concept="3iwpAv" id="3Z4nPTNSJ8t" role="2x9oDi">
+        <ref role="3iwpAs" node="3Z4nPTNSJ7s" resolve="ki_out" />
       </node>
     </node>
-    <node concept="3bymMO" id="1D32TeNwW4s" role="2yRIpc">
-      <node concept="3iwpAv" id="1D32TeNwW6x" role="3iwpA2">
-        <ref role="3iwpAs" node="1D32TeNwW32" resolve="sum_d" />
+    <node concept="3bymMO" id="3Z4nPTNSIXx" role="2yRIpc">
+      <property role="TrG5h" value="int_out_sig" />
+      <node concept="3iwpAv" id="3Z4nPTNT4eG" role="3iwpA2">
+        <ref role="3iwpAs" node="3Z4nPTNT4e3" resolve="sum_i" />
       </node>
-      <node concept="2xaP8o" id="1D32TeNwW4w" role="2x9oDg">
-        <property role="TrG5h" value="dif_out_data" />
-      </node>
-      <node concept="3iwpAv" id="1D32TeNwW4Y" role="2x9oDi">
-        <ref role="3iwpAs" node="1D32TeNwVXN" resolve="kd_out" />
+      <node concept="3iwpAv" id="3Z4nPTNT4eD" role="2x9oDi">
+        <ref role="3iwpAs" node="3Z4nPTNSQax" resolve="int_out" />
       </node>
     </node>
-    <node concept="3bymMO" id="1D32TeNwW5w" role="2yRIpc">
-      <node concept="3iwpAv" id="1D32TeNwW6$" role="3iwpA2">
+    <node concept="3bymMO" id="3Z4nPTNSJ03" role="2yRIpc">
+      <property role="TrG5h" value="kd_out_sig" />
+      <node concept="3iwpAv" id="3Z4nPTNT4eJ" role="3iwpA2">
+        <ref role="3iwpAs" node="3Z4nPTNSXc0" resolve="dif_in" />
+      </node>
+      <node concept="3iwpAv" id="3Z4nPTNSQa1" role="2x9oDi">
+        <ref role="3iwpAs" node="3Z4nPTNSQ98" resolve="kd_out" />
+      </node>
+    </node>
+    <node concept="3bymMO" id="3Z4nPTNSJ1i" role="2yRIpc">
+      <property role="TrG5h" value="dif_out_sig" />
+      <node concept="3iwpAv" id="3Z4nPTNT4eM" role="3iwpA2">
+        <ref role="3iwpAs" node="3Z4nPTNT4e6" resolve="sum_d" />
+      </node>
+      <node concept="3iwpAv" id="3Z4nPTNT4eP" role="2x9oDi">
+        <ref role="3iwpAs" node="3Z4nPTNSXc2" resolve="dif_out" />
+      </node>
+    </node>
+    <node concept="3bymMO" id="3Z4nPTNSJ2Y" role="2yRIpc">
+      <property role="TrG5h" value="pid_sum_sig" />
+      <node concept="3iwpAv" id="3Z4nPTNSJ3C" role="3iwpA2">
         <ref role="3iwpAs" node="1D32TeNwMGG" resolve="y_out" />
       </node>
-      <node concept="2xaP8o" id="1D32TeNwW5$" role="2x9oDg">
-        <property role="TrG5h" value="pid_sum_out_data" />
-      </node>
-      <node concept="3iwpAv" id="1D32TeNwW66" role="2x9oDi">
-        <ref role="3iwpAs" node="1D32TeNwW2B" resolve="pid_sum_out" />
+      <node concept="3iwpAv" id="3Z4nPTNT4eS" role="2x9oDi">
+        <ref role="3iwpAs" node="3Z4nPTNT4dA" resolve="pid_sum_out" />
       </node>
     </node>
   </node>
