@@ -7,11 +7,11 @@
   <imports />
   <registry>
     <language id="9356c85b-d8d9-4f77-a6c3-7a0852b5bf29" name="Controller">
-      <concept id="7556790644811405148" name="Controller.structure.IAmSignal" flags="ng" index="2x9oDh">
+      <concept id="7556790644811405148" name="Controller.structure.ISignal" flags="ng" index="2x9oDh">
         <child id="7556790644811405151" name="source" index="2x9oDi" />
       </concept>
       <concept id="7556790644811833496" name="Controller.structure.Sum" flags="ng" index="2yRzQl">
-        <child id="7556790644811833501" name="inputs_add" index="2yRzQg" />
+        <child id="7556790644811833501" name="inputs" index="2yRzQg" />
         <child id="7556790644811833548" name="output" index="2yRzR1" />
       </concept>
       <concept id="1892368997425517870" name="Controller.structure.Actuation" flags="ng" index="2DKpUX">
@@ -30,6 +30,7 @@
         <child id="4282916219301223186" name="input" index="PmEae" />
         <child id="845723010037341971" name="gain" index="3c6Geb" />
       </concept>
+      <concept id="6490703408622330640" name="Controller.structure.SignedInput" flags="ng" index="ZiBXc" />
       <concept id="8271025701684454153" name="Controller.structure.SignalSplit" flags="ng" index="2ZNVk4">
         <child id="8271025701684454156" name="destinations" index="2ZNVk1" />
       </concept>
@@ -149,19 +150,19 @@
         <property role="TrG5h" value="dif_out" />
       </node>
     </node>
-    <node concept="2yRzQl" id="3Z4nPTNT4d$" role="3VaOyC">
+    <node concept="2yRzQl" id="6h6hmbVCMRi" role="3VaOyC">
       <property role="TrG5h" value="sum_block" />
-      <node concept="3c6G8z" id="3Z4nPTNT4dA" role="2yRzR1">
-        <property role="TrG5h" value="pid_sum_out" />
-      </node>
-      <node concept="3c6G89" id="3Z4nPTNT4e1" role="2yRzQg">
+      <node concept="ZiBXc" id="6h6hmbVCU8M" role="2yRzQg">
         <property role="TrG5h" value="sum_p" />
       </node>
-      <node concept="3c6G89" id="3Z4nPTNT4e3" role="2yRzQg">
+      <node concept="ZiBXc" id="6h6hmbVCU8O" role="2yRzQg">
         <property role="TrG5h" value="sum_i" />
       </node>
-      <node concept="3c6G89" id="3Z4nPTNT4e6" role="2yRzQg">
+      <node concept="ZiBXc" id="4fxft1irUN0" role="2yRzQg">
         <property role="TrG5h" value="sum_d" />
+      </node>
+      <node concept="3c6G8z" id="6h6hmbVCMRm" role="2yRzR1">
+        <property role="TrG5h" value="pid_sum_out" />
       </node>
     </node>
     <node concept="3bymMO" id="3Z4nPTNSIPG" role="2yRIpc">
@@ -199,8 +200,8 @@
     </node>
     <node concept="3bymMO" id="3Z4nPTNSIUQ" role="2yRIpc">
       <property role="TrG5h" value="kp_out_sig" />
-      <node concept="3iwpAv" id="3Z4nPTNT4ez" role="3iwpA2">
-        <ref role="3iwpAs" node="3Z4nPTNT4e1" resolve="sum_p" />
+      <node concept="3iwpAv" id="4fxft1irUN4" role="3iwpA2">
+        <ref role="3iwpAs" node="6h6hmbVCU8M" resolve="sum_p" />
       </node>
       <node concept="3iwpAv" id="3Z4nPTNSJ7Y" role="2x9oDi">
         <ref role="3iwpAs" node="3Z4nPTNSJ69" resolve="kp_out" />
@@ -217,8 +218,8 @@
     </node>
     <node concept="3bymMO" id="3Z4nPTNSIXx" role="2yRIpc">
       <property role="TrG5h" value="int_out_sig" />
-      <node concept="3iwpAv" id="3Z4nPTNT4eG" role="3iwpA2">
-        <ref role="3iwpAs" node="3Z4nPTNT4e3" resolve="sum_i" />
+      <node concept="3iwpAv" id="4fxft1irUN7" role="3iwpA2">
+        <ref role="3iwpAs" node="6h6hmbVCU8O" resolve="sum_i" />
       </node>
       <node concept="3iwpAv" id="3Z4nPTNT4eD" role="2x9oDi">
         <ref role="3iwpAs" node="3Z4nPTNSQax" resolve="int_out" />
@@ -235,8 +236,8 @@
     </node>
     <node concept="3bymMO" id="3Z4nPTNSJ1i" role="2yRIpc">
       <property role="TrG5h" value="dif_out_sig" />
-      <node concept="3iwpAv" id="3Z4nPTNT4eM" role="3iwpA2">
-        <ref role="3iwpAs" node="3Z4nPTNT4e6" resolve="sum_d" />
+      <node concept="3iwpAv" id="4fxft1irUNa" role="3iwpA2">
+        <ref role="3iwpAs" node="4fxft1irUN0" resolve="sum_d" />
       </node>
       <node concept="3iwpAv" id="3Z4nPTNT4eP" role="2x9oDi">
         <ref role="3iwpAs" node="3Z4nPTNSXc2" resolve="dif_out" />
@@ -247,8 +248,8 @@
       <node concept="3iwpAv" id="3Z4nPTNSJ3C" role="3iwpA2">
         <ref role="3iwpAs" node="1D32TeNwMGG" resolve="y_out" />
       </node>
-      <node concept="3iwpAv" id="3Z4nPTNT4eS" role="2x9oDi">
-        <ref role="3iwpAs" node="3Z4nPTNT4dA" resolve="pid_sum_out" />
+      <node concept="3iwpAv" id="4fxft1irUNd" role="2x9oDi">
+        <ref role="3iwpAs" node="6h6hmbVCMRm" resolve="pid_sum_out" />
       </node>
     </node>
   </node>
