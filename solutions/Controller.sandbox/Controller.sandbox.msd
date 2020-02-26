@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="Controller.sandbox" uuid="0d0953b9-b841-46e0-aa8a-468ad7d9577a" moduleVersion="0" compileInMPS="true">
+<solution name="Controller.sandbox" uuid="8e6c6959-fa66-4d1c-8ee1-3dcc7d203777" moduleVersion="0" compileInMPS="true">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
@@ -17,7 +17,7 @@
     <language slang="l:9ded098b-ad6a-4657-bfd9-48636cfe8bc3:jetbrains.mps.lang.traceable" version="0" />
   </languageVersions>
   <dependencyVersions>
-    <module reference="0d0953b9-b841-46e0-aa8a-468ad7d9577a(Controller.sandbox)" version="0" />
+    <module reference="8e6c6959-fa66-4d1c-8ee1-3dcc7d203777(Controller.sandbox)" version="0" />
   </dependencyVersions>
 </solution>
 
