@@ -63,18 +63,8 @@
   <node concept="1TIwiD" id="7CX82aLH4Mm">
     <property role="EcuMT" value="8808231779588918422" />
     <property role="TrG5h" value="Signal" />
-    <property role="3GE5qa" value="core" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="JSnFFpussS" role="1TKVEi">
-      <property role="IQ2ns" value="862543485247014712" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="detination" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="JSnFFpuss_" resolve="PortRef" />
-    </node>
-    <node concept="PrWs8" id="6zv7gR9YDty" role="PzmwI">
-      <ref role="PrY4T" node="6zv7gR9YDts" resolve="ISignal" />
-    </node>
+    <property role="3GE5qa" value="data_blocks" />
+    <ref role="1TJDcQ" to="yvgz:29RmJoXeePk" resolve="DataBlock" />
   </node>
   <node concept="1TIwiD" id="7CX82aLH6SU">
     <property role="EcuMT" value="8808231779588927034" />
@@ -108,13 +98,6 @@
       <property role="20kJfa" value="errorCalculation" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="IWB9z7E695" resolve="ErrorCalculation" />
-    </node>
-    <node concept="1TJgyj" id="6zv7gRa0vH1" role="1TKVEi">
-      <property role="IQ2ns" value="7556790644811889473" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="signals" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="6zv7gR9YDts" resolve="ISignal" />
     </node>
     <node concept="1TJgyj" id="5oAJGAH3vpx" role="1TKVEi">
       <property role="IQ2ns" value="6207858909777884769" />
@@ -156,18 +139,8 @@
   <node concept="1TIwiD" id="7b8_wRd1Mc9">
     <property role="EcuMT" value="8271025701684454153" />
     <property role="TrG5h" value="SignalSplit" />
-    <property role="3GE5qa" value="core" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="7b8_wRd1Mcc" role="1TKVEi">
-      <property role="IQ2ns" value="8271025701684454156" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="destinations" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="JSnFFpuss_" resolve="PortRef" />
-    </node>
-    <node concept="PrWs8" id="6zv7gR9YDtB" role="PzmwI">
-      <ref role="PrY4T" node="6zv7gR9YDts" resolve="ISignal" />
-    </node>
+    <property role="3GE5qa" value="data_blocks" />
+    <ref role="1TJDcQ" node="7CX82aLH4Mm" resolve="Signal" />
   </node>
   <node concept="1TIwiD" id="3HJYpKedczu">
     <property role="EcuMT" value="4282916219301185758" />
@@ -316,21 +289,6 @@
     <property role="3GE5qa" value="core" />
     <property role="TrG5h" value="IFunctionBlock" />
     <node concept="PrWs8" id="3Z4nPTNSgAU" role="PrDN$">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-  </node>
-  <node concept="PlHQZ" id="6zv7gR9YDts">
-    <property role="EcuMT" value="7556790644811405148" />
-    <property role="3GE5qa" value="core" />
-    <property role="TrG5h" value="ISignal" />
-    <node concept="1TJgyj" id="6zv7gR9YDtv" role="1TKVEi">
-      <property role="IQ2ns" value="7556790644811405151" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="source" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="JSnFFpuss_" resolve="PortRef" />
-    </node>
-    <node concept="PrWs8" id="3Z4nPTNSgAO" role="PrDN$">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
