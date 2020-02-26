@@ -30,49 +30,49 @@
   <node concept="1TIwiD" id="7CX82aLH4Mm">
     <property role="EcuMT" value="8808231779588918422" />
     <property role="TrG5h" value="Signal" />
-    <property role="3GE5qa" value="data_blocks" />
+    <property role="3GE5qa" value="DataBlocks" />
     <ref role="1TJDcQ" to="yvgz:29RmJoXeePk" resolve="DataBlock" />
   </node>
   <node concept="1TIwiD" id="7CX82aLH6SU">
     <property role="EcuMT" value="8808231779588927034" />
     <property role="TrG5h" value="ControlDiagram" />
     <property role="19KtqR" value="true" />
-    <property role="3GE5qa" value="function_blocks" />
+    <property role="3GE5qa" value="FunctionBlocks" />
     <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
   </node>
   <node concept="1TIwiD" id="7CX82aLH9vK">
     <property role="EcuMT" value="8808231779588937712" />
     <property role="TrG5h" value="SetPoint" />
-    <property role="3GE5qa" value="data_ports" />
+    <property role="3GE5qa" value="DataPorts" />
     <ref role="1TJDcQ" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
   </node>
   <node concept="1TIwiD" id="7CX82aLH9vP">
     <property role="EcuMT" value="8808231779588937717" />
     <property role="TrG5h" value="Measurement" />
-    <property role="3GE5qa" value="data_ports" />
+    <property role="3GE5qa" value="DataPorts" />
     <ref role="1TJDcQ" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
   </node>
   <node concept="1TIwiD" id="7b8_wRd1Mc9">
     <property role="EcuMT" value="8271025701684454153" />
     <property role="TrG5h" value="SignalSplit" />
-    <property role="3GE5qa" value="data_blocks" />
+    <property role="3GE5qa" value="DataBlocks" />
     <ref role="1TJDcQ" node="7CX82aLH4Mm" resolve="Signal" />
   </node>
   <node concept="1TIwiD" id="6zv7gRa0i2o">
     <property role="EcuMT" value="7556790644811833496" />
-    <property role="3GE5qa" value="function_blocks" />
+    <property role="3GE5qa" value="FunctionBlocks" />
     <property role="TrG5h" value="Sum" />
     <ref role="1TJDcQ" to="yvgz:3EtQu_uQFi" resolve="FunctionBlock" />
   </node>
   <node concept="1TIwiD" id="1D32TeNwDkI">
     <property role="EcuMT" value="1892368997425517870" />
-    <property role="3GE5qa" value="data_ports" />
+    <property role="3GE5qa" value="DataPorts" />
     <property role="TrG5h" value="Actuation" />
     <ref role="1TJDcQ" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
   </node>
   <node concept="1TIwiD" id="snu4kiadNR">
     <property role="EcuMT" value="511009320782585079" />
-    <property role="3GE5qa" value="data_ports" />
+    <property role="3GE5qa" value="DataPorts" />
     <property role="TrG5h" value="Error" />
     <ref role="1TJDcQ" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
   </node>
