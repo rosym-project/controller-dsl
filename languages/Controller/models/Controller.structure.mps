@@ -11,21 +11,9 @@
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
-      <concept id="3348158742936976480" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration" flags="ng" index="25R33">
-        <property id="1421157252384165432" name="memberId" index="3tVfz5" />
-        <property id="672037151186491528" name="presentation" index="1L1pqM" />
-      </concept>
-      <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
-        <reference id="1075010451642646892" name="defaultMember" index="1H5jkz" />
-        <child id="3348158742936976577" name="members" index="25R1y" />
-      </concept>
-      <concept id="1082978164218" name="jetbrains.mps.lang.structure.structure.DataTypeDeclaration" flags="ng" index="AxPO6">
-        <property id="7791109065626895363" name="datatypeId" index="3F6X1D" />
-      </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
-        <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
@@ -34,10 +22,6 @@
         <property id="1096454100552" name="rootable" index="19KtqR" />
         <reference id="1071489389519" name="extends" index="1TJDcQ" />
         <child id="1169129564478" name="implements" index="PzmwI" />
-      </concept>
-      <concept id="1071489288299" name="jetbrains.mps.lang.structure.structure.PropertyDeclaration" flags="ig" index="1TJgyi">
-        <property id="241647608299431129" name="propertyId" index="IQ2nx" />
-        <reference id="1082985295845" name="dataType" index="AX2Wp" />
       </concept>
       <concept id="1071489288298" name="jetbrains.mps.lang.structure.structure.LinkDeclaration" flags="ig" index="1TJgyj">
         <property id="1071599776563" name="role" index="20kJfa" />
@@ -95,67 +79,20 @@
   <node concept="1TIwiD" id="7CX82aLH9vK">
     <property role="EcuMT" value="8808231779588937712" />
     <property role="TrG5h" value="SetPoint" />
-    <property role="3GE5qa" value="core" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="IWB9z7E68Y" role="1TKVEi">
-      <property role="IQ2ns" value="845723010037473854" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="setpoints" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="IWB9z7D_Uh" resolve="Input" />
-    </node>
+    <property role="3GE5qa" value="data_ports" />
+    <ref role="1TJDcQ" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
   </node>
   <node concept="1TIwiD" id="7CX82aLH9vP">
     <property role="EcuMT" value="8808231779588937717" />
     <property role="TrG5h" value="Measurement" />
-    <property role="3GE5qa" value="core" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="IWB9z7E68W" role="1TKVEi">
-      <property role="IQ2ns" value="845723010037473852" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="measurements" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="IWB9z7D_Uh" resolve="Input" />
-    </node>
+    <property role="3GE5qa" value="data_ports" />
+    <ref role="1TJDcQ" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
   </node>
   <node concept="1TIwiD" id="7b8_wRd1Mc9">
     <property role="EcuMT" value="8271025701684454153" />
     <property role="TrG5h" value="SignalSplit" />
     <property role="3GE5qa" value="data_blocks" />
     <ref role="1TJDcQ" node="7CX82aLH4Mm" resolve="Signal" />
-  </node>
-  <node concept="1TIwiD" id="IWB9z7D_Uh">
-    <property role="EcuMT" value="845723010037341841" />
-    <property role="3GE5qa" value="core" />
-    <property role="TrG5h" value="Input" />
-    <ref role="1TJDcQ" node="JSnFFpussy" resolve="Port" />
-  </node>
-  <node concept="1TIwiD" id="IWB9z7D_UV">
-    <property role="EcuMT" value="845723010037341883" />
-    <property role="3GE5qa" value="core" />
-    <property role="TrG5h" value="Output" />
-    <ref role="1TJDcQ" node="JSnFFpussy" resolve="Port" />
-  </node>
-  <node concept="1TIwiD" id="JSnFFpussy">
-    <property role="EcuMT" value="862543485247014690" />
-    <property role="3GE5qa" value="core" />
-    <property role="TrG5h" value="Port" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="6zv7gR9XwgC" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="JSnFFpuss_">
-    <property role="EcuMT" value="862543485247014693" />
-    <property role="3GE5qa" value="core" />
-    <property role="TrG5h" value="PortRef" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="JSnFFpussA" role="1TKVEi">
-      <property role="IQ2ns" value="862543485247014694" />
-      <property role="20kJfa" value="port" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="JSnFFpussy" resolve="Port" />
-    </node>
   </node>
   <node concept="1TIwiD" id="6zv7gRa0i2o">
     <property role="EcuMT" value="7556790644811833496" />
@@ -165,43 +102,15 @@
   </node>
   <node concept="1TIwiD" id="1D32TeNwDkI">
     <property role="EcuMT" value="1892368997425517870" />
-    <property role="3GE5qa" value="core" />
+    <property role="3GE5qa" value="data_ports" />
     <property role="TrG5h" value="Actuation" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="1D32TeNwDkJ" role="1TKVEi">
-      <property role="IQ2ns" value="1892368997425517871" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="actuations" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="IWB9z7D_UV" resolve="Output" />
-    </node>
+    <ref role="1TJDcQ" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
   </node>
-  <node concept="25R3W" id="5CjB5L_muca">
-    <property role="3F6X1D" value="6490703408622330634" />
-    <property role="3GE5qa" value="core" />
-    <property role="TrG5h" value="Sign" />
-    <ref role="1H5jkz" node="5CjB5L_mucb" resolve="Positive" />
-    <node concept="25R33" id="5CjB5L_mucb" role="25R1y">
-      <property role="3tVfz5" value="6490703408622330635" />
-      <property role="TrG5h" value="Positive" />
-      <property role="1L1pqM" value="+" />
-    </node>
-    <node concept="25R33" id="5CjB5L_mucc" role="25R1y">
-      <property role="3tVfz5" value="6490703408622330636" />
-      <property role="TrG5h" value="Negative" />
-      <property role="1L1pqM" value="-" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="5CjB5L_mucg">
-    <property role="EcuMT" value="6490703408622330640" />
-    <property role="3GE5qa" value="core" />
-    <property role="TrG5h" value="SignedInput" />
-    <ref role="1TJDcQ" node="IWB9z7D_Uh" resolve="Input" />
-    <node concept="1TJgyi" id="5CjB5L_much" role="1TKVEl">
-      <property role="IQ2nx" value="6490703408622330641" />
-      <property role="TrG5h" value="sign" />
-      <ref role="AX2Wp" node="5CjB5L_muca" resolve="Sign" />
-    </node>
+  <node concept="1TIwiD" id="snu4kiadNR">
+    <property role="EcuMT" value="511009320782585079" />
+    <property role="3GE5qa" value="data_ports" />
+    <property role="TrG5h" value="Error" />
+    <ref role="1TJDcQ" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
   </node>
 </model>
 
