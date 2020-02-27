@@ -141,5 +141,89 @@
       <ref role="AX2Wp" node="5wYy1lwCD7Y" resolve="Sign" />
     </node>
   </node>
+  <node concept="1TIwiD" id="5gyKVURjHS1">
+    <property role="EcuMT" value="6062623272280710657" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="Delay" />
+    <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
+  </node>
+  <node concept="1TIwiD" id="5gyKVURjHS2">
+    <property role="EcuMT" value="6062623272280710658" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="Actuator" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
+  <node concept="1TIwiD" id="5gyKVURjHS3">
+    <property role="EcuMT" value="6062623272280710659" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="Sensor" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
+  <node concept="1TIwiD" id="5gyKVURjHS4">
+    <property role="EcuMT" value="6062623272280710660" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="Feedforward" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
+  <node concept="1TIwiD" id="5gyKVURjHS5">
+    <property role="EcuMT" value="6062623272280710661" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="Feedback" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
+  <node concept="1TIwiD" id="5gyKVURjHS6">
+    <property role="EcuMT" value="6062623272280710662" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="Plant" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
+  <node concept="1TIwiD" id="5gyKVURjHS7">
+    <property role="EcuMT" value="6062623272280710663" />
+    <property role="3GE5qa" value="DataBlocks" />
+    <property role="TrG5h" value="Event" />
+    <ref role="1TJDcQ" node="7CX82aLH4Mm" resolve="Signal" />
+  </node>
+  <node concept="1TIwiD" id="5gyKVURjHS8">
+    <property role="EcuMT" value="6062623272280710664" />
+    <property role="3GE5qa" value="DataBlocks" />
+    <property role="TrG5h" value="State" />
+    <ref role="1TJDcQ" to="yvgz:29RmJoXeePk" resolve="DataBlock" />
+    <node concept="1TJgyj" id="5gyKVURjHSf" role="1TKVEi">
+      <property role="IQ2ns" value="6062623272280710671" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="signals" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="5gyKVURjHS9" resolve="SignalRef" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5gyKVURjHS9">
+    <property role="EcuMT" value="6062623272280710665" />
+    <property role="TrG5h" value="SignalRef" />
+    <property role="3GE5qa" value="DataBlocks" />
+    <node concept="1TJgyj" id="5gyKVURjHSa" role="1TKVEi">
+      <property role="20lbJX" value="fLJekj4/1" />
+      <property role="IQ2ns" value="6062623272280710666" />
+      <property role="20kJfa" value="signal" />
+      <ref role="20lvS9" node="7CX82aLH4Mm" resolve="Signal" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5gyKVURk9ky">
+    <property role="EcuMT" value="6062623272280823074" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="Adapter" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
+  <node concept="1TIwiD" id="5gyKVURk9kz">
+    <property role="EcuMT" value="6062623272280823075" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="Monitor" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
+  <node concept="1TIwiD" id="5gyKVURkouv">
+    <property role="EcuMT" value="6062623272280885151" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="Gain" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
 </model>
 
