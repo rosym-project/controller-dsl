@@ -99,13 +99,13 @@
       <node concept="SB1Cm" id="5wYy1lwCD_G" role="SB1Ct">
         <ref role="SB1Ch" node="3DKr0ffqfVG" resolve="setpoint" />
       </node>
-      <node concept="SB1Cm" id="5wYy1lwCD_A" role="SB1Ct">
-        <property role="SB1Cj" value="5wYy1lwCD80/Negative" />
-        <ref role="SB1Ch" node="3DKr0ffqfV_" resolve="measurement" />
-      </node>
       <node concept="1pt3V6" id="5wYy1lwCD_J" role="2YOnzW">
         <property role="TrG5h" value="error-computation-trigger" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+      <node concept="SB1Cm" id="5wYy1lwCD_A" role="SB1Ct">
+        <property role="SB1Cj" value="5wYy1lwCD80/Negative" />
+        <ref role="SB1Ch" node="3DKr0ffqfV_" resolve="measurement" />
       </node>
     </node>
     <node concept="3byrvi" id="5wYy1lwCTZJ" role="2YOnzZ">

@@ -15,7 +15,40 @@
   </languages>
   <imports>
     <import index="prp3" ref="r:52ea8481-08b2-4cbd-ad9d-1b42825f7d09(jetbrains.mps.lang.constraints.rules.kinds.constraints)" />
+    <import index="356a" ref="r:3b7ed80f-6cfd-45bc-b051-2f66c620dd27(jetbrains.mps.lang.traceable.structure)" />
+    <import index="6xgk" ref="r:6e9ad488-5df2-49e4-8c01-8a7f3812adf7(jetbrains.mps.lang.scopes.runtime)" />
+    <import index="g6sh" ref="r:7d1839fc-c0d4-418b-b0ae-9e1397d9f405(Controller.structure)" implicit="true" />
+    <import index="yvgz" ref="r:3b411c10-569a-4299-9505-176144359d3b(Algorithm.structure)" implicit="true" />
   </imports>
-  <registry />
+  <registry>
+    <language id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints">
+      <concept id="8401916545537438642" name="jetbrains.mps.lang.constraints.structure.InheritedNodeScopeFactory" flags="ng" index="1dDu$B">
+        <reference id="8401916545537438643" name="kind" index="1dDu$A" />
+      </concept>
+      <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
+        <reference id="1213093996982" name="concept" index="1M2myG" />
+        <child id="1213100494875" name="referent" index="1Mr941" />
+      </concept>
+      <concept id="1148687176410" name="jetbrains.mps.lang.constraints.structure.NodeReferentConstraint" flags="ng" index="1N5Pfh">
+        <reference id="1148687202698" name="applicableLink" index="1N5Vy1" />
+        <child id="1148687345559" name="searchScopeFactory" index="1N6uqs" />
+      </concept>
+    </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+    </language>
+  </registry>
+  <node concept="1M2fIO" id="6JwG7wexjl6">
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <ref role="1M2myG" to="g6sh:5wYy1lwCD83" resolve="SignedPort" />
+    <node concept="1N5Pfh" id="6JwG7wexLDO" role="1Mr941">
+      <ref role="1N5Vy1" to="g6sh:5wYy1lwCD84" resolve="port" />
+      <node concept="1dDu$B" id="6JwG7wexZ57" role="1N6uqs">
+        <ref role="1dDu$A" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+      </node>
+    </node>
+  </node>
 </model>
 
