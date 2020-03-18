@@ -253,6 +253,21 @@
           <ref role="1Busuk" to="empi:1byp$lDFZXj" resolve="Algorithm" />
         </node>
       </node>
+      <node concept="1SiIV0" id="7FkahUZosM3" role="3bR37C">
+        <node concept="3bR9La" id="7FkahUZosM4" role="1SiIV1">
+          <ref role="3bR37D" to="ffeo:7Kfy9QB6LbO" resolve="jetbrains.mps.lang.traceable" />
+        </node>
+      </node>
+      <node concept="1SiIV0" id="7FkahUZosM5" role="3bR37C">
+        <node concept="3bR9La" id="7FkahUZosM6" role="1SiIV1">
+          <ref role="3bR37D" to="ffeo:7Kfy9QB6LfQ" resolve="jetbrains.mps.kernel" />
+        </node>
+      </node>
+      <node concept="1SiIV0" id="7FkahUZosM7" role="3bR37C">
+        <node concept="3bR9La" id="7FkahUZosM8" role="1SiIV1">
+          <ref role="3bR37D" to="ffeo:1d41uYMTVPB" resolve="jetbrains.mps.lang.scopes.runtime" />
+        </node>
+      </node>
     </node>
     <node concept="1E1JtA" id="1O1itf128qN" role="3989C9">
       <property role="BnDLt" value="true" />
