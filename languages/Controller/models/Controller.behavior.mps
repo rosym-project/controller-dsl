@@ -35,6 +35,10 @@
       <concept id="1082485599095" name="jetbrains.mps.baseLanguage.structure.BlockStatement" flags="nn" index="9aQIb">
         <child id="1082485599096" name="statements" index="9aQI4" />
       </concept>
+      <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
+        <child id="1068498886297" name="rValue" index="37vLTx" />
+        <child id="1068498886295" name="lValue" index="37vLTJ" />
+      </concept>
       <concept id="4836112446988635817" name="jetbrains.mps.baseLanguage.structure.UndefinedType" flags="in" index="2jxLKc" />
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1154032098014" name="jetbrains.mps.baseLanguage.structure.AbstractLoopStatement" flags="nn" index="2LF5Ji">
@@ -63,6 +67,7 @@
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
       <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
+      <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
       <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
@@ -76,6 +81,7 @@
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
+      <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
         <child id="1068580123160" name="condition" index="3clFbw" />
         <child id="1068580123161" name="ifTrue" index="3clFbx" />
@@ -156,11 +162,17 @@
       <concept id="1145567426890" name="jetbrains.mps.lang.smodel.structure.SNodeListCreator" flags="nn" index="2T8Vx0">
         <child id="1145567471833" name="createdType" index="2T96Bj" />
       </concept>
+      <concept id="1966870290088668512" name="jetbrains.mps.lang.smodel.structure.Enum_MemberLiteral" flags="ng" index="2ViDtV">
+        <reference id="1966870290088668516" name="memberDeclaration" index="2ViDtZ" />
+      </concept>
       <concept id="1180031783296" name="jetbrains.mps.lang.smodel.structure.Concept_IsSubConceptOfOperation" flags="nn" index="2Zo12i">
         <child id="1180031783297" name="conceptArgument" index="2Zo12j" />
       </concept>
       <concept id="6677504323281689838" name="jetbrains.mps.lang.smodel.structure.SConceptType" flags="in" index="3bZ5Sz" />
       <concept id="1139613262185" name="jetbrains.mps.lang.smodel.structure.Node_GetParentOperation" flags="nn" index="1mfA1w" />
+      <concept id="1180636770613" name="jetbrains.mps.lang.smodel.structure.SNodeCreator" flags="nn" index="3zrR0B">
+        <child id="1180636770616" name="createdType" index="3zrR0E" />
+      </concept>
       <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI">
         <property id="1238684351431" name="asCast" index="1BlNFB" />
       </concept>
@@ -175,6 +187,9 @@
       </concept>
       <concept id="1138056282393" name="jetbrains.mps.lang.smodel.structure.SLinkListAccess" flags="nn" index="3Tsc0h">
         <reference id="1138056546658" name="link" index="3TtcxE" />
+      </concept>
+      <concept id="5779574625830813396" name="jetbrains.mps.lang.smodel.structure.EnumerationIdRefExpression" flags="ng" index="1XH99k">
+        <reference id="5779574625830813397" name="enumDeclaration" index="1XH99l" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -521,6 +536,277 @@
     </node>
     <node concept="13hLZK" id="WUr5EYF8vQ" role="13h7CW">
       <node concept="3clFbS" id="WUr5EYF8vR" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="5Tr1VsJA251">
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <ref role="13h7C2" to="g6sh:5gyKVURkouv" resolve="Gain" />
+    <node concept="13hLZK" id="5Tr1VsJA252" role="13h7CW">
+      <node concept="3clFbS" id="5Tr1VsJA253" role="2VODD2">
+        <node concept="3cpWs8" id="5Tr1VsJA25d" role="3cqZAp">
+          <node concept="3cpWsn" id="5Tr1VsJA25g" role="3cpWs9">
+            <property role="TrG5h" value="trigPort" />
+            <node concept="3Tqbb2" id="5Tr1VsJA25c" role="1tU5fm">
+              <ref role="ehGHo" to="yvgz:6jvQBgXEYiM" resolve="TriggerPort" />
+            </node>
+            <node concept="2ShNRf" id="5Tr1VsJA266" role="33vP2m">
+              <node concept="3zrR0B" id="5Tr1VsJA2dE" role="2ShVmc">
+                <node concept="3Tqbb2" id="5Tr1VsJA2dG" role="3zrR0E">
+                  <ref role="ehGHo" to="yvgz:6jvQBgXEYiM" resolve="TriggerPort" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5Tr1VsJA7wH" role="3cqZAp">
+          <node concept="37vLTI" id="5Tr1VsJA8jo" role="3clFbG">
+            <node concept="Xl_RD" id="5Tr1VsJA8jV" role="37vLTx">
+              <property role="Xl_RC" value="_trigger" />
+            </node>
+            <node concept="2OqwBi" id="5Tr1VsJA7MR" role="37vLTJ">
+              <node concept="37vLTw" id="5Tr1VsJA7ET" role="2Oq$k0">
+                <ref role="3cqZAo" node="5Tr1VsJA25g" resolve="trigPort" />
+              </node>
+              <node concept="3TrcHB" id="5Tr1VsJA7UZ" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5Tr1VsJAj5S" role="3cqZAp">
+          <node concept="37vLTI" id="5Tr1VsJAjEs" role="3clFbG">
+            <node concept="2OqwBi" id="5Tr1VsJAk8S" role="37vLTx">
+              <node concept="1XH99k" id="5Tr1VsJAjGp" role="2Oq$k0">
+                <ref role="1XH99l" to="yvgz:3EtQu_uj5g" resolve="TriggerPortDirection" />
+              </node>
+              <node concept="2ViDtV" id="5Tr1VsJAkng" role="2OqNvi">
+                <ref role="2ViDtZ" to="yvgz:3EtQu_uj5h" resolve="In" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="5Tr1VsJAjoe" role="37vLTJ">
+              <node concept="37vLTw" id="5Tr1VsJAj5Q" role="2Oq$k0">
+                <ref role="3cqZAo" node="5Tr1VsJA25g" resolve="trigPort" />
+              </node>
+              <node concept="3TrcHB" id="5Tr1VsJAjwL" role="2OqNvi">
+                <ref role="3TsBF5" to="yvgz:3EtQu_tWxu" resolve="direction" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5Tr1VsJA3hk" role="3cqZAp">
+          <node concept="2OqwBi" id="5Tr1VsJA5cF" role="3clFbG">
+            <node concept="2OqwBi" id="5Tr1VsJA3qA" role="2Oq$k0">
+              <node concept="13iPFW" id="5Tr1VsJA3hi" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="5Tr1VsJA3A2" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5Gb" resolve="trigger_ports" />
+              </node>
+            </node>
+            <node concept="TSZUe" id="5Tr1VsJA73t" role="2OqNvi">
+              <node concept="37vLTw" id="5Tr1VsJA7eM" role="25WWJ7">
+                <ref role="3cqZAo" node="5Tr1VsJA25g" resolve="trigPort" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="5Tr1VsJAvze" role="3cqZAp" />
+        <node concept="3cpWs8" id="5Tr1VsJAvRD" role="3cqZAp">
+          <node concept="3cpWsn" id="5Tr1VsJAvRG" role="3cpWs9">
+            <property role="TrG5h" value="gainPort" />
+            <node concept="3Tqbb2" id="5Tr1VsJAvRB" role="1tU5fm">
+              <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+            </node>
+            <node concept="2ShNRf" id="5Tr1VsJAw0E" role="33vP2m">
+              <node concept="3zrR0B" id="5Tr1VsJAw8e" role="2ShVmc">
+                <node concept="3Tqbb2" id="5Tr1VsJAw8g" role="3zrR0E">
+                  <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5Tr1VsJAwl2" role="3cqZAp">
+          <node concept="37vLTI" id="5Tr1VsJAx5D" role="3clFbG">
+            <node concept="Xl_RD" id="5Tr1VsJAx6c" role="37vLTx">
+              <property role="Xl_RC" value="_gain" />
+            </node>
+            <node concept="2OqwBi" id="5Tr1VsJAwBN" role="37vLTJ">
+              <node concept="37vLTw" id="5Tr1VsJAwl0" role="2Oq$k0">
+                <ref role="3cqZAo" node="5Tr1VsJAvRG" resolve="gainPort" />
+              </node>
+              <node concept="3TrcHB" id="5Tr1VsJAwLm" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5Tr1VsJAxhN" role="3cqZAp">
+          <node concept="37vLTI" id="5Tr1VsJAxMY" role="3clFbG">
+            <node concept="2OqwBi" id="5Tr1VsJAygN" role="37vLTx">
+              <node concept="1XH99k" id="5Tr1VsJAxOV" role="2Oq$k0">
+                <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+              </node>
+              <node concept="2ViDtV" id="5Tr1VsJAyxk" role="2OqNvi">
+                <ref role="2ViDtZ" to="yvgz:6po$YwiVCCm" resolve="In" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="5Tr1VsJAxqm" role="37vLTJ">
+              <node concept="37vLTw" id="5Tr1VsJAxhL" role="2Oq$k0">
+                <ref role="3cqZAo" node="5Tr1VsJAvRG" resolve="gainPort" />
+              </node>
+              <node concept="3TrcHB" id="5Tr1VsJAxDa" role="2OqNvi">
+                <ref role="3TsBF5" to="yvgz:6po$YwiVCCu" resolve="direction" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5Tr1VsJBtbV" role="3cqZAp">
+          <node concept="2OqwBi" id="5Tr1VsJBw3v" role="3clFbG">
+            <node concept="2OqwBi" id="5Tr1VsJBtIC" role="2Oq$k0">
+              <node concept="13iPFW" id="5Tr1VsJBtbT" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="5Tr1VsJBtU4" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+              </node>
+            </node>
+            <node concept="TSZUe" id="5Tr1VsJBy5t" role="2OqNvi">
+              <node concept="37vLTw" id="5Tr1VsJByfD" role="25WWJ7">
+                <ref role="3cqZAo" node="5Tr1VsJAvRG" resolve="gainPort" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="5Tr1VsJABmm" role="3cqZAp" />
+        <node concept="3cpWs8" id="5Tr1VsJABmn" role="3cqZAp">
+          <node concept="3cpWsn" id="5Tr1VsJABmo" role="3cpWs9">
+            <property role="TrG5h" value="signalInPort" />
+            <node concept="3Tqbb2" id="5Tr1VsJABmp" role="1tU5fm">
+              <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+            </node>
+            <node concept="2ShNRf" id="5Tr1VsJABmq" role="33vP2m">
+              <node concept="3zrR0B" id="5Tr1VsJABmr" role="2ShVmc">
+                <node concept="3Tqbb2" id="5Tr1VsJABms" role="3zrR0E">
+                  <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5Tr1VsJABmt" role="3cqZAp">
+          <node concept="37vLTI" id="5Tr1VsJABmu" role="3clFbG">
+            <node concept="Xl_RD" id="5Tr1VsJABmv" role="37vLTx">
+              <property role="Xl_RC" value="_in" />
+            </node>
+            <node concept="2OqwBi" id="5Tr1VsJABmw" role="37vLTJ">
+              <node concept="37vLTw" id="5Tr1VsJABmx" role="2Oq$k0">
+                <ref role="3cqZAo" node="5Tr1VsJABmo" resolve="signalInPort" />
+              </node>
+              <node concept="3TrcHB" id="5Tr1VsJABmy" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5Tr1VsJABmz" role="3cqZAp">
+          <node concept="37vLTI" id="5Tr1VsJABm$" role="3clFbG">
+            <node concept="2OqwBi" id="5Tr1VsJABm_" role="37vLTx">
+              <node concept="1XH99k" id="5Tr1VsJABmA" role="2Oq$k0">
+                <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+              </node>
+              <node concept="2ViDtV" id="5Tr1VsJABmB" role="2OqNvi">
+                <ref role="2ViDtZ" to="yvgz:6po$YwiVCCm" resolve="In" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="5Tr1VsJABmC" role="37vLTJ">
+              <node concept="37vLTw" id="5Tr1VsJABmD" role="2Oq$k0">
+                <ref role="3cqZAo" node="5Tr1VsJABmo" resolve="signalInPort" />
+              </node>
+              <node concept="3TrcHB" id="5Tr1VsJABmE" role="2OqNvi">
+                <ref role="3TsBF5" to="yvgz:6po$YwiVCCu" resolve="direction" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5Tr1VsJABmF" role="3cqZAp">
+          <node concept="2OqwBi" id="5Tr1VsJABmG" role="3clFbG">
+            <node concept="2OqwBi" id="5Tr1VsJABmH" role="2Oq$k0">
+              <node concept="13iPFW" id="5Tr1VsJABmI" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="5Tr1VsJABmJ" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+              </node>
+            </node>
+            <node concept="TSZUe" id="5Tr1VsJABmK" role="2OqNvi">
+              <node concept="37vLTw" id="5Tr1VsJABmL" role="25WWJ7">
+                <ref role="3cqZAo" node="5Tr1VsJABmo" resolve="signalInPort" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="5Tr1VsJABOT" role="3cqZAp" />
+        <node concept="3cpWs8" id="5Tr1VsJABOU" role="3cqZAp">
+          <node concept="3cpWsn" id="5Tr1VsJABOV" role="3cpWs9">
+            <property role="TrG5h" value="signalOutPort" />
+            <node concept="3Tqbb2" id="5Tr1VsJABOW" role="1tU5fm">
+              <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+            </node>
+            <node concept="2ShNRf" id="5Tr1VsJABOX" role="33vP2m">
+              <node concept="3zrR0B" id="5Tr1VsJABOY" role="2ShVmc">
+                <node concept="3Tqbb2" id="5Tr1VsJABOZ" role="3zrR0E">
+                  <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5Tr1VsJABP0" role="3cqZAp">
+          <node concept="37vLTI" id="5Tr1VsJABP1" role="3clFbG">
+            <node concept="Xl_RD" id="5Tr1VsJABP2" role="37vLTx">
+              <property role="Xl_RC" value="_out" />
+            </node>
+            <node concept="2OqwBi" id="5Tr1VsJABP3" role="37vLTJ">
+              <node concept="37vLTw" id="5Tr1VsJABP4" role="2Oq$k0">
+                <ref role="3cqZAo" node="5Tr1VsJABOV" resolve="signalOutPort" />
+              </node>
+              <node concept="3TrcHB" id="5Tr1VsJABP5" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5Tr1VsJABP6" role="3cqZAp">
+          <node concept="37vLTI" id="5Tr1VsJABP7" role="3clFbG">
+            <node concept="2OqwBi" id="5Tr1VsJABP8" role="37vLTx">
+              <node concept="1XH99k" id="5Tr1VsJABP9" role="2Oq$k0">
+                <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+              </node>
+              <node concept="2ViDtV" id="5Tr1VsJADCA" role="2OqNvi">
+                <ref role="2ViDtZ" to="yvgz:6po$YwiVCCn" resolve="Out" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="5Tr1VsJABPb" role="37vLTJ">
+              <node concept="37vLTw" id="5Tr1VsJABPc" role="2Oq$k0">
+                <ref role="3cqZAo" node="5Tr1VsJABOV" resolve="signalOutPort" />
+              </node>
+              <node concept="3TrcHB" id="5Tr1VsJABPd" role="2OqNvi">
+                <ref role="3TsBF5" to="yvgz:6po$YwiVCCu" resolve="direction" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5Tr1VsJAyI2" role="3cqZAp">
+          <node concept="2OqwBi" id="5Tr1VsJA$Yj" role="3clFbG">
+            <node concept="2OqwBi" id="5Tr1VsJAyZG" role="2Oq$k0">
+              <node concept="13iPFW" id="5Tr1VsJAyI0" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="5Tr1VsJAzbe" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+              </node>
+            </node>
+            <node concept="TSZUe" id="5Tr1VsJAB0f" role="2OqNvi">
+              <node concept="37vLTw" id="5Tr1VsJABas" role="25WWJ7">
+                <ref role="3cqZAo" node="5Tr1VsJABOV" resolve="signalOutPort" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

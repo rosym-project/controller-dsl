@@ -75,17 +75,17 @@
     </language>
   </registry>
   <node concept="3bykSo" id="3DKr0ffqfeg">
-    <property role="TrG5h" value="p-controller" />
+    <property role="TrG5h" value="pController" />
     <node concept="3bymMO" id="5wYy1lwCU0u" role="3SlQUm">
       <property role="TrG5h" value="error" />
       <node concept="1OHxBU" id="5wYy1lwCU0L" role="1ptsVk">
-        <property role="TrG5h" value="error-access" />
+        <property role="TrG5h" value="errorAccess" />
         <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
         <node concept="10P55v" id="2FsRs4zCfpz" role="1OHwi9" />
       </node>
     </node>
     <node concept="2yRzQl" id="3DKr0ffqfeh" role="3SlQUd">
-      <property role="TrG5h" value="error-computation" />
+      <property role="TrG5h" value="errorcomputation" />
       <node concept="3byrvn" id="3DKr0ffqfV_" role="2YOnzZ">
         <property role="TrG5h" value="measurement" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
@@ -116,17 +116,17 @@
     <node concept="3zsOgx" id="6_DwxJb1Wrj" role="3SlQUd">
       <property role="TrG5h" value="p" />
       <node concept="1OHxBU" id="6_DwxJb1Wrw" role="2YOnzZ">
-        <property role="TrG5h" value="p-block-error" />
+        <property role="TrG5h" value="pBlockError" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
         <node concept="10P55v" id="6_DwxJb1Wr$" role="1OHwi9" />
       </node>
       <node concept="1OHxBU" id="6_DwxJb1WrK" role="2YOnzZ">
-        <property role="TrG5h" value="p-block-gain" />
+        <property role="TrG5h" value="pBlockGain" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
         <node concept="10P55v" id="6_DwxJb1WrS" role="1OHwi9" />
       </node>
       <node concept="1OHxBU" id="6_DwxJb1WrB" role="2YOnzZ">
-        <property role="TrG5h" value="p-block-out" />
+        <property role="TrG5h" value="pBlockOut" />
         <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
         <node concept="10P55v" id="6_DwxJb1WrH" role="1OHwi9" />
       </node>
@@ -148,23 +148,45 @@
         <node concept="10P55v" id="2FsRs4zCS5E" role="1OHwi9" />
       </node>
     </node>
+    <node concept="3zsOgx" id="5Tr1VsJBHG1" role="3SlQUd">
+      <property role="TrG5h" value="te" />
+      <node concept="1pt3V6" id="5Tr1VsJBHG2" role="2YOnzW">
+        <property role="TrG5h" value="_trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+      <node concept="1OHxBU" id="5Tr1VsJBHG3" role="2YOnzZ">
+        <property role="TrG5h" value="_gain" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10P55v" id="5Tr1VsJBSHT" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="5Tr1VsJBHG4" role="2YOnzZ">
+        <property role="TrG5h" value="_in" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10P55v" id="5Tr1VsJBSHV" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="5Tr1VsJBHG5" role="2YOnzZ">
+        <property role="TrG5h" value="_out" />
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <node concept="10P55v" id="5Tr1VsJBSHX" role="1OHwi9" />
+      </node>
+    </node>
     <node concept="3byrvi" id="5wYy1lwCTZJ" role="2YOnzZ">
-      <property role="TrG5h" value="p-setpoint" />
+      <property role="TrG5h" value="pSetpoint" />
       <property role="1OHxBQ" value="6po$YwiVCCm/In" />
       <node concept="10P55v" id="2FsRs4zCfp5" role="1OHwi9" />
     </node>
     <node concept="3byrvn" id="5wYy1lwCTZm" role="2YOnzZ">
-      <property role="TrG5h" value="p-measurement" />
+      <property role="TrG5h" value="pMeasurement" />
       <property role="1OHxBQ" value="6po$YwiVCCm/In" />
       <node concept="10P55v" id="5wYy1lwCTZq" role="1OHwi9" />
     </node>
     <node concept="1OHxBU" id="6F0tY7D8tRj" role="2YOnzZ">
-      <property role="TrG5h" value="p-gain" />
+      <property role="TrG5h" value="pGain" />
       <property role="1OHxBQ" value="6po$YwiVCCm/In" />
       <node concept="10P55v" id="6F0tY7D8tRt" role="1OHwi9" />
     </node>
     <node concept="2DKpUX" id="5PE55GMNubu" role="2YOnzZ">
-      <property role="TrG5h" value="p-actuation" />
+      <property role="TrG5h" value="pActuation" />
       <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
       <node concept="10P55v" id="5PE55GMNubE" role="1OHwi9" />
     </node>
@@ -206,28 +228,28 @@
       <ref role="1psEGP" node="6F0tY7D8tSm" resolve="p-trigger" />
     </node>
     <node concept="1OHxBB" id="5wYy1lwCU0G" role="3SlQUq">
-      <ref role="1OHxBS" node="5wYy1lwCTZJ" resolve="p-setpoint" />
+      <ref role="1OHxBS" node="5wYy1lwCTZJ" resolve="pSetpoint" />
       <ref role="1OHyup" node="3DKr0ffqfVG" resolve="setpoint" />
     </node>
     <node concept="1OHxBB" id="5wYy1lwCU0I" role="3SlQUq">
       <ref role="1OHyup" node="3DKr0ffqfV_" resolve="measurement" />
-      <ref role="1OHxBS" node="5wYy1lwCTZm" resolve="p-measurement" />
+      <ref role="1OHxBS" node="5wYy1lwCTZm" resolve="pMeasurement" />
     </node>
     <node concept="1OHxBB" id="5wYy1lwCU0S" role="3SlQUq">
       <ref role="1OHxBS" node="3DKr0ffqfVP" resolve="error" />
-      <ref role="1OHyup" node="5wYy1lwCU0L" resolve="error-access" />
+      <ref role="1OHyup" node="5wYy1lwCU0L" resolve="errorAccess" />
     </node>
     <node concept="1OHxBB" id="5PE55GMNubd" role="3SlQUq">
-      <ref role="1OHxBS" node="5wYy1lwCU0L" resolve="error-access" />
-      <ref role="1OHyup" node="6_DwxJb1Wrw" resolve="p-block-error" />
+      <ref role="1OHxBS" node="5wYy1lwCU0L" resolve="errorAccess" />
+      <ref role="1OHyup" node="6_DwxJb1Wrw" resolve="pBlockError" />
     </node>
     <node concept="1OHxBB" id="5PE55GMNuag" role="3SlQUq">
-      <ref role="1OHxBS" node="6_DwxJb1WrK" resolve="p-block-gain" />
-      <ref role="1OHyup" node="6F0tY7D8tRj" resolve="p-gain" />
+      <ref role="1OHxBS" node="6_DwxJb1WrK" resolve="pBlockGain" />
+      <ref role="1OHyup" node="6F0tY7D8tRj" resolve="pGain" />
     </node>
     <node concept="1OHxBB" id="5PE55GMNubH" role="3SlQUq">
-      <ref role="1OHxBS" node="6_DwxJb1WrB" resolve="p-block-out" />
-      <ref role="1OHyup" node="5PE55GMNubu" resolve="p-actuation" />
+      <ref role="1OHxBS" node="6_DwxJb1WrB" resolve="pBlockOut" />
+      <ref role="1OHyup" node="5PE55GMNubu" resolve="pActuation" />
     </node>
   </node>
 </model>
