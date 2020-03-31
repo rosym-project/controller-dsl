@@ -195,9 +195,6 @@
       <node concept="m$_yC" id="1O1itf1280Z" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
-      <node concept="m$_yC" id="1O1itf128sr" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:5HVSRHdVm9a" resolve="jetbrains.mps.build" />
-      </node>
       <node concept="m$_yC" id="6elPPFNPp_X" role="m$_yJ">
         <ref role="m$_y1" to="empi:1byp$lDFZvl" resolve="algorithm" />
       </node>
