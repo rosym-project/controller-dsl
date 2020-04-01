@@ -3,7 +3,6 @@
   <persistence version="9" />
   <languages>
     <use id="990507d3-3527-4c54-bfe9-0ca3c9c6247a" name="com.dslfoundry.plaintextgen" version="0" />
-    <use id="8d7c3baa-c6d4-442a-843a-34b7b957af1e" name="Algorithm_CGenerator" version="0" />
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
   </languages>
   <imports>
