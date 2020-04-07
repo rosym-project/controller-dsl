@@ -90,9 +90,7 @@
     </language>
     <language id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator">
       <concept id="1202776937179" name="jetbrains.mps.lang.generator.structure.AbandonInput_RuleConsequence" flags="lg" index="b5Tf3" />
-      <concept id="1095416546421" name="jetbrains.mps.lang.generator.structure.MappingConfiguration" flags="ig" index="bUwia">
-        <child id="1167514678247" name="rootMappingRule" index="3lj3bC" />
-      </concept>
+      <concept id="1095416546421" name="jetbrains.mps.lang.generator.structure.MappingConfiguration" flags="ig" index="bUwia" />
       <concept id="1168559333462" name="jetbrains.mps.lang.generator.structure.TemplateDeclarationReference" flags="ln" index="j$656" />
       <concept id="1112730859144" name="jetbrains.mps.lang.generator.structure.TemplateSwitch" flags="ig" index="jVnub">
         <reference id="1112820671508" name="modifiedSwitch" index="phYkn" />
@@ -116,9 +114,6 @@
       </concept>
       <concept id="1167327847730" name="jetbrains.mps.lang.generator.structure.Reduction_MappingRule" flags="lg" index="3aamgX">
         <child id="1169672767469" name="ruleConsequence" index="1lVwrX" />
-      </concept>
-      <concept id="1167514355419" name="jetbrains.mps.lang.generator.structure.Root_MappingRule" flags="lg" index="3lhOvk">
-        <reference id="1167514355421" name="template" index="3lhOvi" />
       </concept>
       <concept id="1167756080639" name="jetbrains.mps.lang.generator.structure.PropertyMacro_GetPropertyValue" flags="in" index="3zFVjK" />
     </language>
@@ -203,10 +198,6 @@
   </registry>
   <node concept="bUwia" id="6_DwxJb0Ldg">
     <property role="TrG5h" value="Controller" />
-    <node concept="3lhOvk" id="5Tr1VsJQtsU" role="3lj3bC">
-      <ref role="30HIoZ" to="g6sh:7CX82aLH6SU" resolve="ControlDiagram" />
-      <ref role="3lhOvi" to="2g3d:5Tr1VsJDsug" resolve="function_name" />
-    </node>
   </node>
   <node concept="jVnub" id="3DldKpvnwAe">
     <property role="TrG5h" value="switch_ControllerFunctionCall" />
@@ -383,7 +374,7 @@
                                   <ref role="2Gs0qQ" node="3yq_xaLGDDw" resolve="dataPort" />
                                 </node>
                                 <node concept="2qgKlT" id="7VOfr8WpmG5" role="2OqNvi">
-                                  <ref role="37wK5l" to="ixp9:7VOfr8WpcKN" resolve="getDataOrPortName" />
+                                  <ref role="37wK5l" to="ixp9:7VOfr8WpcKN" resolve="getVariableName" />
                                 </node>
                               </node>
                             </node>
@@ -481,7 +472,7 @@
                               <node concept="1uHKPH" id="7VOfr8WprVO" role="2OqNvi" />
                             </node>
                             <node concept="2qgKlT" id="7VOfr8Wpt8y" role="2OqNvi">
-                              <ref role="37wK5l" to="ixp9:7VOfr8WpcKN" resolve="getDataOrPortName" />
+                              <ref role="37wK5l" to="ixp9:7VOfr8WpcKN" resolve="getVariableName" />
                             </node>
                           </node>
                           <node concept="3cpWs3" id="5PE55GMMsh2" role="3uHU7B">
@@ -515,9 +506,6 @@
           </node>
         </node>
         <node concept="2EixSi" id="5PE55GMN5UG" role="2EinRH" />
-        <node concept="356sEF" id="5PE55GMN_Xy" role="356sEH">
-          <property role="TrG5h" value=";" />
-        </node>
       </node>
       <node concept="raruj" id="5PE55GMN5Uy" role="lGtFl" />
     </node>
@@ -673,7 +661,7 @@
                                 <node concept="1uHKPH" id="7VOfr8WpAeI" role="2OqNvi" />
                               </node>
                               <node concept="2qgKlT" id="7VOfr8WpARy" role="2OqNvi">
-                                <ref role="37wK5l" to="ixp9:7VOfr8WpcKN" resolve="getDataOrPortName" />
+                                <ref role="37wK5l" to="ixp9:7VOfr8WpcKN" resolve="getVariableName" />
                               </node>
                             </node>
                             <node concept="37vLTw" id="7VOfr8WpvQ1" role="37vLTJ">
@@ -789,7 +777,7 @@
                                       <node concept="1uHKPH" id="7VOfr8WpSWl" role="2OqNvi" />
                                     </node>
                                     <node concept="2qgKlT" id="7VOfr8WpTZp" role="2OqNvi">
-                                      <ref role="37wK5l" to="ixp9:7VOfr8WpcKN" resolve="getDataOrPortName" />
+                                      <ref role="37wK5l" to="ixp9:7VOfr8WpcKN" resolve="getVariableName" />
                                     </node>
                                   </node>
                                 </node>
@@ -808,7 +796,7 @@
                                           <node concept="1uHKPH" id="7VOfr8Wq3AU" role="2OqNvi" />
                                         </node>
                                         <node concept="2qgKlT" id="7VOfr8Wq4te" role="2OqNvi">
-                                          <ref role="37wK5l" to="ixp9:7VOfr8WpcKN" resolve="getDataOrPortName" />
+                                          <ref role="37wK5l" to="ixp9:7VOfr8WpcKN" resolve="getVariableName" />
                                         </node>
                                       </node>
                                       <node concept="Xl_RD" id="7VOfr8WpWKW" role="3uHU7B">
@@ -848,9 +836,6 @@
           </node>
         </node>
         <node concept="2EixSi" id="5PE55GMNun9" role="2EinRH" />
-        <node concept="356sEF" id="5PE55GMNBdw" role="356sEH">
-          <property role="TrG5h" value=";" />
-        </node>
       </node>
       <node concept="raruj" id="5PE55GMNun5" role="lGtFl" />
     </node>
