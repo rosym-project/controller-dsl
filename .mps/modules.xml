@@ -2,12 +2,10 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
-      <modulePath path="$PROJECT_DIR$/languages/CGenerator/CGenerator.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/Controller/Controller.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/Controller_CGenerator/Controller_CGenerator.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/Controller.build/Controller.build.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/Controller.sandbox/Controller.sandbox.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/../algorithm-dsl/languages/Algorithm/Algorithm.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/../algorithm-dsl/solutions/Algorithm.build/Algorithm.build.msd" folder="" />
     </projectModules>
   </component>
 </project>
