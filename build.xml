@@ -74,7 +74,6 @@
         <name>controller</name>
         <version>1.0</version>
         <depends>jetbrains.mps.core</depends>
-        <depends>jetbrains.mps.build</depends>
         <depends>algorithm</depends>
         
         <extensions defaultExtensionNs="com.intellij">
