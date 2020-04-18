@@ -195,7 +195,7 @@
       <property role="2_BrWT" value="3EtQu_uj5h/In" />
     </node>
     <node concept="2__D7_" id="5wYy1lwCU0x" role="3SlQUj">
-      <property role="TrG5h" value="p-sched" />
+      <property role="TrG5h" value="pSched" />
       <node concept="1pt3V6" id="5wYy1lwCU0z" role="1OHzVH">
         <property role="TrG5h" value="p-sched-trigger" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
