@@ -153,6 +153,11 @@
     <property role="3GE5qa" value="FunctionBlocks" />
     <property role="TrG5h" value="Delay" />
     <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
+    <node concept="1TJgyi" id="6T_5$hleRRb" role="1TKVEl">
+      <property role="IQ2nx" value="7954788799563398603" />
+      <property role="TrG5h" value="horizon" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5gyKVURjHS2">
     <property role="EcuMT" value="6062623272280710658" />
