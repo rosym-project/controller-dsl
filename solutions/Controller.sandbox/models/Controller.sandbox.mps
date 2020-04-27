@@ -9,7 +9,6 @@
   <imports />
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
-      <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1070534513062" name="jetbrains.mps.baseLanguage.structure.DoubleType" flags="in" index="10P55v" />
     </language>
     <language id="a8f70f9e-ef01-499f-885c-c79273fa1695" name="Algorithm">
@@ -19,7 +18,6 @@
       <concept id="2483553733153713493" name="Algorithm.structure.SchedulerBlock" flags="ng" index="vjVuz">
         <child id="7374807014778514693" name="trigger_ports" index="1OHzVH" />
       </concept>
-      <concept id="2483553733153713489" name="Algorithm.structure.EmptyFunctionBlock" flags="ng" index="vjVuB" />
       <concept id="65996431592360841" name="Algorithm.structure.TriggerPortRef" flags="ng" index="2_qZNI">
         <reference id="65996431592360842" name="trigger_port" index="2_qZNH" />
       </concept>
@@ -66,6 +64,9 @@
       <concept id="8808231779588918422" name="Controller.structure.Signal" flags="ng" index="3bymMO" />
       <concept id="8808231779588937712" name="Controller.structure.SetPoint" flags="ng" index="3byrvi" />
       <concept id="8808231779588937717" name="Controller.structure.Measurement" flags="ng" index="3byrvn" />
+      <concept id="6062623272280710657" name="Controller.structure.Delay" flags="ng" index="3zr1QZ">
+        <property id="7954788799563398603" name="horizon" index="VnAIf" />
+      </concept>
       <concept id="6062623272280885151" name="Controller.structure.Gain" flags="ng" index="3zsOgx" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -135,39 +136,27 @@
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
       </node>
     </node>
-    <node concept="vjVuB" id="2FsRs4zCS58" role="3SlQUd">
-      <property role="TrG5h" value="testFunction" />
-      <node concept="1OHxBU" id="2FsRs4zCS5t" role="2YOnzZ">
-        <property role="TrG5h" value="testParam1" />
-        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
-        <node concept="10Oyi0" id="2FsRs4zCS5x" role="1OHwi9" />
-      </node>
-      <node concept="1OHxBU" id="2FsRs4zCS5$" role="2YOnzZ">
-        <property role="TrG5h" value="testParam2" />
-        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
-        <node concept="10P55v" id="2FsRs4zCS5E" role="1OHwi9" />
-      </node>
-    </node>
-    <node concept="3zsOgx" id="5Tr1VsJBHG1" role="3SlQUd">
-      <property role="TrG5h" value="te" />
-      <node concept="1pt3V6" id="5Tr1VsJBHG2" role="2YOnzW">
-        <property role="TrG5h" value="_trigger" />
+    <node concept="3zr1QZ" id="4LsB5TjuK2K" role="3SlQUd">
+      <property role="VnAIf" value="2" />
+      <property role="TrG5h" value="err_delay" />
+      <node concept="1pt3V6" id="4LsB5TjuK2L" role="2YOnzW">
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
+        <property role="TrG5h" value="err_delay_trigger" />
       </node>
-      <node concept="1OHxBU" id="5Tr1VsJBHG3" role="2YOnzZ">
-        <property role="TrG5h" value="_gain" />
+      <node concept="1OHxBU" id="4LsB5TjuK2M" role="2YOnzZ">
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
-        <node concept="10P55v" id="5Tr1VsJBSHT" role="1OHwi9" />
+        <property role="TrG5h" value="err_input" />
+        <node concept="10P55v" id="4LsB5TjuK3d" role="1OHwi9" />
       </node>
-      <node concept="1OHxBU" id="5Tr1VsJBHG4" role="2YOnzZ">
-        <property role="TrG5h" value="_in" />
-        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
-        <node concept="10P55v" id="5Tr1VsJBSHV" role="1OHwi9" />
-      </node>
-      <node concept="1OHxBU" id="5Tr1VsJBHG5" role="2YOnzZ">
-        <property role="TrG5h" value="_out" />
+      <node concept="1OHxBU" id="4LsB5TjuK2N" role="2YOnzZ">
         <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
-        <node concept="10P55v" id="5Tr1VsJBSHX" role="1OHwi9" />
+        <property role="TrG5h" value="err_delay_1" />
+        <node concept="10P55v" id="4LsB5TjuK3p" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="4LsB5TjuK2O" role="2YOnzZ">
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <property role="TrG5h" value="err_delay_2" />
+        <node concept="10P55v" id="4LsB5TjuK3u" role="1OHwi9" />
       </node>
     </node>
     <node concept="3byrvi" id="5wYy1lwCTZJ" role="2YOnzZ">
@@ -190,6 +179,16 @@
       <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
       <node concept="10P55v" id="5PE55GMNubE" role="1OHwi9" />
     </node>
+    <node concept="1OHxBU" id="47cn$M6vaep" role="2YOnzZ">
+      <property role="TrG5h" value="delayOut1" />
+      <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+      <node concept="10P55v" id="47cn$M6vaeB" role="1OHwi9" />
+    </node>
+    <node concept="1OHxBU" id="47cn$M6vaf$" role="2YOnzZ">
+      <property role="TrG5h" value="delayOut2" />
+      <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+      <node concept="10P55v" id="47cn$M6vafO" role="1OHwi9" />
+    </node>
     <node concept="1pt3V6" id="5wYy1lwCU00" role="2YOnzW">
       <property role="TrG5h" value="p-trigger" />
       <property role="2_BrWT" value="3EtQu_uj5h/In" />
@@ -208,8 +207,15 @@
         <property role="TrG5h" value="compute-gain-p" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
+      <node concept="1pt3V6" id="2kx_g_xfxEb" role="1OHzVH">
+        <property role="TrG5h" value="delay-error" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
       <node concept="2_qZNI" id="5wYy1lwCU0C" role="2__D7$">
         <ref role="2_qZNH" node="5wYy1lwCU0_" resolve="compute-error" />
+      </node>
+      <node concept="2_qZNI" id="2kx_g_xfxEp" role="2__D7$">
+        <ref role="2_qZNH" node="2kx_g_xfxEb" resolve="delay-error" />
       </node>
       <node concept="2_qZNI" id="71WlwW$_Toj" role="2__D7$">
         <ref role="2_qZNH" node="6F0tY7D8tSo" resolve="compute-gain-p" />
@@ -226,6 +232,10 @@
     <node concept="1psEHa" id="5PE55GMN_41" role="1psEGK">
       <ref role="1psEHb" node="6F0tY7D8tSo" resolve="compute-gain-p" />
       <ref role="1psEGP" node="6F0tY7D8tSm" resolve="p-trigger" />
+    </node>
+    <node concept="1psEHa" id="2kx_g_xfxEy" role="1psEGK">
+      <ref role="1psEHb" node="2kx_g_xfxEb" resolve="delay-error" />
+      <ref role="1psEGP" node="4LsB5TjuK2L" resolve="err_delay_trigger" />
     </node>
     <node concept="1OHxBB" id="5wYy1lwCU0G" role="3SlQUq">
       <ref role="1OHxBS" node="5wYy1lwCTZJ" resolve="pSetpoint" />
@@ -250,6 +260,18 @@
     <node concept="1OHxBB" id="5PE55GMNubH" role="3SlQUq">
       <ref role="1OHxBS" node="6_DwxJb1WrB" resolve="pBlockOut" />
       <ref role="1OHyup" node="5PE55GMNubu" resolve="pActuation" />
+    </node>
+    <node concept="1OHxBB" id="4LsB5TjuK3$" role="3SlQUq">
+      <ref role="1OHyup" node="4LsB5TjuK2M" resolve="err_input" />
+      <ref role="1OHxBS" node="5wYy1lwCU0L" resolve="errorAccess" />
+    </node>
+    <node concept="1OHxBB" id="47cn$M6vaeE" role="3SlQUq">
+      <ref role="1OHxBS" node="47cn$M6vaep" resolve="delayOut1" />
+      <ref role="1OHyup" node="4LsB5TjuK2N" resolve="err_delay_1" />
+    </node>
+    <node concept="1OHxBB" id="47cn$M6vaeO" role="3SlQUq">
+      <ref role="1OHxBS" node="47cn$M6vaf$" resolve="delayOut2" />
+      <ref role="1OHyup" node="4LsB5TjuK2O" resolve="err_delay_2" />
     </node>
   </node>
 </model>

@@ -8,6 +8,7 @@
   <imports>
     <import index="yvgz" ref="r:3b411c10-569a-4299-9505-176144359d3b(Algorithm.structure)" implicit="true" />
     <import index="g6sh" ref="r:7d1839fc-c0d4-418b-b0ae-9e1397d9f405(Controller.structure)" implicit="true" />
+    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -66,7 +67,6 @@
       <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
-      <concept id="1068581242869" name="jetbrains.mps.baseLanguage.structure.MinusExpression" flags="nn" index="3cpWsd" />
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1206060495898" name="jetbrains.mps.baseLanguage.structure.ElsifClause" flags="ng" index="3eNFk2">
         <child id="1206060619838" name="condition" index="3eO9$A" />
@@ -122,6 +122,7 @@
       <concept id="1174658326157" name="jetbrains.mps.lang.typesystem.structure.CreateEquationStatement" flags="nn" index="1Z5TYs" />
       <concept id="1174660718586" name="jetbrains.mps.lang.typesystem.structure.AbstractEquationStatement" flags="nn" index="1Zf1VF">
         <property id="1206359757216" name="checkOnly" index="3wDh2S" />
+        <child id="1180447237840" name="errorString" index="3o8Qv2" />
         <child id="1174660783413" name="leftExpression" index="1ZfhK$" />
         <child id="1174660783414" name="rightExpression" index="1ZfhKB" />
       </concept>
@@ -581,17 +582,12 @@
                     </node>
                   </node>
                   <node concept="1eOMI4" id="hkK7ztRuJd" role="3uHU7w">
-                    <node concept="3cpWs3" id="hkK7ztR56I" role="1eOMHV">
-                      <node concept="2OqwBi" id="hkK7ztR3BI" role="3uHU7B">
-                        <node concept="1YBJjd" id="hkK7ztR3mw" role="2Oq$k0">
-                          <ref role="1YBMHb" node="2SLYjZthY9k" resolve="delay" />
-                        </node>
-                        <node concept="3TrcHB" id="hkK7ztR3Wt" role="2OqNvi">
-                          <ref role="3TsBF5" to="g6sh:6T_5$hleRRb" resolve="horizon" />
-                        </node>
+                    <node concept="2OqwBi" id="hkK7ztR3BI" role="1eOMHV">
+                      <node concept="1YBJjd" id="hkK7ztR3mw" role="2Oq$k0">
+                        <ref role="1YBMHb" node="2SLYjZthY9k" resolve="delay" />
                       </node>
-                      <node concept="3cmrfG" id="hkK7ztR56L" role="3uHU7w">
-                        <property role="3cmrfH" value="1" />
+                      <node concept="3TrcHB" id="hkK7ztR3Wt" role="2OqNvi">
+                        <ref role="3TsBF5" to="g6sh:6T_5$hleRRb" resolve="horizon" />
                       </node>
                     </node>
                   </node>
@@ -607,13 +603,8 @@
           </node>
         </node>
         <node concept="3y3z36" id="2SLYjZthZrQ" role="3clFbw">
-          <node concept="3cpWsd" id="2o0RQQge8HO" role="3uHU7w">
-            <node concept="3cmrfG" id="2o0RQQge8HV" role="3uHU7w">
-              <property role="3cmrfH" value="1" />
-            </node>
-            <node concept="37vLTw" id="2SLYjZtii_5" role="3uHU7B">
-              <ref role="3cqZAo" node="2SLYjZti6en" resolve="outputPortCount" />
-            </node>
+          <node concept="37vLTw" id="2SLYjZtii_5" role="3uHU7w">
+            <ref role="3cqZAo" node="2SLYjZti6en" resolve="outputPortCount" />
           </node>
           <node concept="2OqwBi" id="2SLYjZthYmt" role="3uHU7B">
             <node concept="1YBJjd" id="2SLYjZthY9E" role="2Oq$k0">
@@ -692,9 +683,9 @@
     <node concept="3clFbS" id="2o0RQQgff3V" role="18ibNy">
       <node concept="3cpWs8" id="2o0RQQgff8s" role="3cqZAp">
         <node concept="3cpWsn" id="2o0RQQgff8v" role="3cpWs9">
-          <property role="TrG5h" value="inputPort" />
-          <node concept="3Tqbb2" id="2o0RQQgff8r" role="1tU5fm">
-            <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+          <property role="TrG5h" value="inputPortType" />
+          <node concept="3Tqbb2" id="4LsB5TjlKTm" role="1tU5fm">
+            <ref role="ehGHo" to="tpee:fz3vP1H" resolve="Type" />
           </node>
         </node>
       </node>
@@ -730,11 +721,16 @@
             <node concept="3clFbS" id="2o0RQQgffDI" role="3clFbx">
               <node concept="3clFbF" id="2o0RQQgfgzB" role="3cqZAp">
                 <node concept="37vLTI" id="2o0RQQgfgFK" role="3clFbG">
-                  <node concept="2GrUjf" id="2o0RQQgfgI1" role="37vLTx">
-                    <ref role="2Gs0qQ" node="2o0RQQgff8N" resolve="dataPort" />
+                  <node concept="2OqwBi" id="4LsB5TjlLjr" role="37vLTx">
+                    <node concept="2GrUjf" id="2o0RQQgfgI1" role="2Oq$k0">
+                      <ref role="2Gs0qQ" node="2o0RQQgff8N" resolve="dataPort" />
+                    </node>
+                    <node concept="3TrEf2" id="4LsB5TjlLud" role="2OqNvi">
+                      <ref role="3Tt5mk" to="yvgz:6po$YwiVDtx" resolve="type" />
+                    </node>
                   </node>
                   <node concept="37vLTw" id="2o0RQQgfgzA" role="37vLTJ">
-                    <ref role="3cqZAo" node="2o0RQQgff8v" resolve="inputPort" />
+                    <ref role="3cqZAo" node="2o0RQQgff8v" resolve="inputPortType" />
                   </node>
                 </node>
               </node>
@@ -789,12 +785,35 @@
                     </node>
                   </node>
                   <node concept="mw_s8" id="2o0RQQgfRf9" role="1ZfhKB">
-                    <node concept="2OqwBi" id="2o0RQQgfRfa" role="mwGJk">
-                      <node concept="37vLTw" id="2o0RQQgfRfb" role="2Oq$k0">
-                        <ref role="3cqZAo" node="2o0RQQgff8v" resolve="inputPort" />
+                    <node concept="37vLTw" id="2o0RQQgfRfb" role="mwGJk">
+                      <ref role="3cqZAo" node="2o0RQQgff8v" resolve="inputPortType" />
+                    </node>
+                  </node>
+                  <node concept="3cpWs3" id="4LsB5TjmvUb" role="3o8Qv2">
+                    <node concept="Xl_RD" id="4LsB5TjmvUe" role="3uHU7w">
+                      <property role="Xl_RC" value="'" />
+                    </node>
+                    <node concept="3cpWs3" id="4LsB5TjmvFh" role="3uHU7B">
+                      <node concept="3cpWs3" id="4LsB5TjmtRy" role="3uHU7B">
+                        <node concept="3cpWs3" id="4LsB5Tjmugk" role="3uHU7B">
+                          <node concept="2OqwBi" id="4LsB5TjmuB9" role="3uHU7w">
+                            <node concept="37vLTw" id="4LsB5TjmunB" role="2Oq$k0">
+                              <ref role="3cqZAo" node="2o0RQQgfljV" resolve="dataPort" />
+                            </node>
+                            <node concept="3TrEf2" id="4LsB5TjmuNc" role="2OqNvi">
+                              <ref role="3Tt5mk" to="yvgz:6po$YwiVDtx" resolve="type" />
+                            </node>
+                          </node>
+                          <node concept="Xl_RD" id="4LsB5TjmtRC" role="3uHU7B">
+                            <property role="Xl_RC" value="[Delay] 'Out' port of type '" />
+                          </node>
+                        </node>
+                        <node concept="Xl_RD" id="4LsB5TjmtRE" role="3uHU7w">
+                          <property role="Xl_RC" value="' incompatible with 'In' port of type '" />
+                        </node>
                       </node>
-                      <node concept="3TrEf2" id="2o0RQQgfRfc" role="2OqNvi">
-                        <ref role="3Tt5mk" to="yvgz:6po$YwiVDtx" resolve="type" />
+                      <node concept="37vLTw" id="4LsB5TjmvI_" role="3uHU7w">
+                        <ref role="3cqZAo" node="2o0RQQgff8v" resolve="inputPortType" />
                       </node>
                     </node>
                   </node>

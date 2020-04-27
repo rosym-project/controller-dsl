@@ -29,6 +29,7 @@
       <dependencies>
         <dependency reexport="false">9356c85b-d8d9-4f77-a6c3-7a0852b5bf29(Controller)</dependency>
         <dependency reexport="false">40039aa5-5dfd-4b77-8737-89f5a034d3fd(Algorithm_CGenerator#01)</dependency>
+        <dependency reexport="false">ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:990507d3-3527-4c54-bfe9-0ca3c9c6247a:com.dslfoundry.plaintextgen" version="0" />
