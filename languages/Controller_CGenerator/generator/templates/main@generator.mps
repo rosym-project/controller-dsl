@@ -303,8 +303,8 @@
     </node>
   </node>
   <node concept="jVnub" id="2FsRs4zCCSH">
-    <property role="TrG5h" value="switch_ControllerFunctionDeclare" />
-    <ref role="phYkn" to="2g3d:5Tr1VsJKqPb" resolve="switch_FunctionDeclare" />
+    <property role="TrG5h" value="switch_ControllerFuncDefinition" />
+    <ref role="phYkn" to="2g3d:5Tr1VsJKqPb" resolve="switch_FunctionDefinition" />
     <node concept="3aamgX" id="2FsRs4zCCT2" role="3aUrZf">
       <property role="36QftV" value="true" />
       <ref role="30HIoZ" to="g6sh:6zv7gRa0i2o" resolve="Sum" />
@@ -319,7 +319,7 @@
       <property role="36QftV" value="true" />
       <ref role="30HIoZ" to="g6sh:5gyKVURjHS1" resolve="Delay" />
       <node concept="j$656" id="4LsB5TjueVW" role="1lVwrX">
-        <ref role="v9R2y" node="4LsB5TjueVQ" resolve="reduce_DelayDeclare" />
+        <ref role="v9R2y" node="4LsB5TjueVQ" resolve="reduce_DelayDefinition" />
       </node>
     </node>
   </node>
@@ -781,7 +781,7 @@
     </node>
   </node>
   <node concept="13MO4I" id="4LsB5TjueVQ">
-    <property role="TrG5h" value="reduce_DelayDeclare" />
+    <property role="TrG5h" value="reduce_DelayDefinition" />
     <ref role="3gUMe" to="g6sh:5gyKVURjHS1" resolve="Delay" />
     <node concept="356WMU" id="4LsB5TjueVS" role="13RCb5">
       <node concept="356sEK" id="4LsB5Tjuf2T" role="383Ya9">
