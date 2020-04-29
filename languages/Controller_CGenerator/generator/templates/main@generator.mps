@@ -92,6 +92,9 @@
       </concept>
       <concept id="1202776937179" name="jetbrains.mps.lang.generator.structure.AbandonInput_RuleConsequence" flags="lg" index="b5Tf3" />
       <concept id="1095416546421" name="jetbrains.mps.lang.generator.structure.MappingConfiguration" flags="ig" index="bUwia" />
+      <concept id="1177093525992" name="jetbrains.mps.lang.generator.structure.InlineTemplate_RuleConsequence" flags="lg" index="gft3U">
+        <child id="1177093586806" name="templateNode" index="gfFT$" />
+      </concept>
       <concept id="5015072279636592410" name="jetbrains.mps.lang.generator.structure.VarMacro_ValueQuery" flags="in" index="2jfdEK" />
       <concept id="1168559333462" name="jetbrains.mps.lang.generator.structure.TemplateDeclarationReference" flags="ln" index="j$656" />
       <concept id="1112730859144" name="jetbrains.mps.lang.generator.structure.TemplateSwitch" flags="ig" index="jVnub">
@@ -303,7 +306,7 @@
     </node>
   </node>
   <node concept="jVnub" id="2FsRs4zCCSH">
-    <property role="TrG5h" value="switch_ControllerFuncDefinition" />
+    <property role="TrG5h" value="switch_ControllerFunctionDefinition" />
     <ref role="phYkn" to="2g3d:5Tr1VsJKqPb" resolve="switch_FunctionDefinition" />
     <node concept="3aamgX" id="2FsRs4zCCT2" role="3aUrZf">
       <property role="36QftV" value="true" />
@@ -791,22 +794,17 @@
             <property role="TrG5h" value="void " />
           </node>
           <node concept="356sEF" id="5Tr1VsJNEUg" role="356sEH">
-            <property role="TrG5h" value="functionName" />
-            <node concept="17Uvod" id="5Tr1VsJNEUm" role="lGtFl">
+            <property role="TrG5h" value="delayName" />
+            <node concept="17Uvod" id="w_xyS7bMgi" role="lGtFl">
               <property role="2qtEX9" value="name" />
               <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
-              <node concept="3zFVjK" id="5Tr1VsJNEUn" role="3zH0cK">
-                <node concept="3clFbS" id="5Tr1VsJNEUo" role="2VODD2">
-                  <node concept="3clFbF" id="5Tr1VsJNEYZ" role="3cqZAp">
-                    <node concept="3cpWs3" id="4LsB5Tjujtq" role="3clFbG">
-                      <node concept="Xl_RD" id="4LsB5TjuiXD" role="3uHU7B">
-                        <property role="Xl_RC" value="delay_" />
-                      </node>
-                      <node concept="2OqwBi" id="4LsB5Tjughu" role="3uHU7w">
-                        <node concept="3TrcHB" id="4LsB5Tjuk5Q" role="2OqNvi">
-                          <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                        </node>
-                        <node concept="30H73N" id="4LsB5TjujAL" role="2Oq$k0" />
+              <node concept="3zFVjK" id="w_xyS7bMgj" role="3zH0cK">
+                <node concept="3clFbS" id="w_xyS7bMgk" role="2VODD2">
+                  <node concept="3clFbF" id="w_xyS7bMkV" role="3cqZAp">
+                    <node concept="2OqwBi" id="w_xyS7bUfj" role="3clFbG">
+                      <node concept="30H73N" id="w_xyS7bU1A" role="2Oq$k0" />
+                      <node concept="3TrcHB" id="w_xyS7bUuQ" role="2OqNvi">
+                        <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                       </node>
                     </node>
                   </node>
@@ -1648,6 +1646,62 @@
         <node concept="2EixSi" id="4LsB5TjufCC" role="2EinRH" />
       </node>
       <node concept="raruj" id="4LsB5TjueVU" role="lGtFl" />
+    </node>
+  </node>
+  <node concept="jVnub" id="w_xyS7bkeV">
+    <property role="TrG5h" value="switch_ControllerFunctionDeclaration" />
+    <ref role="phYkn" to="2g3d:w_xyS7aKgB" resolve="switch_FunctionDeclaration" />
+    <node concept="3aamgX" id="w_xyS7bklB" role="3aUrZf">
+      <property role="36QftV" value="true" />
+      <ref role="30HIoZ" to="g6sh:6zv7gRa0i2o" resolve="Sum" />
+      <node concept="b5Tf3" id="w_xyS7bklF" role="1lVwrX" />
+    </node>
+    <node concept="3aamgX" id="w_xyS7bklI" role="3aUrZf">
+      <property role="36QftV" value="true" />
+      <ref role="30HIoZ" to="g6sh:5gyKVURkouv" resolve="Gain" />
+      <node concept="b5Tf3" id="w_xyS7bklO" role="1lVwrX" />
+    </node>
+    <node concept="3aamgX" id="w_xyS7bklR" role="3aUrZf">
+      <property role="36QftV" value="true" />
+      <ref role="30HIoZ" to="g6sh:5gyKVURjHS1" resolve="Delay" />
+      <node concept="gft3U" id="w_xyS7bm3a" role="1lVwrX">
+        <node concept="356WMU" id="w_xyS7bm3e" role="gfFT$">
+          <node concept="356sEK" id="w_xyS7bm3g" role="383Ya9">
+            <node concept="356sEF" id="w_xyS7btMO" role="356sEH">
+              <property role="TrG5h" value="void " />
+            </node>
+            <node concept="356sEF" id="w_xyS7btVa" role="356sEH">
+              <property role="TrG5h" value="delayName" />
+              <node concept="17Uvod" id="w_xyS7bKBV" role="lGtFl">
+                <property role="2qtEX9" value="name" />
+                <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+                <node concept="3zFVjK" id="w_xyS7bKBW" role="3zH0cK">
+                  <node concept="3clFbS" id="w_xyS7bKBX" role="2VODD2">
+                    <node concept="3clFbF" id="w_xyS7bKCn" role="3cqZAp">
+                      <node concept="2OqwBi" id="w_xyS7bV1W" role="3clFbG">
+                        <node concept="30H73N" id="w_xyS7bUOf" role="2Oq$k0" />
+                        <node concept="3TrcHB" id="w_xyS7bVdi" role="2OqNvi">
+                          <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="356sEF" id="w_xyS7bu1S" role="356sEH">
+              <property role="TrG5h" value="params" />
+              <node concept="5jKBG" id="w_xyS7bu1T" role="lGtFl">
+                <ref role="v9R2y" to="2g3d:5Tr1VsJLpoy" resolve="include_FunctionDeclareArgs" />
+              </node>
+            </node>
+            <node concept="356sEF" id="w_xyS7bm3y" role="356sEH">
+              <property role="TrG5h" value=";" />
+            </node>
+            <node concept="2EixSi" id="w_xyS7bm3z" role="2EinRH" />
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>
