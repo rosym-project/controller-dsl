@@ -52,6 +52,7 @@
       </concept>
     </language>
     <language id="9356c85b-d8d9-4f77-a6c3-7a0852b5bf29" name="Controller">
+      <concept id="587022858689393152" name="Controller.structure.SignFunction" flags="ng" index="f4FgI" />
       <concept id="511009320782585079" name="Controller.structure.Error" flags="ng" index="lfUiM" />
       <concept id="7556790644811833496" name="Controller.structure.Sum" flags="ng" index="2yRzQl">
         <child id="6358669349290676744" name="signs" index="SB1Ct" />
@@ -459,6 +460,61 @@
     <node concept="1psEHa" id="w_xyS72DAd" role="1psEGK">
       <ref role="1psEHb" node="w_xyS72D_W" resolve="calculate actuation" />
       <ref role="1psEGP" node="w_xyS72D_x" resolve="act_sum_trigger" />
+    </node>
+  </node>
+  <node concept="3bykSo" id="w_xyS7ckup">
+    <property role="TrG5h" value="abag" />
+    <node concept="1psEHa" id="w_xyS7ckvo" role="1psEGK">
+      <ref role="1psEHb" node="w_xyS7ckvm" resolve="trigSign" />
+      <ref role="1psEGP" node="4cDC_xhnaTC" resolve="signTrigger" />
+    </node>
+    <node concept="1OHxBB" id="w_xyS7ckv9" role="3SlQUq">
+      <ref role="1OHxBS" node="w_xyS7ckuq" resolve="errorIn" />
+      <ref role="1OHyup" node="4cDC_xhnaTD" resolve="input" />
+    </node>
+    <node concept="1OHxBB" id="w_xyS7ckve" role="3SlQUq">
+      <ref role="1OHyup" node="w_xyS7ckuF" resolve="access" />
+      <ref role="1OHxBS" node="4cDC_xhnaTE" resolve="output" />
+    </node>
+    <node concept="2__D7_" id="w_xyS7ckuQ" role="3SlQUj">
+      <property role="TrG5h" value="schedule" />
+      <node concept="2_qZNI" id="w_xyS7dMLw" role="2__D7$">
+        <ref role="2_qZNH" node="w_xyS7ckvm" resolve="trigSign" />
+      </node>
+      <node concept="1pt3V6" id="w_xyS7ckvm" role="1OHzVH">
+        <property role="TrG5h" value="trigSign" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+    </node>
+    <node concept="3bymMO" id="w_xyS7ckuC" role="3SlQUm">
+      <property role="TrG5h" value="signedError" />
+      <node concept="1OHxBU" id="w_xyS7ckuF" role="1ptsVk">
+        <property role="TrG5h" value="access" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="w_xyS7ckuJ" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="f4FgI" id="4cDC_xhnaTB" role="3SlQUd">
+      <property role="TrG5h" value="sign" />
+      <node concept="1pt3V6" id="4cDC_xhnaTC" role="2YOnzW">
+        <property role="TrG5h" value="signTrigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+      <node concept="1OHxBU" id="4cDC_xhnaTD" role="2YOnzZ">
+        <property role="TrG5h" value="input" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10P55v" id="4cDC_xhoj0_" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="4cDC_xhnaTE" role="2YOnzZ">
+        <property role="TrG5h" value="output" />
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <node concept="10P55v" id="4cDC_xhoj0B" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="lfUiM" id="w_xyS7ckuq" role="2YOnzZ">
+      <property role="TrG5h" value="errorIn" />
+      <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+      <node concept="10P55v" id="w_xyS7ckuu" role="1OHwi9" />
     </node>
   </node>
 </model>

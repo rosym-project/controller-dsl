@@ -1149,5 +1149,102 @@
       <ref role="1YaFvo" to="g6sh:5gyKVURkouv" resolve="Gain" />
     </node>
   </node>
+  <node concept="18kY7G" id="4cDC_xhmbPP">
+    <property role="TrG5h" value="check_SignFunction" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <node concept="3clFbS" id="4cDC_xhmbPQ" role="18ibNy">
+      <node concept="3cpWs8" id="4cDC_xhmbQs" role="3cqZAp">
+        <node concept="3cpWsn" id="4cDC_xhmbQv" role="3cpWs9">
+          <property role="TrG5h" value="sortedPorts" />
+          <node concept="2OqwBi" id="4cDC_xhmc28" role="33vP2m">
+            <node concept="1YBJjd" id="4cDC_xhmbQR" role="2Oq$k0">
+              <ref role="1YBMHb" node="4cDC_xhmbPS" resolve="signFunction" />
+            </node>
+            <node concept="2qgKlT" id="4cDC_xhmcdd" role="2OqNvi">
+              <ref role="37wK5l" to="ixp9:w_xyS7dNjI" resolve="getDataPortsByDirection" />
+            </node>
+          </node>
+          <node concept="3rvAFt" id="4cDC_xhmcsr" role="1tU5fm">
+            <node concept="2ZThk1" id="4cDC_xhmcx_" role="3rvQeY">
+              <ref role="2ZWj4r" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+            </node>
+            <node concept="2I9FWS" id="4cDC_xhmdfs" role="3rvSg0">
+              <ref role="2I9WkF" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="4cDC_xhmbPW" role="3cqZAp">
+        <node concept="3y3z36" id="4cDC_xhmgNk" role="3clFbw">
+          <node concept="3cmrfG" id="4cDC_xhmhRo" role="3uHU7w">
+            <property role="3cmrfH" value="1" />
+          </node>
+          <node concept="2OqwBi" id="4cDC_xhmiMf" role="3uHU7B">
+            <node concept="3EllGN" id="4cDC_xhmdHM" role="2Oq$k0">
+              <node concept="2OqwBi" id="4cDC_xhmei8" role="3ElVtu">
+                <node concept="1XH99k" id="4cDC_xhme4M" role="2Oq$k0">
+                  <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                </node>
+                <node concept="2ViDtV" id="4cDC_xhmeDP" role="2OqNvi">
+                  <ref role="2ViDtZ" to="yvgz:6po$YwiVCCm" resolve="In" />
+                </node>
+              </node>
+              <node concept="37vLTw" id="4cDC_xhmdlz" role="3ElQJh">
+                <ref role="3cqZAo" node="4cDC_xhmbQv" resolve="sortedPorts" />
+              </node>
+            </node>
+            <node concept="34oBXx" id="4cDC_xhmkNG" role="2OqNvi" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="4cDC_xhmbPY" role="3clFbx">
+          <node concept="2MkqsV" id="4cDC_xhmkPt" role="3cqZAp">
+            <node concept="Xl_RD" id="4cDC_xhmkPD" role="2MkJ7o">
+              <property role="Xl_RC" value="sign function must have exactly 1 input port" />
+            </node>
+            <node concept="1YBJjd" id="4cDC_xhmkQ_" role="1urrMF">
+              <ref role="1YBMHb" node="4cDC_xhmbPS" resolve="signFunction" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="4cDC_xhmlYa" role="3cqZAp">
+        <node concept="3y3z36" id="4cDC_xhmlYb" role="3clFbw">
+          <node concept="3cmrfG" id="4cDC_xhmlYc" role="3uHU7w">
+            <property role="3cmrfH" value="1" />
+          </node>
+          <node concept="2OqwBi" id="4cDC_xhmlYd" role="3uHU7B">
+            <node concept="3EllGN" id="4cDC_xhmlYe" role="2Oq$k0">
+              <node concept="2OqwBi" id="4cDC_xhmlYf" role="3ElVtu">
+                <node concept="1XH99k" id="4cDC_xhmlYg" role="2Oq$k0">
+                  <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                </node>
+                <node concept="2ViDtV" id="4cDC_xhmm8U" role="2OqNvi">
+                  <ref role="2ViDtZ" to="yvgz:6po$YwiVCCn" resolve="Out" />
+                </node>
+              </node>
+              <node concept="37vLTw" id="4cDC_xhmlYi" role="3ElQJh">
+                <ref role="3cqZAo" node="4cDC_xhmbQv" resolve="sortedPorts" />
+              </node>
+            </node>
+            <node concept="34oBXx" id="4cDC_xhmlYj" role="2OqNvi" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="4cDC_xhmlYk" role="3clFbx">
+          <node concept="2MkqsV" id="4cDC_xhmlYl" role="3cqZAp">
+            <node concept="Xl_RD" id="4cDC_xhmlYm" role="2MkJ7o">
+              <property role="Xl_RC" value="sign function must have exactly 1 output port" />
+            </node>
+            <node concept="1YBJjd" id="4cDC_xhmlYn" role="1urrMF">
+              <ref role="1YBMHb" node="4cDC_xhmbPS" resolve="signFunction" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="4cDC_xhmbPS" role="1YuTPh">
+      <property role="TrG5h" value="signFunction" />
+      <ref role="1YaFvo" to="g6sh:w_xyS7dN80" resolve="SignFunction" />
+    </node>
+  </node>
 </model>
 
