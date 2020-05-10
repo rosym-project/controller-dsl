@@ -8,6 +8,7 @@
   <imports>
     <import index="yvgz" ref="r:3b411c10-569a-4299-9505-176144359d3b(Algorithm.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -236,6 +237,28 @@
     <property role="3GE5qa" value="FunctionBlocks" />
     <property role="TrG5h" value="Gain" />
     <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
+  <node concept="1TIwiD" id="w_xyS7dN80">
+    <property role="EcuMT" value="587022858689393152" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="SignFunction" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
+  <node concept="1TIwiD" id="w_xyS7lMjU">
+    <property role="EcuMT" value="587022858691486970" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="Saturation" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+    <node concept="1TJgyi" id="w_xyS7lMjZ" role="1TKVEl">
+      <property role="IQ2nx" value="587022858691486975" />
+      <property role="TrG5h" value="low_threshold" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="w_xyS7lMk1" role="1TKVEl">
+      <property role="IQ2nx" value="587022858691486977" />
+      <property role="TrG5h" value="high_threshold" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
   </node>
 </model>
 
