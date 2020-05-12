@@ -260,5 +260,22 @@
       <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
     </node>
   </node>
+  <node concept="1TIwiD" id="3PnBpiiBzhT">
+    <property role="EcuMT" value="4420174820727993465" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="LowPassFilter" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
+  <node concept="1TIwiD" id="3PnBpiiDu$D">
+    <property role="EcuMT" value="4420174820728498473" />
+    <property role="3GE5qa" value="DataBlocks" />
+    <property role="TrG5h" value="Parameter" />
+    <ref role="1TJDcQ" to="yvgz:29RmJoXeePk" resolve="DataBlock" />
+    <node concept="1TJgyi" id="3PnBpiiDu$E" role="1TKVEl">
+      <property role="IQ2nx" value="4420174820728498474" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
+    </node>
+  </node>
 </model>
 

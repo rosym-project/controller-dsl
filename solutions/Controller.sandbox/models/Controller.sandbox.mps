@@ -59,6 +59,10 @@
         <child id="6358669349290676744" name="signs" index="SB1Ct" />
       </concept>
       <concept id="1892368997425517870" name="Controller.structure.Actuation" flags="ng" index="2DKpUX" />
+      <concept id="4420174820727993465" name="Controller.structure.LowPassFilter" flags="ng" index="2JMqBH" />
+      <concept id="4420174820728498473" name="Controller.structure.Parameter" flags="ng" index="2JWBiX">
+        <property id="4420174820728498474" name="value" index="2JWBiY" />
+      </concept>
       <concept id="6358669349290676739" name="Controller.structure.SignedPort" flags="ng" index="SB1Cm">
         <property id="6358669349290676742" name="sign" index="SB1Cj" />
         <reference id="6358669349290676740" name="port" index="SB1Ch" />
@@ -465,40 +469,193 @@
   </node>
   <node concept="3bykSo" id="w_xyS7ckup">
     <property role="TrG5h" value="abag" />
+    <node concept="2JWBiX" id="3PnBpiiDNF0" role="3SlQUm">
+      <property role="TrG5h" value="filterRatio" />
+      <property role="2JWBiY" value="0.7" />
+      <node concept="1OHxBU" id="3PnBpiiE2XM" role="1ptsVk">
+        <property role="TrG5h" value="alpha" />
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <node concept="10P55v" id="3PnBpiiE2XQ" role="1OHwi9" />
+      </node>
+    </node>
     <node concept="1psEHa" id="w_xyS7ckvo" role="1psEGK">
-      <ref role="1psEHb" node="w_xyS7ckvm" resolve="trigSign" />
-      <ref role="1psEGP" node="4cDC_xhnaTC" resolve="signTrigger" />
+      <ref role="1psEHb" node="w_xyS7ckvm" resolve="trigSignErr" />
+      <ref role="1psEGP" node="4cDC_xhnaTC" resolve="sign trigger" />
+    </node>
+    <node concept="1psEHa" id="3PnBpiiD62N" role="1psEGK">
+      <ref role="1psEHb" node="3PnBpiiD62D" resolve="trigGain" />
+      <ref role="1psEGP" node="3PnBpiiD60Z" resolve="gain trigger" />
+    </node>
+    <node concept="1psEHa" id="3PnBpiiDtcL" role="1psEGK">
+      <ref role="1psEHb" node="3PnBpiiDtc$" resolve="trigSum" />
+      <ref role="1psEGP" node="3PnBpiiD70z" resolve="sum trigger" />
+    </node>
+    <node concept="1psEHa" id="3PnBpiiE3af" role="1psEGK">
+      <ref role="1psEHb" node="3PnBpiiE39Z" resolve="trigFilter" />
+      <ref role="1psEGP" node="3PnBpiiE38M" resolve="error sign filter trigger" />
+    </node>
+    <node concept="1psEHa" id="3PnBpiiE3eZ" role="1psEGK">
+      <ref role="1psEHb" node="3PnBpiiE3eG" resolve="trigDelay" />
+      <ref role="1psEGP" node="3PnBpiiE3bX" resolve="error delay trigger" />
     </node>
     <node concept="1OHxBB" id="w_xyS7ckv9" role="3SlQUq">
       <ref role="1OHxBS" node="w_xyS7ckuq" resolve="errorIn" />
       <ref role="1OHyup" node="4cDC_xhnaTD" resolve="input" />
     </node>
     <node concept="1OHxBB" id="w_xyS7ckve" role="3SlQUq">
-      <ref role="1OHyup" node="w_xyS7ckuF" resolve="access" />
+      <ref role="1OHyup" node="w_xyS7ckuF" resolve="e_sgn" />
       <ref role="1OHxBS" node="4cDC_xhnaTE" resolve="output" />
+    </node>
+    <node concept="1OHxBB" id="3PnBpiiD61q" role="3SlQUq">
+      <ref role="1OHxBS" node="3PnBpiiCIY8" resolve="g" />
+      <ref role="1OHyup" node="3PnBpiiD610" resolve="actuation_gain" />
+    </node>
+    <node concept="1OHxBB" id="3PnBpiiD61$" role="3SlQUq">
+      <ref role="1OHxBS" node="w_xyS7ckuF" resolve="e_sgn" />
+      <ref role="1OHyup" node="3PnBpiiD611" resolve="actuation_gain_in" />
+    </node>
+    <node concept="1OHxBB" id="3PnBpiiE39p" role="3SlQUq">
+      <ref role="1OHxBS" node="w_xyS7ckuF" resolve="e_sgn" />
+      <ref role="1OHyup" node="3PnBpiiE38P" resolve="signal" />
+    </node>
+    <node concept="1OHxBB" id="3PnBpiiE39I" role="3SlQUq">
+      <ref role="1OHxBS" node="3PnBpiiE2XM" resolve="alpha" />
+      <ref role="1OHyup" node="3PnBpiiE38N" resolve="filterFactor" />
+    </node>
+    <node concept="1OHxBB" id="3PnBpiiE3b6" role="3SlQUq">
+      <ref role="1OHxBS" node="3PnBpiiE3aZ" resolve="e_bar" />
+      <ref role="1OHyup" node="3PnBpiiE38R" resolve="filteredSignal" />
+    </node>
+    <node concept="1OHxBB" id="3PnBpiiE3dP" role="3SlQUq">
+      <ref role="1OHxBS" node="3PnBpiiE3dI" resolve="e_bar_prev" />
+      <ref role="1OHyup" node="3PnBpiiE38Q" resolve="previousSignal" />
+    </node>
+    <node concept="1OHxBB" id="3PnBpiiE3e7" role="3SlQUq">
+      <ref role="1OHxBS" node="3PnBpiiE3bY" resolve="filtered_err_input" />
+      <ref role="1OHyup" node="3PnBpiiE3aZ" resolve="e_bar" />
+    </node>
+    <node concept="1OHxBB" id="3PnBpiiE3ep" role="3SlQUq">
+      <ref role="1OHxBS" node="3PnBpiiE3bZ" resolve="filtered_err_delay_1" />
+      <ref role="1OHyup" node="3PnBpiiE3dI" resolve="e_bar_prev" />
+    </node>
+    <node concept="1OHxBB" id="3PnBpiiD62v" role="3SlQUq">
+      <ref role="1OHxBS" node="3PnBpiiD612" resolve="actuation_gain_out" />
+      <ref role="1OHyup" node="3PnBpiiD624" resolve="g_e_sgn" />
+    </node>
+    <node concept="1OHxBB" id="3PnBpiiDtb9" role="3SlQUq">
+      <ref role="1OHxBS" node="3PnBpiiD70W" resolve="bias" />
+      <ref role="1OHyup" node="3PnBpiiDtb2" resolve="b" />
+    </node>
+    <node concept="1OHxBB" id="3PnBpiiDtbi" role="3SlQUq">
+      <ref role="1OHxBS" node="3PnBpiiD624" resolve="g_e_sgn" />
+      <ref role="1OHyup" node="3PnBpiiD717" resolve="gained_err_sign" />
+    </node>
+    <node concept="1OHxBB" id="3PnBpiiDtcn" role="3SlQUq">
+      <ref role="1OHxBS" node="3PnBpiiD70_" resolve="output_sum" />
+      <ref role="1OHyup" node="3PnBpiiDtbX" resolve="u" />
+    </node>
+    <node concept="1OHxBB" id="3PnBpiiDtcb" role="3SlQUq">
+      <ref role="1OHxBS" node="3PnBpiiDtbX" resolve="u" />
+      <ref role="1OHyup" node="4cDC_xhxngY" resolve="actuation" />
     </node>
     <node concept="2__D7_" id="w_xyS7ckuQ" role="3SlQUj">
       <property role="TrG5h" value="schedule" />
       <node concept="2_qZNI" id="w_xyS7dMLw" role="2__D7$">
-        <ref role="2_qZNH" node="w_xyS7ckvm" resolve="trigSign" />
+        <ref role="2_qZNH" node="w_xyS7ckvm" resolve="trigSignErr" />
+      </node>
+      <node concept="2_qZNI" id="3PnBpiiE3a9" role="2__D7$">
+        <ref role="2_qZNH" node="3PnBpiiE39Z" resolve="trigFilter" />
+      </node>
+      <node concept="2_qZNI" id="3PnBpiiD62J" role="2__D7$">
+        <ref role="2_qZNH" node="3PnBpiiD62D" resolve="trigGain" />
+      </node>
+      <node concept="2_qZNI" id="3PnBpiiDtcG" role="2__D7$">
+        <ref role="2_qZNH" node="3PnBpiiDtc$" resolve="trigSum" />
+      </node>
+      <node concept="2_qZNI" id="3PnBpiiE3eS" role="2__D7$">
+        <ref role="2_qZNH" node="3PnBpiiE3eG" resolve="trigDelay" />
       </node>
       <node concept="1pt3V6" id="w_xyS7ckvm" role="1OHzVH">
-        <property role="TrG5h" value="trigSign" />
+        <property role="TrG5h" value="trigSignErr" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1pt3V6" id="3PnBpiiD62D" role="1OHzVH">
+        <property role="TrG5h" value="trigGain" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1pt3V6" id="3PnBpiiDtc$" role="1OHzVH">
+        <property role="TrG5h" value="trigSum" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1pt3V6" id="3PnBpiiE39Z" role="1OHzVH">
+        <property role="TrG5h" value="trigFilter" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1pt3V6" id="3PnBpiiE3eG" role="1OHzVH">
+        <property role="TrG5h" value="trigDelay" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
     </node>
     <node concept="3bymMO" id="w_xyS7ckuC" role="3SlQUm">
-      <property role="TrG5h" value="signedError" />
+      <property role="TrG5h" value="errorSign" />
       <node concept="1OHxBU" id="w_xyS7ckuF" role="1ptsVk">
-        <property role="TrG5h" value="access" />
+        <property role="TrG5h" value="e_sgn" />
         <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
         <node concept="10P55v" id="w_xyS7ckuJ" role="1OHwi9" />
       </node>
     </node>
+    <node concept="3bymMO" id="3PnBpiiE3aC" role="3SlQUm">
+      <property role="TrG5h" value="filteredError" />
+      <node concept="1OHxBU" id="3PnBpiiE3aZ" role="1ptsVk">
+        <property role="TrG5h" value="e_bar" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="3PnBpiiE3b3" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="3bymMO" id="3PnBpiiE3dm" role="3SlQUm">
+      <property role="TrG5h" value="delayedFilteredErr" />
+      <node concept="1OHxBU" id="3PnBpiiE3dI" role="1ptsVk">
+        <property role="TrG5h" value="e_bar_prev" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="3PnBpiiE3dM" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="3bymMO" id="3PnBpiiCIXE" role="3SlQUm">
+      <property role="TrG5h" value="bias" />
+      <node concept="1OHxBU" id="3PnBpiiDtb2" role="1ptsVk">
+        <property role="TrG5h" value="b" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="3PnBpiiDtb6" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="3bymMO" id="3PnBpiiCIXZ" role="3SlQUm">
+      <property role="TrG5h" value="gain" />
+      <node concept="1OHxBU" id="3PnBpiiCIY8" role="1ptsVk">
+        <property role="TrG5h" value="g" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="3PnBpiiCIYc" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="3bymMO" id="3PnBpiiD61S" role="3SlQUm">
+      <property role="TrG5h" value="gainedSignedError" />
+      <node concept="1OHxBU" id="3PnBpiiD624" role="1ptsVk">
+        <property role="TrG5h" value="g_e_sgn" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="3PnBpiiD62k" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="3bymMO" id="3PnBpiiDtbI" role="3SlQUm">
+      <property role="TrG5h" value="actuation" />
+      <node concept="1OHxBU" id="3PnBpiiDtbX" role="1ptsVk">
+        <property role="TrG5h" value="u" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="3PnBpiiDtc1" role="1OHwi9" />
+      </node>
+    </node>
     <node concept="f4FgI" id="4cDC_xhnaTB" role="3SlQUd">
-      <property role="TrG5h" value="sign" />
+      <property role="TrG5h" value="sign_block" />
       <node concept="1pt3V6" id="4cDC_xhnaTC" role="2YOnzW">
-        <property role="TrG5h" value="signTrigger" />
+        <property role="TrG5h" value="sign trigger" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
       </node>
       <node concept="1OHxBU" id="4cDC_xhnaTD" role="2YOnzZ">
@@ -512,10 +669,110 @@
         <node concept="10P55v" id="4cDC_xhoj0B" role="1OHwi9" />
       </node>
     </node>
+    <node concept="3zsOgx" id="3PnBpiiD60Y" role="3SlQUd">
+      <property role="TrG5h" value="actuation_gain_block" />
+      <node concept="1pt3V6" id="3PnBpiiD60Z" role="2YOnzW">
+        <property role="TrG5h" value="gain trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+      <node concept="1OHxBU" id="3PnBpiiD610" role="2YOnzZ">
+        <property role="TrG5h" value="actuation_gain" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10P55v" id="3PnBpiiD61g" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="3PnBpiiD611" role="2YOnzZ">
+        <property role="TrG5h" value="actuation_gain_in" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10P55v" id="3PnBpiiD61i" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="3PnBpiiD612" role="2YOnzZ">
+        <property role="TrG5h" value="actuation_gain_out" />
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <node concept="10P55v" id="3PnBpiiD61k" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="2yRzQl" id="3PnBpiiD70y" role="3SlQUd">
+      <property role="TrG5h" value="actuation_sum_block" />
+      <node concept="SB1Cm" id="3PnBpiiD715" role="SB1Ct">
+        <ref role="SB1Ch" node="3PnBpiiD70W" resolve="bias" />
+      </node>
+      <node concept="SB1Cm" id="3PnBpiiD71i" role="SB1Ct">
+        <ref role="SB1Ch" node="3PnBpiiD717" resolve="gained_err_sign" />
+      </node>
+      <node concept="1pt3V6" id="3PnBpiiD70z" role="2YOnzW">
+        <property role="TrG5h" value="sum trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+      <node concept="1OHxBU" id="3PnBpiiD70_" role="2YOnzZ">
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <property role="TrG5h" value="output_sum" />
+        <node concept="10P55v" id="3PnBpiiD70U" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="3PnBpiiD70W" role="2YOnzZ">
+        <property role="TrG5h" value="bias" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10P55v" id="3PnBpiiD712" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="3PnBpiiD717" role="2YOnzZ">
+        <property role="TrG5h" value="gained_err_sign" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10P55v" id="3PnBpiiD71f" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="2JMqBH" id="3PnBpiiE38L" role="3SlQUd">
+      <property role="TrG5h" value="errSignFilter" />
+      <node concept="1pt3V6" id="3PnBpiiE38M" role="2YOnzW">
+        <property role="TrG5h" value="error sign filter trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+      <node concept="1OHxBU" id="3PnBpiiE38N" role="2YOnzZ">
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <property role="TrG5h" value="filterFactor" />
+        <node concept="10P55v" id="3PnBpiiE38O" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="3PnBpiiE38P" role="2YOnzZ">
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <property role="TrG5h" value="signal" />
+        <node concept="10P55v" id="3PnBpiiE39A" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="3PnBpiiE38Q" role="2YOnzZ">
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <property role="TrG5h" value="previousSignal" />
+        <node concept="10P55v" id="3PnBpiiE39E" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="3PnBpiiE38R" role="2YOnzZ">
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <property role="TrG5h" value="filteredSignal" />
+        <node concept="10P55v" id="3PnBpiiE39G" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="3zr1QZ" id="3PnBpiiE3bW" role="3SlQUd">
+      <property role="VnAIf" value="1" />
+      <property role="TrG5h" value="filteredErrDelay" />
+      <node concept="1pt3V6" id="3PnBpiiE3bX" role="2YOnzW">
+        <property role="TrG5h" value="error delay trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+      <node concept="1OHxBU" id="3PnBpiiE3bY" role="2YOnzZ">
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <property role="TrG5h" value="filtered_err_input" />
+        <node concept="10P55v" id="3PnBpiiE3cC" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="3PnBpiiE3bZ" role="2YOnzZ">
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <property role="TrG5h" value="filtered_err_delay_1" />
+        <node concept="10P55v" id="3PnBpiiE3cF" role="1OHwi9" />
+      </node>
+    </node>
     <node concept="lfUiM" id="w_xyS7ckuq" role="2YOnzZ">
       <property role="TrG5h" value="errorIn" />
       <property role="1OHxBQ" value="6po$YwiVCCm/In" />
       <node concept="10P55v" id="w_xyS7ckuu" role="1OHwi9" />
+    </node>
+    <node concept="2DKpUX" id="4cDC_xhxngY" role="2YOnzZ">
+      <property role="TrG5h" value="actuation" />
+      <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+      <node concept="10P55v" id="4cDC_xhxnh6" role="1OHwi9" />
     </node>
   </node>
 </model>
