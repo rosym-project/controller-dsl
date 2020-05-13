@@ -232,6 +232,10 @@
       <concept id="1160612413312" name="jetbrains.mps.baseLanguage.collections.structure.AddElementOperation" flags="nn" index="TSZUe" />
       <concept id="1162935959151" name="jetbrains.mps.baseLanguage.collections.structure.GetSizeOperation" flags="nn" index="34oBXx" />
       <concept id="1165525191778" name="jetbrains.mps.baseLanguage.collections.structure.GetFirstOperation" flags="nn" index="1uHKPH" />
+      <concept id="1225711141656" name="jetbrains.mps.baseLanguage.collections.structure.ListElementAccessExpression" flags="nn" index="1y4W85">
+        <child id="1225711182005" name="list" index="1y566C" />
+        <child id="1225711191269" name="index" index="1y58nS" />
+      </concept>
     </language>
   </registry>
   <node concept="13h7C7" id="6JwG7wexZ7u">
@@ -993,6 +997,50 @@
   <node concept="13h7C7" id="4cDC_xhgORA">
     <property role="3GE5qa" value="FunctionBlocks" />
     <ref role="13h7C2" to="g6sh:w_xyS7dN80" resolve="SignFunction" />
+    <node concept="13i0hz" id="3PnBpiiHmXW" role="13h7CS">
+      <property role="TrG5h" value="getInputPort" />
+      <node concept="3Tm1VV" id="3PnBpiiHmXX" role="1B3o_S" />
+      <node concept="3Tqbb2" id="3PnBpiiHmXY" role="3clF45">
+        <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+      </node>
+      <node concept="3clFbS" id="3PnBpiiHmXZ" role="3clF47">
+        <node concept="3cpWs6" id="3PnBpiiHmY0" role="3cqZAp">
+          <node concept="1y4W85" id="3PnBpiiHmY1" role="3cqZAk">
+            <node concept="3cmrfG" id="3PnBpiiHmY2" role="1y58nS">
+              <property role="3cmrfH" value="0" />
+            </node>
+            <node concept="2OqwBi" id="3PnBpiiHmY3" role="1y566C">
+              <node concept="13iPFW" id="3PnBpiiHmY4" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="3PnBpiiHmY5" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="3PnBpiiHomT" role="13h7CS">
+      <property role="TrG5h" value="getOutputPort" />
+      <node concept="3Tm1VV" id="3PnBpiiHomU" role="1B3o_S" />
+      <node concept="3Tqbb2" id="3PnBpiiHomV" role="3clF45">
+        <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+      </node>
+      <node concept="3clFbS" id="3PnBpiiHomW" role="3clF47">
+        <node concept="3cpWs6" id="3PnBpiiHomX" role="3cqZAp">
+          <node concept="1y4W85" id="3PnBpiiHomY" role="3cqZAk">
+            <node concept="3cmrfG" id="3PnBpiiHomZ" role="1y58nS">
+              <property role="3cmrfH" value="1" />
+            </node>
+            <node concept="2OqwBi" id="3PnBpiiHon0" role="1y566C">
+              <node concept="13iPFW" id="3PnBpiiHon1" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="3PnBpiiHon2" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="13hLZK" id="4cDC_xhgORB" role="13h7CW">
       <node concept="3clFbS" id="4cDC_xhgORC" role="2VODD2">
         <node concept="3cpWs8" id="4cDC_xhgORM" role="3cqZAp">
@@ -1131,6 +1179,94 @@
   <node concept="13h7C7" id="3PnBpiiBzhU">
     <property role="3GE5qa" value="FunctionBlocks" />
     <ref role="13h7C2" to="g6sh:3PnBpiiBzhT" resolve="LowPassFilter" />
+    <node concept="13i0hz" id="3PnBpiiGD3$" role="13h7CS">
+      <property role="TrG5h" value="getFilterRatioPort" />
+      <node concept="3Tm1VV" id="3PnBpiiGD3_" role="1B3o_S" />
+      <node concept="3Tqbb2" id="3PnBpiiGD$8" role="3clF45">
+        <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+      </node>
+      <node concept="3clFbS" id="3PnBpiiGD3B" role="3clF47">
+        <node concept="3cpWs6" id="3PnBpiiGD_b" role="3cqZAp">
+          <node concept="1y4W85" id="3PnBpiiGG8k" role="3cqZAk">
+            <node concept="3cmrfG" id="3PnBpiiGG9j" role="1y58nS">
+              <property role="3cmrfH" value="0" />
+            </node>
+            <node concept="2OqwBi" id="3PnBpiiGDL8" role="1y566C">
+              <node concept="13iPFW" id="3PnBpiiGD_E" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="3PnBpiiGDWA" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="3PnBpiiGHez" role="13h7CS">
+      <property role="TrG5h" value="getCurrentSignalPort" />
+      <node concept="3Tm1VV" id="3PnBpiiGHe$" role="1B3o_S" />
+      <node concept="3Tqbb2" id="3PnBpiiGHe_" role="3clF45">
+        <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+      </node>
+      <node concept="3clFbS" id="3PnBpiiGHeA" role="3clF47">
+        <node concept="3cpWs6" id="3PnBpiiGHeB" role="3cqZAp">
+          <node concept="1y4W85" id="3PnBpiiGHeC" role="3cqZAk">
+            <node concept="3cmrfG" id="3PnBpiiGHeD" role="1y58nS">
+              <property role="3cmrfH" value="1" />
+            </node>
+            <node concept="2OqwBi" id="3PnBpiiGHeE" role="1y566C">
+              <node concept="13iPFW" id="3PnBpiiGHeF" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="3PnBpiiGHeG" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="3PnBpiiGHQj" role="13h7CS">
+      <property role="TrG5h" value="getPreviousSignalPort" />
+      <node concept="3Tm1VV" id="3PnBpiiGHQk" role="1B3o_S" />
+      <node concept="3Tqbb2" id="3PnBpiiGHQl" role="3clF45">
+        <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+      </node>
+      <node concept="3clFbS" id="3PnBpiiGHQm" role="3clF47">
+        <node concept="3cpWs6" id="3PnBpiiGHQn" role="3cqZAp">
+          <node concept="1y4W85" id="3PnBpiiGHQo" role="3cqZAk">
+            <node concept="3cmrfG" id="3PnBpiiGHQp" role="1y58nS">
+              <property role="3cmrfH" value="2" />
+            </node>
+            <node concept="2OqwBi" id="3PnBpiiGHQq" role="1y566C">
+              <node concept="13iPFW" id="3PnBpiiGHQr" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="3PnBpiiGHQs" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="3PnBpiiGIx4" role="13h7CS">
+      <property role="TrG5h" value="getFilteredSignalPort" />
+      <node concept="3Tm1VV" id="3PnBpiiGIx5" role="1B3o_S" />
+      <node concept="3Tqbb2" id="3PnBpiiGIx6" role="3clF45">
+        <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+      </node>
+      <node concept="3clFbS" id="3PnBpiiGIx7" role="3clF47">
+        <node concept="3cpWs6" id="3PnBpiiGIx8" role="3cqZAp">
+          <node concept="1y4W85" id="3PnBpiiGIx9" role="3cqZAk">
+            <node concept="3cmrfG" id="3PnBpiiGIxa" role="1y58nS">
+              <property role="3cmrfH" value="3" />
+            </node>
+            <node concept="2OqwBi" id="3PnBpiiGIxb" role="1y566C">
+              <node concept="13iPFW" id="3PnBpiiGIxc" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="3PnBpiiGIxd" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="13hLZK" id="3PnBpiiBzhV" role="13h7CW">
       <node concept="3clFbS" id="3PnBpiiBzhW" role="2VODD2">
         <node concept="3cpWs8" id="3PnBpiiBzi6" role="3cqZAp">
@@ -1171,7 +1307,7 @@
         <node concept="3clFbF" id="3PnBpiiBENt" role="3cqZAp">
           <node concept="37vLTI" id="3PnBpiiBFwL" role="3clFbG">
             <node concept="Xl_RD" id="3PnBpiiBF_z" role="37vLTx">
-              <property role="Xl_RC" value="filterFactor" />
+              <property role="Xl_RC" value="filterRatio" />
             </node>
             <node concept="2OqwBi" id="3PnBpiiBF4B" role="37vLTJ">
               <node concept="37vLTw" id="3PnBpiiBENr" role="2Oq$k0">
