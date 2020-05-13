@@ -9,6 +9,7 @@
     <import index="g6sh" ref="r:7d1839fc-c0d4-418b-b0ae-9e1397d9f405(Controller.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="yvgz" ref="r:3b411c10-569a-4299-9505-176144359d3b(Algorithm.structure)" implicit="true" />
+    <import index="xfxr" ref="r:47c19eeb-604b-4ce7-bab1-09ee0ee52e0d(Controller.behavior)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -27,8 +28,16 @@
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
       <concept id="795210086017940429" name="jetbrains.mps.lang.editor.structure.ReadOnlyStyleClassItem" flags="lg" index="xShMh" />
+      <concept id="1078938745671" name="jetbrains.mps.lang.editor.structure.EditorComponentDeclaration" flags="ig" index="PKFIW" />
+      <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
+        <reference id="1078939183255" name="editorComponent" index="PMmxG" />
+      </concept>
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
+      </concept>
+      <concept id="1074767920765" name="jetbrains.mps.lang.editor.structure.CellModel_ModelAccess" flags="sg" stub="8104358048506729357" index="XafU7">
+        <property id="1082638248796" name="nullText" index="ihaIw" />
+        <child id="1176718152741" name="modelAcessor" index="3TRxkO" />
       </concept>
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
@@ -54,6 +63,20 @@
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
       </concept>
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
+      <concept id="1225898583838" name="jetbrains.mps.lang.editor.structure.ReadOnlyModelAccessor" flags="ng" index="1HfYo3">
+        <child id="1225898971709" name="getter" index="1Hhtcw" />
+      </concept>
+      <concept id="1225900081164" name="jetbrains.mps.lang.editor.structure.CellModel_ReadOnlyModelAccessor" flags="sg" stub="3708815482283559694" index="1HlG4h">
+        <child id="1225900141900" name="modelAccessor" index="1HlULh" />
+      </concept>
+      <concept id="1176717841777" name="jetbrains.mps.lang.editor.structure.QueryFunction_ModelAccess_Getter" flags="in" index="3TQlhw" />
+      <concept id="1176717871254" name="jetbrains.mps.lang.editor.structure.QueryFunction_ModelAccess_Setter" flags="in" index="3TQsA7" />
+      <concept id="1176717888428" name="jetbrains.mps.lang.editor.structure.QueryFunction_ModelAccess_Validator" flags="in" index="3TQwEX" />
+      <concept id="1176717996748" name="jetbrains.mps.lang.editor.structure.ModelAccessor" flags="ng" index="3TQVft">
+        <child id="1176718001874" name="getter" index="3TQWv3" />
+        <child id="1176718007938" name="setter" index="3TQXYj" />
+        <child id="1176718014393" name="validator" index="3TQZqC" />
+      </concept>
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
       </concept>
@@ -89,12 +112,19 @@
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
+      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
+        <property id="1068580123138" name="value" index="3clFbU" />
+      </concept>
       <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
+      <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
+        <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
+      </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="1966870290088668512" name="jetbrains.mps.lang.smodel.structure.Enum_MemberLiteral" flags="ng" index="2ViDtV">
         <reference id="1966870290088668516" name="memberDeclaration" index="2ViDtZ" />
       </concept>
@@ -411,6 +441,377 @@
         <property role="3F0ifm" value="}" />
         <node concept="3mYdg7" id="5afKWQLpx40" role="3F10Kt">
           <property role="1413C4" value="body-brace" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="3vEHYKomo7G">
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <ref role="1XX52x" to="g6sh:3vEHYKomo7B" resolve="SimpleDecisionMap" />
+    <node concept="3EZMnI" id="3vEHYKomo7I" role="2wV5jI">
+      <node concept="l2Vlx" id="3vEHYKomo7J" role="2iSdaV" />
+      <node concept="3F0ifn" id="3vEHYKomo7K" role="3EZMnx">
+        <property role="3F0ifm" value="simple decision map" />
+      </node>
+      <node concept="3F0A7n" id="3vEHYKomo7L" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="3vEHYKomo7M" role="3EZMnx">
+        <property role="3F0ifm" value="{" />
+        <node concept="3mYdg7" id="3vEHYKomo7N" role="3F10Kt">
+          <property role="1413C4" value="body-brace" />
+        </node>
+        <node concept="ljvvj" id="3vEHYKomo7O" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="3vEHYKomo7P" role="3EZMnx">
+        <node concept="3F0ifn" id="3vEHYKop$I6" role="3EZMnx">
+          <property role="3F0ifm" value="decisions: " />
+          <node concept="ljvvj" id="3vEHYKop_39" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="PMmxH" id="3vEHYKorCh5" role="3EZMnx">
+          <ref role="PMmxG" node="3vEHYKorAwv" resolve="DMOutputPort_Comp" />
+          <node concept="lj46D" id="3vEHYKorC_h" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F0ifn" id="3vEHYKoosIB" role="3EZMnx">
+          <property role="3F0ifm" value=" = " />
+        </node>
+        <node concept="3F0A7n" id="3vEHYKoot0E" role="3EZMnx">
+          <ref role="1NtTu8" to="g6sh:3vEHYKooplA" resolve="less_than_neg_threshold" />
+        </node>
+        <node concept="3F0ifn" id="3vEHYKoq7GR" role="3EZMnx">
+          <property role="3F0ifm" value=" when " />
+        </node>
+        <node concept="PMmxH" id="3vEHYKorEUK" role="3EZMnx">
+          <ref role="PMmxG" node="3vEHYKor_1w" resolve="DMInputPort_Comp" />
+        </node>
+        <node concept="3F0ifn" id="3vEHYKoorFw" role="3EZMnx">
+          <property role="3F0ifm" value=" &lt; " />
+        </node>
+        <node concept="3F0ifn" id="3vEHYKoorXo" role="3EZMnx">
+          <property role="3F0ifm" value="-" />
+        </node>
+        <node concept="XafU7" id="3vEHYKooyQA" role="3EZMnx">
+          <property role="ihaIw" value="threshold" />
+          <node concept="3TQVft" id="3vEHYKooyQC" role="3TRxkO">
+            <node concept="3TQlhw" id="3vEHYKooyQE" role="3TQWv3">
+              <node concept="3clFbS" id="3vEHYKooyQG" role="2VODD2">
+                <node concept="3clFbF" id="3vEHYKooyUf" role="3cqZAp">
+                  <node concept="2OqwBi" id="3vEHYKoozfW" role="3clFbG">
+                    <node concept="2OqwBi" id="3vEHYKooz15" role="2Oq$k0">
+                      <node concept="pncrf" id="3vEHYKooyUe" role="2Oq$k0" />
+                      <node concept="2qgKlT" id="3vEHYKooz2W" role="2OqNvi">
+                        <ref role="37wK5l" to="xfxr:3vEHYKoovKN" resolve="getThresholdPort" />
+                      </node>
+                    </node>
+                    <node concept="3TrcHB" id="3vEHYKoozwn" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3TQsA7" id="3vEHYKooyQI" role="3TQXYj">
+              <node concept="3clFbS" id="3vEHYKooyQK" role="2VODD2" />
+            </node>
+            <node concept="3TQwEX" id="3vEHYKooyQM" role="3TQZqC">
+              <node concept="3clFbS" id="3vEHYKooyQO" role="2VODD2">
+                <node concept="3clFbF" id="3vEHYKoozL5" role="3cqZAp">
+                  <node concept="3clFbT" id="3vEHYKoozL4" role="3clFbG">
+                    <property role="3clFbU" value="true" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="xShMh" id="3vEHYKoozKk" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="ljvvj" id="3vEHYKoq9B6" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="PMmxH" id="3vEHYKorDDS" role="3EZMnx">
+          <ref role="PMmxG" node="3vEHYKorAwv" resolve="DMOutputPort_Comp" />
+          <node concept="lj46D" id="3vEHYKorDMg" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F0ifn" id="3vEHYKop2AA" role="3EZMnx">
+          <property role="3F0ifm" value=" = " />
+        </node>
+        <node concept="3F0A7n" id="3vEHYKop2N6" role="3EZMnx">
+          <ref role="1NtTu8" to="g6sh:3vEHYKooplC" resolve="within_threshold" />
+        </node>
+        <node concept="3F0ifn" id="3vEHYKoq8o3" role="3EZMnx">
+          <property role="3F0ifm" value=" when " />
+        </node>
+        <node concept="3F0ifn" id="3vEHYKop0RX" role="3EZMnx">
+          <property role="3F0ifm" value="-" />
+          <node concept="lj46D" id="3vEHYKopBfo" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="PMmxH" id="3vEHYKos9PZ" role="3EZMnx">
+          <ref role="PMmxG" node="3vEHYKos8oV" resolve="DMSimpleThresholdPort_Comp" />
+        </node>
+        <node concept="3F0ifn" id="3vEHYKop0EX" role="3EZMnx">
+          <property role="3F0ifm" value=" &lt; " />
+        </node>
+        <node concept="PMmxH" id="3vEHYKorFOl" role="3EZMnx">
+          <ref role="PMmxG" node="3vEHYKor_1w" resolve="DMInputPort_Comp" />
+        </node>
+        <node concept="3F0ifn" id="3vEHYKop1pq" role="3EZMnx">
+          <property role="3F0ifm" value=" &lt; " />
+        </node>
+        <node concept="XafU7" id="3vEHYKop1$3" role="3EZMnx">
+          <property role="ihaIw" value="threshold" />
+          <node concept="3TQVft" id="3vEHYKop1$4" role="3TRxkO">
+            <node concept="3TQlhw" id="3vEHYKop1$5" role="3TQWv3">
+              <node concept="3clFbS" id="3vEHYKop1$6" role="2VODD2">
+                <node concept="3clFbF" id="3vEHYKop1$7" role="3cqZAp">
+                  <node concept="2OqwBi" id="3vEHYKop1$8" role="3clFbG">
+                    <node concept="2OqwBi" id="3vEHYKop1$9" role="2Oq$k0">
+                      <node concept="pncrf" id="3vEHYKop1$a" role="2Oq$k0" />
+                      <node concept="2qgKlT" id="3vEHYKop1$b" role="2OqNvi">
+                        <ref role="37wK5l" to="xfxr:3vEHYKoovKN" resolve="getThresholdPort" />
+                      </node>
+                    </node>
+                    <node concept="3TrcHB" id="3vEHYKop1$c" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3TQsA7" id="3vEHYKop1$d" role="3TQXYj">
+              <node concept="3clFbS" id="3vEHYKop1$e" role="2VODD2" />
+            </node>
+            <node concept="3TQwEX" id="3vEHYKop1$f" role="3TQZqC">
+              <node concept="3clFbS" id="3vEHYKop1$g" role="2VODD2">
+                <node concept="3clFbF" id="3vEHYKop1$h" role="3cqZAp">
+                  <node concept="3clFbT" id="3vEHYKop1$i" role="3clFbG">
+                    <property role="3clFbU" value="true" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="xShMh" id="3vEHYKop1$j" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="ljvvj" id="3vEHYKoqdg_" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="PMmxH" id="3vEHYKorEra" role="3EZMnx">
+          <ref role="PMmxG" node="3vEHYKorAwv" resolve="DMOutputPort_Comp" />
+          <node concept="lj46D" id="3vEHYKorEyA" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F0ifn" id="3vEHYKopxye" role="3EZMnx">
+          <property role="3F0ifm" value=" = " />
+        </node>
+        <node concept="3F0A7n" id="3vEHYKopxjG" role="3EZMnx">
+          <ref role="1NtTu8" to="g6sh:3vEHYKooplF" resolve="more_than_pos_threshold" />
+        </node>
+        <node concept="3F0ifn" id="3vEHYKoqejT" role="3EZMnx">
+          <property role="3F0ifm" value=" when " />
+        </node>
+        <node concept="PMmxH" id="3vEHYKorG3w" role="3EZMnx">
+          <ref role="PMmxG" node="3vEHYKor_1w" resolve="DMInputPort_Comp" />
+        </node>
+        <node concept="3F0ifn" id="3vEHYKopyWF" role="3EZMnx">
+          <property role="3F0ifm" value=" &gt; " />
+        </node>
+        <node concept="XafU7" id="3vEHYKopz55" role="3EZMnx">
+          <property role="ihaIw" value="threshold" />
+          <node concept="3TQVft" id="3vEHYKopz56" role="3TRxkO">
+            <node concept="3TQlhw" id="3vEHYKopz57" role="3TQWv3">
+              <node concept="3clFbS" id="3vEHYKopz58" role="2VODD2">
+                <node concept="3clFbF" id="3vEHYKopz59" role="3cqZAp">
+                  <node concept="2OqwBi" id="3vEHYKopz5a" role="3clFbG">
+                    <node concept="2OqwBi" id="3vEHYKopz5b" role="2Oq$k0">
+                      <node concept="pncrf" id="3vEHYKopz5c" role="2Oq$k0" />
+                      <node concept="2qgKlT" id="3vEHYKopz5d" role="2OqNvi">
+                        <ref role="37wK5l" to="xfxr:3vEHYKoovKN" resolve="getThresholdPort" />
+                      </node>
+                    </node>
+                    <node concept="3TrcHB" id="3vEHYKopz5e" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3TQsA7" id="3vEHYKopz5f" role="3TQXYj">
+              <node concept="3clFbS" id="3vEHYKopz5g" role="2VODD2" />
+            </node>
+            <node concept="3TQwEX" id="3vEHYKopz5h" role="3TQZqC">
+              <node concept="3clFbS" id="3vEHYKopz5i" role="2VODD2">
+                <node concept="3clFbF" id="3vEHYKopz5j" role="3cqZAp">
+                  <node concept="3clFbT" id="3vEHYKopz5k" role="3clFbG">
+                    <property role="3clFbU" value="true" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="xShMh" id="3vEHYKopz5l" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="ljvvj" id="3vEHYKoqeO$" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="l2Vlx" id="3vEHYKomo7Q" role="2iSdaV" />
+        <node concept="lj46D" id="3vEHYKomo7R" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="3F0ifn" id="3vEHYKopCtd" role="3EZMnx">
+          <node concept="ljvvj" id="3vEHYKopCBt" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F0ifn" id="3vEHYKomo7S" role="3EZMnx">
+          <property role="3F0ifm" value="data_ports" />
+        </node>
+        <node concept="3F0ifn" id="3vEHYKomo7T" role="3EZMnx">
+          <property role="3F0ifm" value=":" />
+          <node concept="11L4FC" id="3vEHYKomo7U" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="ljvvj" id="3vEHYKomo7V" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F2HdR" id="3vEHYKomo7W" role="3EZMnx">
+          <ref role="1NtTu8" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+          <node concept="l2Vlx" id="3vEHYKomo7X" role="2czzBx" />
+          <node concept="pj6Ft" id="3vEHYKomo7Y" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="lj46D" id="3vEHYKomo7Z" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="ljvvj" id="3vEHYKomo80" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F0ifn" id="3vEHYKomo83" role="3EZMnx">
+          <property role="3F0ifm" value="trigger_ports" />
+        </node>
+        <node concept="3F0ifn" id="3vEHYKomo84" role="3EZMnx">
+          <property role="3F0ifm" value=":" />
+          <node concept="11L4FC" id="3vEHYKomo85" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="ljvvj" id="3vEHYKomo86" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F2HdR" id="3vEHYKomo87" role="3EZMnx">
+          <ref role="1NtTu8" to="yvgz:3eP8Zudp5Gb" resolve="trigger_ports" />
+          <node concept="l2Vlx" id="3vEHYKomo88" role="2czzBx" />
+          <node concept="pj6Ft" id="3vEHYKomo89" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="lj46D" id="3vEHYKomo8a" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="ljvvj" id="3vEHYKomo8b" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="3vEHYKomo8c" role="3EZMnx">
+        <property role="3F0ifm" value="}" />
+        <node concept="3mYdg7" id="3vEHYKomo8d" role="3F10Kt">
+          <property role="1413C4" value="body-brace" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="PKFIW" id="3vEHYKor_1w">
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="DMInputPort_Comp" />
+    <ref role="1XX52x" to="g6sh:3vEHYKomnTQ" resolve="DecisionMap" />
+    <node concept="1HlG4h" id="3vEHYKor_1y" role="2wV5jI">
+      <node concept="1HfYo3" id="3vEHYKor_1$" role="1HlULh">
+        <node concept="3TQlhw" id="3vEHYKor_1A" role="1Hhtcw">
+          <node concept="3clFbS" id="3vEHYKor_1C" role="2VODD2">
+            <node concept="3clFbF" id="3vEHYKor_6u" role="3cqZAp">
+              <node concept="2OqwBi" id="3vEHYKor_Jt" role="3clFbG">
+                <node concept="2OqwBi" id="3vEHYKor_k8" role="2Oq$k0">
+                  <node concept="pncrf" id="3vEHYKor_6t" role="2Oq$k0" />
+                  <node concept="2qgKlT" id="3vEHYKor_Ay" role="2OqNvi">
+                    <ref role="37wK5l" to="xfxr:3vEHYKom_p3" resolve="getInputPort" />
+                  </node>
+                </node>
+                <node concept="3TrcHB" id="3vEHYKor_ZS" role="2OqNvi">
+                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="PKFIW" id="3vEHYKorAwv">
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="DMOutputPort_Comp" />
+    <ref role="1XX52x" to="g6sh:3vEHYKomnTQ" resolve="DecisionMap" />
+    <node concept="1HlG4h" id="3vEHYKorAwx" role="2wV5jI">
+      <node concept="1HfYo3" id="3vEHYKorAwz" role="1HlULh">
+        <node concept="3TQlhw" id="3vEHYKorAw_" role="1Hhtcw">
+          <node concept="3clFbS" id="3vEHYKorAwB" role="2VODD2">
+            <node concept="3clFbF" id="3vEHYKorA_g" role="3cqZAp">
+              <node concept="2OqwBi" id="3vEHYKorBqp" role="3clFbG">
+                <node concept="2OqwBi" id="3vEHYKorAKi" role="2Oq$k0">
+                  <node concept="pncrf" id="3vEHYKorA_f" role="2Oq$k0" />
+                  <node concept="2qgKlT" id="3vEHYKorBad" role="2OqNvi">
+                    <ref role="37wK5l" to="xfxr:3vEHYKomC$e" resolve="getOutputPort" />
+                  </node>
+                </node>
+                <node concept="3TrcHB" id="3vEHYKorBEO" role="2OqNvi">
+                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="PKFIW" id="3vEHYKos8oV">
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="DMSimpleThresholdPort_Comp" />
+    <ref role="1XX52x" to="g6sh:3vEHYKomo7B" resolve="SimpleDecisionMap" />
+    <node concept="1HlG4h" id="3vEHYKos8oX" role="2wV5jI">
+      <node concept="1HfYo3" id="3vEHYKos8oZ" role="1HlULh">
+        <node concept="3TQlhw" id="3vEHYKos8p1" role="1Hhtcw">
+          <node concept="3clFbS" id="3vEHYKos8p3" role="2VODD2">
+            <node concept="3clFbF" id="3vEHYKos8tG" role="3cqZAp">
+              <node concept="2OqwBi" id="3vEHYKos9fE" role="3clFbG">
+                <node concept="2OqwBi" id="3vEHYKos8G0" role="2Oq$k0">
+                  <node concept="pncrf" id="3vEHYKos8tF" role="2Oq$k0" />
+                  <node concept="2qgKlT" id="3vEHYKos902" role="2OqNvi">
+                    <ref role="37wK5l" to="xfxr:3vEHYKoovKN" resolve="getThresholdPort" />
+                  </node>
+                </node>
+                <node concept="3TrcHB" id="3vEHYKos9rS" role="2OqNvi">
+                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
       </node>
     </node>

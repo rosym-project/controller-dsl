@@ -277,5 +277,32 @@
       <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
     </node>
   </node>
+  <node concept="1TIwiD" id="3vEHYKomnTQ">
+    <property role="EcuMT" value="4029235041285013110" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="DecisionMap" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
+  <node concept="1TIwiD" id="3vEHYKomo7B">
+    <property role="EcuMT" value="4029235041285013991" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="SimpleDecisionMap" />
+    <ref role="1TJDcQ" node="3vEHYKomnTQ" resolve="DecisionMap" />
+    <node concept="1TJgyi" id="3vEHYKooplA" role="1TKVEl">
+      <property role="IQ2nx" value="4029235041285543270" />
+      <property role="TrG5h" value="less_than_neg_threshold" />
+      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
+    </node>
+    <node concept="1TJgyi" id="3vEHYKooplC" role="1TKVEl">
+      <property role="IQ2nx" value="4029235041285543272" />
+      <property role="TrG5h" value="within_threshold" />
+      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
+    </node>
+    <node concept="1TJgyi" id="3vEHYKooplF" role="1TKVEl">
+      <property role="IQ2nx" value="4029235041285543275" />
+      <property role="TrG5h" value="more_than_pos_threshold" />
+      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
+    </node>
+  </node>
 </model>
 
