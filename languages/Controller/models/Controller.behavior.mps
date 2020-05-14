@@ -645,6 +645,72 @@
   <node concept="13h7C7" id="5Tr1VsJA251">
     <property role="3GE5qa" value="FunctionBlocks" />
     <ref role="13h7C2" to="g6sh:5gyKVURkouv" resolve="Gain" />
+    <node concept="13i0hz" id="6P2HqMS$Nbe" role="13h7CS">
+      <property role="TrG5h" value="getGainPort" />
+      <node concept="3Tm1VV" id="6P2HqMS$Nbf" role="1B3o_S" />
+      <node concept="3Tqbb2" id="6P2HqMS$Nbg" role="3clF45">
+        <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+      </node>
+      <node concept="3clFbS" id="6P2HqMS$Nbh" role="3clF47">
+        <node concept="3clFbF" id="6P2HqMS$Nbi" role="3cqZAp">
+          <node concept="1y4W85" id="6P2HqMS$Nbj" role="3clFbG">
+            <node concept="3cmrfG" id="6P2HqMS$Nbk" role="1y58nS">
+              <property role="3cmrfH" value="0" />
+            </node>
+            <node concept="2OqwBi" id="6P2HqMS$Nbl" role="1y566C">
+              <node concept="13iPFW" id="6P2HqMS$Nbm" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="6P2HqMS$Nbn" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="6P2HqMS$Nbo" role="13h7CS">
+      <property role="TrG5h" value="getInputPort" />
+      <node concept="3Tm1VV" id="6P2HqMS$Nbp" role="1B3o_S" />
+      <node concept="3Tqbb2" id="6P2HqMS$Nbq" role="3clF45">
+        <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+      </node>
+      <node concept="3clFbS" id="6P2HqMS$Nbr" role="3clF47">
+        <node concept="3clFbF" id="6P2HqMS$Nbs" role="3cqZAp">
+          <node concept="1y4W85" id="6P2HqMS$Nbt" role="3clFbG">
+            <node concept="3cmrfG" id="6P2HqMS$Nbu" role="1y58nS">
+              <property role="3cmrfH" value="1" />
+            </node>
+            <node concept="2OqwBi" id="6P2HqMS$Nbv" role="1y566C">
+              <node concept="13iPFW" id="6P2HqMS$Nbw" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="6P2HqMS$Nbx" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="6P2HqMS$NCE" role="13h7CS">
+      <property role="TrG5h" value="getOutputPort" />
+      <node concept="3Tm1VV" id="6P2HqMS$NCF" role="1B3o_S" />
+      <node concept="3Tqbb2" id="6P2HqMS$NCG" role="3clF45">
+        <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+      </node>
+      <node concept="3clFbS" id="6P2HqMS$NCH" role="3clF47">
+        <node concept="3clFbF" id="6P2HqMS$NCI" role="3cqZAp">
+          <node concept="1y4W85" id="6P2HqMS$NCJ" role="3clFbG">
+            <node concept="3cmrfG" id="6P2HqMS$NCK" role="1y58nS">
+              <property role="3cmrfH" value="2" />
+            </node>
+            <node concept="2OqwBi" id="6P2HqMS$NCL" role="1y566C">
+              <node concept="13iPFW" id="6P2HqMS$NCM" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="6P2HqMS$NCN" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="13hLZK" id="5Tr1VsJA252" role="13h7CW">
       <node concept="3clFbS" id="5Tr1VsJA253" role="2VODD2">
         <node concept="3cpWs8" id="5Tr1VsJAvRD" role="3cqZAp">
@@ -665,7 +731,7 @@
         <node concept="3clFbF" id="5Tr1VsJAwl2" role="3cqZAp">
           <node concept="37vLTI" id="5Tr1VsJAx5D" role="3clFbG">
             <node concept="Xl_RD" id="5Tr1VsJAx6c" role="37vLTx">
-              <property role="Xl_RC" value="_gain" />
+              <property role="Xl_RC" value="gain" />
             </node>
             <node concept="2OqwBi" id="5Tr1VsJAwBN" role="37vLTJ">
               <node concept="37vLTw" id="5Tr1VsJAwl0" role="2Oq$k0">
@@ -731,7 +797,7 @@
         <node concept="3clFbF" id="5Tr1VsJABmt" role="3cqZAp">
           <node concept="37vLTI" id="5Tr1VsJABmu" role="3clFbG">
             <node concept="Xl_RD" id="5Tr1VsJABmv" role="37vLTx">
-              <property role="Xl_RC" value="_in" />
+              <property role="Xl_RC" value="input" />
             </node>
             <node concept="2OqwBi" id="5Tr1VsJABmw" role="37vLTJ">
               <node concept="37vLTw" id="5Tr1VsJABmx" role="2Oq$k0">
@@ -797,7 +863,7 @@
         <node concept="3clFbF" id="5Tr1VsJABP0" role="3cqZAp">
           <node concept="37vLTI" id="5Tr1VsJABP1" role="3clFbG">
             <node concept="Xl_RD" id="5Tr1VsJABP2" role="37vLTx">
-              <property role="Xl_RC" value="_out" />
+              <property role="Xl_RC" value="output" />
             </node>
             <node concept="2OqwBi" id="5Tr1VsJABP3" role="37vLTJ">
               <node concept="37vLTw" id="5Tr1VsJABP4" role="2Oq$k0">
