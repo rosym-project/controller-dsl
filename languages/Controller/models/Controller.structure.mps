@@ -250,15 +250,15 @@
     <property role="3GE5qa" value="FunctionBlocks" />
     <property role="TrG5h" value="Saturation" />
     <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
-    <node concept="1TJgyi" id="w_xyS7lMjZ" role="1TKVEl">
-      <property role="IQ2nx" value="587022858691486975" />
-      <property role="TrG5h" value="low_threshold" />
-      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    <node concept="1TJgyi" id="3r7wy8GZnxk" role="1TKVEl">
+      <property role="IQ2nx" value="3947266681708836948" />
+      <property role="TrG5h" value="lower_threshold" />
+      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
     </node>
-    <node concept="1TJgyi" id="w_xyS7lMk1" role="1TKVEl">
-      <property role="IQ2nx" value="587022858691486977" />
-      <property role="TrG5h" value="high_threshold" />
-      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    <node concept="1TJgyi" id="3r7wy8GZnxm" role="1TKVEl">
+      <property role="IQ2nx" value="3947266681708836950" />
+      <property role="TrG5h" value="upper_threshold" />
+      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
     </node>
   </node>
   <node concept="1TIwiD" id="3PnBpiiBzhT">

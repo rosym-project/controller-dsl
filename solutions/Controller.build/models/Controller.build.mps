@@ -265,9 +265,9 @@
           <ref role="3bR37D" to="ffeo:1d41uYMTVPB" resolve="jetbrains.mps.lang.scopes.runtime" />
         </node>
       </node>
-      <node concept="1SiIV0" id="5Tr1VsJC2Q0" role="3bR37C">
-        <node concept="3bR9La" id="5Tr1VsJC2Q1" role="1SiIV1">
-          <ref role="3bR37D" to="empi:1byp$lDFZXj" resolve="Algorithm" />
+      <node concept="1SiIV0" id="3r7wy8H12cJ" role="3bR37C">
+        <node concept="3bR9La" id="3r7wy8H12cK" role="1SiIV1">
+          <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
         </node>
       </node>
     </node>

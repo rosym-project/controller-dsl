@@ -54,12 +54,16 @@
     </language>
     <language id="9356c85b-d8d9-4f77-a6c3-7a0852b5bf29" name="Controller">
       <concept id="587022858689393152" name="Controller.structure.SignFunction" flags="ng" index="f4FgI" />
+      <concept id="587022858691486970" name="Controller.structure.Saturation" flags="ng" index="fsEbk">
+        <property id="3947266681708836950" name="upper_threshold" index="qeJDO" />
+        <property id="3947266681708836948" name="lower_threshold" index="qeJDQ" />
+      </concept>
       <concept id="511009320782585079" name="Controller.structure.Error" flags="ng" index="lfUiM" />
       <concept id="7556790644811833496" name="Controller.structure.Sum" flags="ng" index="2yRzQl">
         <child id="6358669349290676744" name="signs" index="SB1Ct" />
       </concept>
       <concept id="1892368997425517870" name="Controller.structure.Actuation" flags="ng" index="2DKpUX" />
-      <concept id="4029235041285013991" name="Controller.structure.SimpleDecisionMap" flags="ng" index="JGNob">
+      <concept id="4029235041285013991" name="Controller.structure.DecisionMapSimple" flags="ng" index="JGNob">
         <property id="4029235041285543272" name="within_threshold" index="JyMa4" />
         <property id="4029235041285543275" name="more_than_pos_threshold" index="JyMa7" />
         <property id="4029235041285543270" name="less_than_neg_threshold" index="JyMaa" />
@@ -497,11 +501,11 @@
       <ref role="1psEGP" node="4cDC_xhnaTC" resolve="sign trigger" />
     </node>
     <node concept="1psEHa" id="3PnBpiiD62N" role="1psEGK">
-      <ref role="1psEHb" node="3PnBpiiD62D" resolve="trigGain" />
+      <ref role="1psEHb" node="3PnBpiiD62D" resolve="trigActuationGain" />
       <ref role="1psEGP" node="3PnBpiiD60Z" resolve="gain trigger" />
     </node>
     <node concept="1psEHa" id="3PnBpiiDtcL" role="1psEGK">
-      <ref role="1psEHb" node="3PnBpiiDtc$" resolve="trigSum" />
+      <ref role="1psEHb" node="3PnBpiiDtc$" resolve="trigActuationSum" />
       <ref role="1psEGP" node="3PnBpiiD70z" resolve="sum trigger" />
     </node>
     <node concept="1psEHa" id="3PnBpiiE3af" role="1psEGK">
@@ -509,12 +513,16 @@
       <ref role="1psEGP" node="3PnBpiiE38M" resolve="error sign filter trigger" />
     </node>
     <node concept="1psEHa" id="3PnBpiiE3eZ" role="1psEGK">
-      <ref role="1psEHb" node="3PnBpiiE3eG" resolve="trigDelay" />
+      <ref role="1psEHb" node="3PnBpiiE3eG" resolve="trigErrorDelay" />
       <ref role="1psEGP" node="3PnBpiiE3bX" resolve="error delay trigger" />
     </node>
     <node concept="1psEHa" id="6P2HqMSwRXh" role="1psEGK">
       <ref role="1psEHb" node="6P2HqMSwRWV" resolve="trigBiasDecision" />
-      <ref role="1psEGP" node="3vEHYKooZjy" resolve="trigger" />
+      <ref role="1psEGP" node="3vEHYKooZjy" resolve="bias decision map trigger" />
+    </node>
+    <node concept="1psEHa" id="3r7wy8H0vCp" role="1psEGK">
+      <ref role="1psEHb" node="3r7wy8H0vAW" resolve="trigActuationSaturation" />
+      <ref role="1psEGP" node="3r7wy8H0v_8" resolve="actuation saturation trigger" />
     </node>
     <node concept="1OHxBB" id="w_xyS7ckv9" role="3SlQUq">
       <ref role="1OHxBS" node="w_xyS7ckuq" resolve="errorIn" />
@@ -584,6 +592,14 @@
       <ref role="1OHxBS" node="3PnBpiiD70_" resolve="output_sum" />
       <ref role="1OHyup" node="3PnBpiiDtbX" resolve="u" />
     </node>
+    <node concept="1OHxBB" id="3r7wy8H0vA5" role="3SlQUq">
+      <ref role="1OHxBS" node="3r7wy8H0v_9" resolve="actuationInput" />
+      <ref role="1OHyup" node="3PnBpiiDtbX" resolve="u" />
+    </node>
+    <node concept="1OHxBB" id="3r7wy8H0vAy" role="3SlQUq">
+      <ref role="1OHxBS" node="3r7wy8H0v_b" resolve="saturatedActuation" />
+      <ref role="1OHyup" node="3PnBpiiDtbX" resolve="u" />
+    </node>
     <node concept="1OHxBB" id="3PnBpiiDtcb" role="3SlQUq">
       <ref role="1OHxBS" node="3PnBpiiDtbX" resolve="u" />
       <ref role="1OHyup" node="4cDC_xhxngY" resolve="actuation" />
@@ -608,36 +624,43 @@
         <ref role="2_qZNH" node="6P2HqMSwRWV" resolve="trigBiasDecision" />
       </node>
       <node concept="2_qZNI" id="3PnBpiiD62J" role="2__D7$">
-        <ref role="2_qZNH" node="3PnBpiiD62D" resolve="trigGain" />
+        <ref role="2_qZNH" node="3PnBpiiD62D" resolve="trigActuationGain" />
       </node>
       <node concept="2_qZNI" id="3PnBpiiDtcG" role="2__D7$">
-        <ref role="2_qZNH" node="3PnBpiiDtc$" resolve="trigSum" />
+        <ref role="2_qZNH" node="3PnBpiiDtc$" resolve="trigActuationSum" />
+      </node>
+      <node concept="2_qZNI" id="3r7wy8H0vBN" role="2__D7$">
+        <ref role="2_qZNH" node="3r7wy8H0vAW" resolve="trigActuationSaturation" />
       </node>
       <node concept="2_qZNI" id="3PnBpiiE3eS" role="2__D7$">
-        <ref role="2_qZNH" node="3PnBpiiE3eG" resolve="trigDelay" />
+        <ref role="2_qZNH" node="3PnBpiiE3eG" resolve="trigErrorDelay" />
       </node>
       <node concept="1pt3V6" id="w_xyS7ckvm" role="1OHzVH">
         <property role="TrG5h" value="trigSignErr" />
-        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
-      </node>
-      <node concept="1pt3V6" id="3PnBpiiD62D" role="1OHzVH">
-        <property role="TrG5h" value="trigGain" />
-        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
-      </node>
-      <node concept="1pt3V6" id="3PnBpiiDtc$" role="1OHzVH">
-        <property role="TrG5h" value="trigSum" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
       <node concept="1pt3V6" id="3PnBpiiE39Z" role="1OHzVH">
         <property role="TrG5h" value="trigFilter" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
-      <node concept="1pt3V6" id="3PnBpiiE3eG" role="1OHzVH">
-        <property role="TrG5h" value="trigDelay" />
-        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
-      </node>
       <node concept="1pt3V6" id="6P2HqMSwRWV" role="1OHzVH">
         <property role="TrG5h" value="trigBiasDecision" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1pt3V6" id="3PnBpiiD62D" role="1OHzVH">
+        <property role="TrG5h" value="trigActuationGain" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1pt3V6" id="3PnBpiiDtc$" role="1OHzVH">
+        <property role="TrG5h" value="trigActuationSum" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1pt3V6" id="3r7wy8H0vAW" role="1OHzVH">
+        <property role="TrG5h" value="trigActuationSaturation" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1pt3V6" id="3PnBpiiE3eG" role="1OHzVH">
+        <property role="TrG5h" value="trigErrorDelay" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
     </node>
@@ -823,7 +846,7 @@
       <property role="JyMa4" value="0." />
       <property role="JyMa7" value="1." />
       <node concept="1pt3V6" id="3vEHYKooZjy" role="2YOnzW">
-        <property role="TrG5h" value="trigger" />
+        <property role="TrG5h" value="bias decision map trigger" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
       </node>
       <node concept="1OHxBU" id="3vEHYKooZjz" role="2YOnzZ">
@@ -840,6 +863,25 @@
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
         <property role="TrG5h" value="threshold" />
         <node concept="10P55v" id="3vEHYKooZkp" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="fsEbk" id="3r7wy8H0v_7" role="3SlQUd">
+      <property role="TrG5h" value="actuationSat" />
+      <property role="qeJDQ" value="-1." />
+      <property role="qeJDO" value="1." />
+      <node concept="1pt3V6" id="3r7wy8H0v_8" role="2YOnzW">
+        <property role="TrG5h" value="actuation saturation trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+      <node concept="1OHxBU" id="3r7wy8H0v_9" role="2YOnzZ">
+        <property role="TrG5h" value="actuationInput" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10P55v" id="3r7wy8H0v_a" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="3r7wy8H0v_b" role="2YOnzZ">
+        <property role="TrG5h" value="saturatedActuation" />
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <node concept="10P55v" id="3r7wy8H0v_c" role="1OHwi9" />
       </node>
     </node>
     <node concept="lfUiM" id="w_xyS7ckuq" role="2YOnzZ">
