@@ -13,6 +13,9 @@
       <concept id="1070534513062" name="jetbrains.mps.baseLanguage.structure.DoubleType" flags="in" index="10P55v" />
     </language>
     <language id="a8f70f9e-ef01-499f-885c-c79273fa1695" name="Algorithm">
+      <concept id="3947266681709561578" name="Algorithm.structure.RealConstantDataBlock" flags="ng" index="rNKj8">
+        <property id="3947266681709561579" name="value" index="rNKj9" />
+      </concept>
       <concept id="2483553733153713492" name="Algorithm.structure.DataBlock" flags="ng" index="vjVuy">
         <child id="7268768516384887968" name="ports" index="1ptsVk" />
       </concept>
@@ -69,9 +72,6 @@
         <property id="4029235041285543270" name="less_than_neg_threshold" index="JyMaa" />
       </concept>
       <concept id="4420174820727993465" name="Controller.structure.LowPassFilter" flags="ng" index="2JMqBH" />
-      <concept id="4420174820728498473" name="Controller.structure.Parameter" flags="ng" index="2JWBiX">
-        <property id="4420174820728498474" name="value" index="2JWBiY" />
-      </concept>
       <concept id="6358669349290676739" name="Controller.structure.SignedPort" flags="ng" index="SB1Cm">
         <property id="6358669349290676742" name="sign" index="SB1Cj" />
         <reference id="6358669349290676740" name="port" index="SB1Ch" />
@@ -478,22 +478,13 @@
   </node>
   <node concept="3bykSo" id="w_xyS7ckup">
     <property role="TrG5h" value="abag" />
-    <node concept="2JWBiX" id="3PnBpiiDNF0" role="3SlQUm">
+    <node concept="rNKj8" id="3r7wy8H6sCM" role="3SlQUm">
       <property role="TrG5h" value="filterRatio" />
-      <property role="2JWBiY" value="0.7" />
-      <node concept="1OHxBU" id="3PnBpiiE2XM" role="1ptsVk">
+      <property role="rNKj9" value="0.3" />
+      <node concept="1OHxBU" id="3r7wy8H6sCN" role="1ptsVk">
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
         <property role="TrG5h" value="alpha" />
-        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
-        <node concept="10P55v" id="3PnBpiiE2XQ" role="1OHwi9" />
-      </node>
-    </node>
-    <node concept="2JWBiX" id="3vEHYKosj8r" role="3SlQUm">
-      <property role="TrG5h" value="biasThreshold" />
-      <property role="2JWBiY" value="0.2" />
-      <node concept="1OHxBU" id="3vEHYKosj8Q" role="1ptsVk">
-        <property role="TrG5h" value="e_b" />
-        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
-        <node concept="10P55v" id="3vEHYKosj8U" role="1OHwi9" />
+        <node concept="10P55v" id="3r7wy8H6sCO" role="1OHwi9" />
       </node>
     </node>
     <node concept="1psEHa" id="w_xyS7ckvo" role="1psEGK">
@@ -545,8 +536,8 @@
       <ref role="1OHyup" node="3PnBpiiE38P" resolve="signal" />
     </node>
     <node concept="1OHxBB" id="3PnBpiiE39I" role="3SlQUq">
-      <ref role="1OHxBS" node="3PnBpiiE2XM" resolve="alpha" />
       <ref role="1OHyup" node="3PnBpiiE38N" resolve="filterFactor" />
+      <ref role="1OHxBS" node="3r7wy8H6sCN" resolve="alpha" />
     </node>
     <node concept="1OHxBB" id="3PnBpiiE3b6" role="3SlQUq">
       <ref role="1OHxBS" node="3PnBpiiE3aZ" resolve="e_bar" />
@@ -565,8 +556,8 @@
       <ref role="1OHyup" node="3PnBpiiE3dI" resolve="e_bar_prev" />
     </node>
     <node concept="1OHxBB" id="3vEHYKosj8X" role="3SlQUq">
-      <ref role="1OHxBS" node="3vEHYKosj8Q" resolve="e_b" />
       <ref role="1OHyup" node="3vEHYKooZj_" resolve="threshold" />
+      <ref role="1OHxBS" node="3r7wy8H6sEg" resolve="e_b" />
     </node>
     <node concept="1OHxBB" id="6P2HqMSwRYq" role="3SlQUq">
       <ref role="1OHxBS" node="6P2HqMSwRYj" resolve="b_xi" />
@@ -662,6 +653,15 @@
       <node concept="1pt3V6" id="3PnBpiiE3eG" role="1OHzVH">
         <property role="TrG5h" value="trigErrorDelay" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+    </node>
+    <node concept="rNKj8" id="3r7wy8H6sEf" role="3SlQUm">
+      <property role="TrG5h" value="biasThreshold" />
+      <property role="rNKj9" value="0.2" />
+      <node concept="1OHxBU" id="3r7wy8H6sEg" role="1ptsVk">
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <property role="TrG5h" value="e_b" />
+        <node concept="10P55v" id="3r7wy8H6sEh" role="1OHwi9" />
       </node>
     </node>
     <node concept="3bymMO" id="w_xyS7ckuC" role="3SlQUm">
