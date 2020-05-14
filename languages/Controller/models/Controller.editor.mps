@@ -447,7 +447,7 @@
   </node>
   <node concept="24kQdi" id="3vEHYKomo7G">
     <property role="3GE5qa" value="FunctionBlocks" />
-    <ref role="1XX52x" to="g6sh:3vEHYKomo7B" resolve="SimpleDecisionMap" />
+    <ref role="1XX52x" to="g6sh:3vEHYKomo7B" resolve="DecisionMapSimple" />
     <node concept="3EZMnI" id="3vEHYKomo7I" role="2wV5jI">
       <node concept="l2Vlx" id="3vEHYKomo7J" role="2iSdaV" />
       <node concept="3F0ifn" id="3vEHYKomo7K" role="3EZMnx">
@@ -793,7 +793,7 @@
   <node concept="PKFIW" id="3vEHYKos8oV">
     <property role="3GE5qa" value="FunctionBlocks" />
     <property role="TrG5h" value="DMSimpleThresholdPort_Comp" />
-    <ref role="1XX52x" to="g6sh:3vEHYKomo7B" resolve="SimpleDecisionMap" />
+    <ref role="1XX52x" to="g6sh:3vEHYKomo7B" resolve="DecisionMapSimple" />
     <node concept="1HlG4h" id="3vEHYKos8oX" role="2wV5jI">
       <node concept="1HfYo3" id="3vEHYKos8oZ" role="1HlULh">
         <node concept="3TQlhw" id="3vEHYKos8p1" role="1Hhtcw">

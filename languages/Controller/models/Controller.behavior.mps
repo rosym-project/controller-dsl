@@ -419,6 +419,28 @@
         <ref role="3uigEE" to="o8zo:3fifI_xCtN$" resolve="Scope" />
       </node>
     </node>
+    <node concept="13i0hz" id="6P2HqMSxDTK" role="13h7CS">
+      <property role="TrG5h" value="getOutputPort" />
+      <node concept="3Tm1VV" id="6P2HqMSxDTL" role="1B3o_S" />
+      <node concept="3Tqbb2" id="6P2HqMSxE5m" role="3clF45">
+        <ref role="ehGHo" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+      </node>
+      <node concept="3clFbS" id="6P2HqMSxDTN" role="3clF47">
+        <node concept="3clFbF" id="6P2HqMSxE5U" role="3cqZAp">
+          <node concept="1y4W85" id="6P2HqMSxH8S" role="3clFbG">
+            <node concept="3cmrfG" id="6P2HqMSxHe9" role="1y58nS">
+              <property role="3cmrfH" value="0" />
+            </node>
+            <node concept="2OqwBi" id="6P2HqMSxEhW" role="1y566C">
+              <node concept="13iPFW" id="6P2HqMSxE5T" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="6P2HqMSxEuN" role="2OqNvi">
+                <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="13h7C7" id="WUr5EYF8vP">
     <property role="3GE5qa" value="FunctionBlocks" />
@@ -1739,7 +1761,7 @@
   </node>
   <node concept="13h7C7" id="3vEHYKoouFc">
     <property role="3GE5qa" value="FunctionBlocks" />
-    <ref role="13h7C2" to="g6sh:3vEHYKomo7B" resolve="SimpleDecisionMap" />
+    <ref role="13h7C2" to="g6sh:3vEHYKomo7B" resolve="DecisionMapSimple" />
     <node concept="13i0hz" id="3vEHYKoovKN" role="13h7CS">
       <property role="TrG5h" value="getThresholdPort" />
       <node concept="3Tm1VV" id="3vEHYKoovKO" role="1B3o_S" />
