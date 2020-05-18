@@ -10,6 +10,7 @@
     <import index="yvgz" ref="r:3b411c10-569a-4299-9505-176144359d3b(Algorithm.structure)" />
     <import index="g6sh" ref="r:7d1839fc-c0d4-418b-b0ae-9e1397d9f405(Controller.structure)" implicit="true" />
     <import index="ixp9" ref="r:172690fd-5286-4218-b525-cadaaf47af22(Algorithm.behavior)" implicit="true" />
+    <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
@@ -23,6 +24,7 @@
         <child id="1068498886295" name="lValue" index="37vLTJ" />
       </concept>
       <concept id="4836112446988635817" name="jetbrains.mps.baseLanguage.structure.UndefinedType" flags="in" index="2jxLKc" />
+      <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1239714755177" name="jetbrains.mps.baseLanguage.structure.AbstractUnaryNumberOperation" flags="nn" index="2$Kvd9">
         <child id="1239714902950" name="expression" index="2$L3a6" />
       </concept>
@@ -44,6 +46,7 @@
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
+      <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
@@ -148,9 +151,6 @@
       </concept>
       <concept id="1966870290088668512" name="jetbrains.mps.lang.smodel.structure.Enum_MemberLiteral" flags="ng" index="2ViDtV">
         <reference id="1966870290088668516" name="memberDeclaration" index="2ViDtZ" />
-      </concept>
-      <concept id="1240170042401" name="jetbrains.mps.lang.smodel.structure.SEnumerationMemberType" flags="in" index="2ZThk1">
-        <reference id="1240170836027" name="enum" index="2ZWj4r" />
       </concept>
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
@@ -326,9 +326,7 @@
             </node>
           </node>
           <node concept="3rvAFt" id="w_xyS7iX5n" role="1tU5fm">
-            <node concept="2ZThk1" id="w_xyS7iXM6" role="3rvQeY">
-              <ref role="2ZWj4r" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
-            </node>
+            <node concept="17QB3L" id="4cDC_xhrPCP" role="3rvQeY" />
             <node concept="2I9FWS" id="w_xyS7iYK2" role="3rvSg0">
               <ref role="2I9WkF" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
             </node>
@@ -343,12 +341,17 @@
             </node>
             <node concept="2OqwBi" id="w_xyS7jca7" role="1urrMF">
               <node concept="3EllGN" id="w_xyS7j92u" role="2Oq$k0">
-                <node concept="2OqwBi" id="w_xyS7j9N6" role="3ElVtu">
-                  <node concept="1XH99k" id="w_xyS7j9p$" role="2Oq$k0">
-                    <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                <node concept="2OqwBi" id="4cDC_xhrQ$e" role="3ElVtu">
+                  <node concept="2OqwBi" id="w_xyS7j9N6" role="2Oq$k0">
+                    <node concept="1XH99k" id="w_xyS7j9p$" role="2Oq$k0">
+                      <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                    </node>
+                    <node concept="2ViDtV" id="w_xyS7jamW" role="2OqNvi">
+                      <ref role="2ViDtZ" to="yvgz:6po$YwiVCCq" resolve="InOut" />
+                    </node>
                   </node>
-                  <node concept="2ViDtV" id="w_xyS7jamW" role="2OqNvi">
-                    <ref role="2ViDtZ" to="yvgz:6po$YwiVCCq" resolve="InOut" />
+                  <node concept="liA8E" id="4cDC_xhrQCR" role="2OqNvi">
+                    <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
                   </node>
                 </node>
                 <node concept="37vLTw" id="w_xyS7j8E9" role="3ElQJh">
@@ -365,12 +368,17 @@
           </node>
           <node concept="2OqwBi" id="w_xyS7j2KJ" role="3uHU7B">
             <node concept="3EllGN" id="w_xyS7iZDF" role="2Oq$k0">
-              <node concept="2OqwBi" id="w_xyS7j0q7" role="3ElVtu">
-                <node concept="1XH99k" id="w_xyS7j00F" role="2Oq$k0">
-                  <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+              <node concept="2OqwBi" id="4cDC_xhrQj0" role="3ElVtu">
+                <node concept="2OqwBi" id="w_xyS7j0q7" role="2Oq$k0">
+                  <node concept="1XH99k" id="w_xyS7j00F" role="2Oq$k0">
+                    <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                  </node>
+                  <node concept="2ViDtV" id="w_xyS7j0Bh" role="2OqNvi">
+                    <ref role="2ViDtZ" to="yvgz:6po$YwiVCCq" resolve="InOut" />
+                  </node>
                 </node>
-                <node concept="2ViDtV" id="w_xyS7j0Bh" role="2OqNvi">
-                  <ref role="2ViDtZ" to="yvgz:6po$YwiVCCq" resolve="InOut" />
+                <node concept="liA8E" id="4cDC_xhrQtq" role="2OqNvi">
+                  <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
                 </node>
               </node>
               <node concept="37vLTw" id="w_xyS7iZdu" role="3ElQJh">
@@ -398,12 +406,17 @@
           </node>
           <node concept="2OqwBi" id="w_xyS7jj58" role="3uHU7B">
             <node concept="3EllGN" id="w_xyS7jfFK" role="2Oq$k0">
-              <node concept="2OqwBi" id="w_xyS7jgIw" role="3ElVtu">
-                <node concept="1XH99k" id="w_xyS7jg2K" role="2Oq$k0">
-                  <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+              <node concept="2OqwBi" id="4cDC_xhrQL4" role="3ElVtu">
+                <node concept="2OqwBi" id="w_xyS7jgIw" role="2Oq$k0">
+                  <node concept="1XH99k" id="w_xyS7jg2K" role="2Oq$k0">
+                    <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                  </node>
+                  <node concept="2ViDtV" id="w_xyS7jgVE" role="2OqNvi">
+                    <ref role="2ViDtZ" to="yvgz:6po$YwiVCCn" resolve="Out" />
+                  </node>
                 </node>
-                <node concept="2ViDtV" id="w_xyS7jgVE" role="2OqNvi">
-                  <ref role="2ViDtZ" to="yvgz:6po$YwiVCCn" resolve="Out" />
+                <node concept="liA8E" id="4cDC_xhrRdR" role="2OqNvi">
+                  <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
                 </node>
               </node>
               <node concept="37vLTw" id="w_xyS7jfjx" role="3ElQJh">
@@ -428,12 +441,17 @@
         <node concept="3y3z36" id="w_xyS7ju2F" role="3clFbw">
           <node concept="2OqwBi" id="w_xyS7jER_" role="3uHU7w">
             <node concept="3EllGN" id="w_xyS7jvn$" role="2Oq$k0">
-              <node concept="2OqwBi" id="w_xyS7jCjC" role="3ElVtu">
-                <node concept="1XH99k" id="w_xyS7j_Vg" role="2Oq$k0">
-                  <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+              <node concept="2OqwBi" id="4cDC_xhrRgs" role="3ElVtu">
+                <node concept="2OqwBi" id="w_xyS7jCjC" role="2Oq$k0">
+                  <node concept="1XH99k" id="w_xyS7j_Vg" role="2Oq$k0">
+                    <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                  </node>
+                  <node concept="2ViDtV" id="w_xyS7jD2j" role="2OqNvi">
+                    <ref role="2ViDtZ" to="yvgz:6po$YwiVCCm" resolve="In" />
+                  </node>
                 </node>
-                <node concept="2ViDtV" id="w_xyS7jD2j" role="2OqNvi">
-                  <ref role="2ViDtZ" to="yvgz:6po$YwiVCCm" resolve="In" />
+                <node concept="liA8E" id="4cDC_xhrRMk" role="2OqNvi">
+                  <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
                 </node>
               </node>
               <node concept="37vLTw" id="w_xyS7juDH" role="3ElQJh">
@@ -967,12 +985,10 @@
             </node>
           </node>
           <node concept="3rvAFt" id="w_xyS7kWg6" role="1tU5fm">
-            <node concept="2ZThk1" id="w_xyS7kWg7" role="3rvQeY">
-              <ref role="2ZWj4r" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
-            </node>
             <node concept="2I9FWS" id="w_xyS7kWg8" role="3rvSg0">
               <ref role="2I9WkF" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
             </node>
+            <node concept="17QB3L" id="4cDC_xhrsEH" role="3rvQeY" />
           </node>
         </node>
       </node>
@@ -984,12 +1000,17 @@
             </node>
             <node concept="2OqwBi" id="w_xyS7kWgd" role="1urrMF">
               <node concept="3EllGN" id="w_xyS7kWge" role="2Oq$k0">
-                <node concept="2OqwBi" id="w_xyS7kWgf" role="3ElVtu">
-                  <node concept="1XH99k" id="w_xyS7kWgg" role="2Oq$k0">
-                    <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                <node concept="2OqwBi" id="4cDC_xhrDdP" role="3ElVtu">
+                  <node concept="2OqwBi" id="w_xyS7kWgf" role="2Oq$k0">
+                    <node concept="1XH99k" id="w_xyS7kWgg" role="2Oq$k0">
+                      <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                    </node>
+                    <node concept="2ViDtV" id="w_xyS7kWgh" role="2OqNvi">
+                      <ref role="2ViDtZ" to="yvgz:6po$YwiVCCq" resolve="InOut" />
+                    </node>
                   </node>
-                  <node concept="2ViDtV" id="w_xyS7kWgh" role="2OqNvi">
-                    <ref role="2ViDtZ" to="yvgz:6po$YwiVCCq" resolve="InOut" />
+                  <node concept="liA8E" id="4cDC_xhrDiu" role="2OqNvi">
+                    <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
                   </node>
                 </node>
                 <node concept="37vLTw" id="w_xyS7kWgi" role="3ElQJh">
@@ -1006,12 +1027,17 @@
           </node>
           <node concept="2OqwBi" id="w_xyS7kWgm" role="3uHU7B">
             <node concept="3EllGN" id="w_xyS7kWgn" role="2Oq$k0">
-              <node concept="2OqwBi" id="w_xyS7kWgo" role="3ElVtu">
-                <node concept="1XH99k" id="w_xyS7kWgp" role="2Oq$k0">
-                  <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+              <node concept="2OqwBi" id="4cDC_xhrt1v" role="3ElVtu">
+                <node concept="2OqwBi" id="w_xyS7kWgo" role="2Oq$k0">
+                  <node concept="1XH99k" id="w_xyS7kWgp" role="2Oq$k0">
+                    <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                  </node>
+                  <node concept="2ViDtV" id="w_xyS7kWgq" role="2OqNvi">
+                    <ref role="2ViDtZ" to="yvgz:6po$YwiVCCq" resolve="InOut" />
+                  </node>
                 </node>
-                <node concept="2ViDtV" id="w_xyS7kWgq" role="2OqNvi">
-                  <ref role="2ViDtZ" to="yvgz:6po$YwiVCCq" resolve="InOut" />
+                <node concept="liA8E" id="4cDC_xhrt69" role="2OqNvi">
+                  <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
                 </node>
               </node>
               <node concept="37vLTw" id="w_xyS7kWgr" role="3ElQJh">
@@ -1039,12 +1065,17 @@
           </node>
           <node concept="2OqwBi" id="w_xyS7kWg$" role="3uHU7B">
             <node concept="3EllGN" id="w_xyS7kWg_" role="2Oq$k0">
-              <node concept="2OqwBi" id="w_xyS7kWgA" role="3ElVtu">
-                <node concept="1XH99k" id="w_xyS7kWgB" role="2Oq$k0">
-                  <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+              <node concept="2OqwBi" id="4cDC_xhrtwa" role="3ElVtu">
+                <node concept="2OqwBi" id="w_xyS7kWgA" role="2Oq$k0">
+                  <node concept="1XH99k" id="w_xyS7kWgB" role="2Oq$k0">
+                    <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                  </node>
+                  <node concept="2ViDtV" id="w_xyS7kWgC" role="2OqNvi">
+                    <ref role="2ViDtZ" to="yvgz:6po$YwiVCCn" resolve="Out" />
+                  </node>
                 </node>
-                <node concept="2ViDtV" id="w_xyS7kWgC" role="2OqNvi">
-                  <ref role="2ViDtZ" to="yvgz:6po$YwiVCCn" resolve="Out" />
+                <node concept="liA8E" id="4cDC_xhrtXy" role="2OqNvi">
+                  <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
                 </node>
               </node>
               <node concept="37vLTw" id="w_xyS7kWgD" role="3ElQJh">
@@ -1072,12 +1103,17 @@
           </node>
           <node concept="2OqwBi" id="w_xyS7l0xS" role="3uHU7B">
             <node concept="3EllGN" id="w_xyS7l0xT" role="2Oq$k0">
-              <node concept="2OqwBi" id="w_xyS7l0xU" role="3ElVtu">
-                <node concept="1XH99k" id="w_xyS7l0xV" role="2Oq$k0">
-                  <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+              <node concept="2OqwBi" id="4cDC_xhru06" role="3ElVtu">
+                <node concept="2OqwBi" id="w_xyS7l0xU" role="2Oq$k0">
+                  <node concept="1XH99k" id="w_xyS7l0xV" role="2Oq$k0">
+                    <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                  </node>
+                  <node concept="2ViDtV" id="w_xyS7l10s" role="2OqNvi">
+                    <ref role="2ViDtZ" to="yvgz:6po$YwiVCCm" resolve="In" />
+                  </node>
                 </node>
-                <node concept="2ViDtV" id="w_xyS7l10s" role="2OqNvi">
-                  <ref role="2ViDtZ" to="yvgz:6po$YwiVCCm" resolve="In" />
+                <node concept="liA8E" id="4cDC_xhruuW" role="2OqNvi">
+                  <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
                 </node>
               </node>
               <node concept="37vLTw" id="w_xyS7l0xX" role="3ElQJh">
@@ -1147,6 +1183,111 @@
     <node concept="1YaCAy" id="w_xyS7kVvv" role="1YuTPh">
       <property role="TrG5h" value="gain" />
       <ref role="1YaFvo" to="g6sh:5gyKVURkouv" resolve="Gain" />
+    </node>
+  </node>
+  <node concept="18kY7G" id="4cDC_xhmbPP">
+    <property role="TrG5h" value="check_SignFunction" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <node concept="3clFbS" id="4cDC_xhmbPQ" role="18ibNy">
+      <node concept="3cpWs8" id="4cDC_xhmbQs" role="3cqZAp">
+        <node concept="3cpWsn" id="4cDC_xhmbQv" role="3cpWs9">
+          <property role="TrG5h" value="sortedPorts" />
+          <node concept="2OqwBi" id="4cDC_xhmc28" role="33vP2m">
+            <node concept="1YBJjd" id="4cDC_xhmbQR" role="2Oq$k0">
+              <ref role="1YBMHb" node="4cDC_xhmbPS" resolve="signFunction" />
+            </node>
+            <node concept="2qgKlT" id="4cDC_xhmcdd" role="2OqNvi">
+              <ref role="37wK5l" to="ixp9:w_xyS7dNjI" resolve="getDataPortsByDirection" />
+            </node>
+          </node>
+          <node concept="3rvAFt" id="4cDC_xhmcsr" role="1tU5fm">
+            <node concept="17QB3L" id="4cDC_xhrOmY" role="3rvQeY" />
+            <node concept="2I9FWS" id="4cDC_xhmdfs" role="3rvSg0">
+              <ref role="2I9WkF" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="4cDC_xhmbPW" role="3cqZAp">
+        <node concept="3y3z36" id="4cDC_xhmgNk" role="3clFbw">
+          <node concept="3cmrfG" id="4cDC_xhmhRo" role="3uHU7w">
+            <property role="3cmrfH" value="1" />
+          </node>
+          <node concept="2OqwBi" id="4cDC_xhmiMf" role="3uHU7B">
+            <node concept="3EllGN" id="4cDC_xhmdHM" role="2Oq$k0">
+              <node concept="2OqwBi" id="4cDC_xhrOuy" role="3ElVtu">
+                <node concept="2OqwBi" id="4cDC_xhmei8" role="2Oq$k0">
+                  <node concept="1XH99k" id="4cDC_xhme4M" role="2Oq$k0">
+                    <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                  </node>
+                  <node concept="2ViDtV" id="4cDC_xhmeDP" role="2OqNvi">
+                    <ref role="2ViDtZ" to="yvgz:6po$YwiVCCm" resolve="In" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="4cDC_xhrOze" role="2OqNvi">
+                  <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
+                </node>
+              </node>
+              <node concept="37vLTw" id="4cDC_xhmdlz" role="3ElQJh">
+                <ref role="3cqZAo" node="4cDC_xhmbQv" resolve="sortedPorts" />
+              </node>
+            </node>
+            <node concept="34oBXx" id="4cDC_xhmkNG" role="2OqNvi" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="4cDC_xhmbPY" role="3clFbx">
+          <node concept="2MkqsV" id="4cDC_xhmkPt" role="3cqZAp">
+            <node concept="Xl_RD" id="4cDC_xhmkPD" role="2MkJ7o">
+              <property role="Xl_RC" value="sign function must have exactly 1 input port" />
+            </node>
+            <node concept="1YBJjd" id="4cDC_xhmkQ_" role="1urrMF">
+              <ref role="1YBMHb" node="4cDC_xhmbPS" resolve="signFunction" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="4cDC_xhmlYa" role="3cqZAp">
+        <node concept="3y3z36" id="4cDC_xhmlYb" role="3clFbw">
+          <node concept="3cmrfG" id="4cDC_xhmlYc" role="3uHU7w">
+            <property role="3cmrfH" value="1" />
+          </node>
+          <node concept="2OqwBi" id="4cDC_xhmlYd" role="3uHU7B">
+            <node concept="3EllGN" id="4cDC_xhmlYe" role="2Oq$k0">
+              <node concept="2OqwBi" id="4cDC_xhrP5E" role="3ElVtu">
+                <node concept="2OqwBi" id="4cDC_xhmlYf" role="2Oq$k0">
+                  <node concept="1XH99k" id="4cDC_xhmlYg" role="2Oq$k0">
+                    <ref role="1XH99l" to="yvgz:6po$YwiVCCl" resolve="DataPortDirection" />
+                  </node>
+                  <node concept="2ViDtV" id="4cDC_xhmm8U" role="2OqNvi">
+                    <ref role="2ViDtZ" to="yvgz:6po$YwiVCCn" resolve="Out" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="4cDC_xhrP8Z" role="2OqNvi">
+                  <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
+                </node>
+              </node>
+              <node concept="37vLTw" id="4cDC_xhmlYi" role="3ElQJh">
+                <ref role="3cqZAo" node="4cDC_xhmbQv" resolve="sortedPorts" />
+              </node>
+            </node>
+            <node concept="34oBXx" id="4cDC_xhmlYj" role="2OqNvi" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="4cDC_xhmlYk" role="3clFbx">
+          <node concept="2MkqsV" id="4cDC_xhmlYl" role="3cqZAp">
+            <node concept="Xl_RD" id="4cDC_xhmlYm" role="2MkJ7o">
+              <property role="Xl_RC" value="sign function must have exactly 1 output port" />
+            </node>
+            <node concept="1YBJjd" id="4cDC_xhmlYn" role="1urrMF">
+              <ref role="1YBMHb" node="4cDC_xhmbPS" resolve="signFunction" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="4cDC_xhmbPS" role="1YuTPh">
+      <property role="TrG5h" value="signFunction" />
+      <ref role="1YaFvo" to="g6sh:w_xyS7dN80" resolve="SignFunction" />
     </node>
   </node>
 </model>

@@ -25,6 +25,7 @@
       </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
+        <property id="4628067390765956802" name="abstract" index="R5$K7" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
@@ -249,15 +250,49 @@
     <property role="3GE5qa" value="FunctionBlocks" />
     <property role="TrG5h" value="Saturation" />
     <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
-    <node concept="1TJgyi" id="w_xyS7lMjZ" role="1TKVEl">
-      <property role="IQ2nx" value="587022858691486975" />
-      <property role="TrG5h" value="low_threshold" />
-      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    <node concept="1TJgyi" id="3r7wy8GZnxk" role="1TKVEl">
+      <property role="IQ2nx" value="3947266681708836948" />
+      <property role="TrG5h" value="lower_threshold" />
+      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
     </node>
-    <node concept="1TJgyi" id="w_xyS7lMk1" role="1TKVEl">
-      <property role="IQ2nx" value="587022858691486977" />
-      <property role="TrG5h" value="high_threshold" />
-      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    <node concept="1TJgyi" id="3r7wy8GZnxm" role="1TKVEl">
+      <property role="IQ2nx" value="3947266681708836950" />
+      <property role="TrG5h" value="upper_threshold" />
+      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3PnBpiiBzhT">
+    <property role="EcuMT" value="4420174820727993465" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="LowPassFilter" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
+  <node concept="1TIwiD" id="3vEHYKomnTQ">
+    <property role="EcuMT" value="4029235041285013110" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="DecisionMap" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+  </node>
+  <node concept="1TIwiD" id="3vEHYKomo7B">
+    <property role="EcuMT" value="4029235041285013991" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="DecisionMapSimple" />
+    <ref role="1TJDcQ" node="3vEHYKomnTQ" resolve="DecisionMap" />
+    <node concept="1TJgyi" id="3vEHYKooplA" role="1TKVEl">
+      <property role="IQ2nx" value="4029235041285543270" />
+      <property role="TrG5h" value="less_than_neg_threshold" />
+      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
+    </node>
+    <node concept="1TJgyi" id="3vEHYKooplC" role="1TKVEl">
+      <property role="IQ2nx" value="4029235041285543272" />
+      <property role="TrG5h" value="within_threshold" />
+      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
+    </node>
+    <node concept="1TJgyi" id="3vEHYKooplF" role="1TKVEl">
+      <property role="IQ2nx" value="4029235041285543275" />
+      <property role="TrG5h" value="more_than_pos_threshold" />
+      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
     </node>
   </node>
 </model>
