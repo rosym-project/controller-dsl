@@ -8,6 +8,7 @@
   </languages>
   <imports>
     <import index="yvgz" ref="r:3b411c10-569a-4299-9505-176144359d3b(Algorithm.structure)" />
+    <import index="xfxr" ref="r:47c19eeb-604b-4ce7-bab1-09ee0ee52e0d(Controller.behavior)" implicit="true" />
     <import index="g6sh" ref="r:7d1839fc-c0d4-418b-b0ae-9e1397d9f405(Controller.structure)" implicit="true" />
     <import index="ixp9" ref="r:172690fd-5286-4218-b525-cadaaf47af22(Algorithm.behavior)" implicit="true" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
@@ -246,6 +247,7 @@
           </node>
         </node>
       </node>
+      <node concept="3clFbH" id="5Pd2VOU2$Dz" role="3cqZAp" />
       <node concept="3clFbJ" id="WUr5EYGj8e" role="3cqZAp">
         <node concept="3clFbS" id="WUr5EYGj8g" role="3clFbx">
           <node concept="2MkqsV" id="WUr5EYGyKb" role="3cqZAp">
@@ -301,6 +303,49 @@
             <node concept="3cmrfG" id="WUr5EYGqlt" role="3uHU7w">
               <property role="3cmrfH" value="1" />
             </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbH" id="5Pd2VOU2$th" role="3cqZAp" />
+      <node concept="3cpWs8" id="5Pd2VOU2$i3" role="3cqZAp">
+        <node concept="3cpWsn" id="5Pd2VOU2$i6" role="3cpWs9">
+          <property role="TrG5h" value="numStates" />
+          <node concept="10Oyi0" id="5Pd2VOU2$i1" role="1tU5fm" />
+          <node concept="2OqwBi" id="5Pd2VOU2tPg" role="33vP2m">
+            <node concept="2OqwBi" id="5Pd2VOU2ooH" role="2Oq$k0">
+              <node concept="1YBJjd" id="5Pd2VOU2obU" role="2Oq$k0">
+                <ref role="1YBMHb" node="3DldKpvmh8z" resolve="controlDiagram" />
+              </node>
+              <node concept="2qgKlT" id="5Pd2VOU2oHr" role="2OqNvi">
+                <ref role="37wK5l" to="xfxr:5Pd2VOU292Q" resolve="getStates" />
+              </node>
+            </node>
+            <node concept="34oBXx" id="5Pd2VOU2x0j" role="2OqNvi" />
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="5Pd2VOU2ob1" role="3cqZAp">
+        <node concept="3clFbS" id="5Pd2VOU2ob3" role="3clFbx">
+          <node concept="2MkqsV" id="5Pd2VOU2zad" role="3cqZAp">
+            <node concept="3cpWs3" id="5Pd2VOU2zul" role="2MkJ7o">
+              <node concept="37vLTw" id="5Pd2VOU2$sO" role="3uHU7w">
+                <ref role="3cqZAo" node="5Pd2VOU2$i6" resolve="numStates" />
+              </node>
+              <node concept="Xl_RD" id="5Pd2VOU2zas" role="3uHU7B">
+                <property role="Xl_RC" value="a control diagram can only have 1 state, found: " />
+              </node>
+            </node>
+            <node concept="1YBJjd" id="5Pd2VOU2zaP" role="1urrMF">
+              <ref role="1YBMHb" node="3DldKpvmh8z" resolve="controlDiagram" />
+            </node>
+          </node>
+        </node>
+        <node concept="3eOSWO" id="5Pd2VOU2z0Y" role="3clFbw">
+          <node concept="3cmrfG" id="5Pd2VOU2z8T" role="3uHU7w">
+            <property role="3cmrfH" value="1" />
+          </node>
+          <node concept="37vLTw" id="5Pd2VOU2$sx" role="3uHU7B">
+            <ref role="3cqZAo" node="5Pd2VOU2$i6" resolve="numStates" />
           </node>
         </node>
       </node>

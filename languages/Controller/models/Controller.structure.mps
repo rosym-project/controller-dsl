@@ -201,25 +201,7 @@
     <property role="EcuMT" value="6062623272280710664" />
     <property role="3GE5qa" value="DataBlocks" />
     <property role="TrG5h" value="State" />
-    <ref role="1TJDcQ" to="yvgz:29RmJoXeePk" resolve="DataBlock" />
-    <node concept="1TJgyj" id="5gyKVURjHSf" role="1TKVEi">
-      <property role="IQ2ns" value="6062623272280710671" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="signals" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="5gyKVURjHS9" resolve="SignalRef" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="5gyKVURjHS9">
-    <property role="EcuMT" value="6062623272280710665" />
-    <property role="TrG5h" value="SignalRef" />
-    <property role="3GE5qa" value="DataBlocks" />
-    <node concept="1TJgyj" id="5gyKVURjHSa" role="1TKVEi">
-      <property role="20lbJX" value="fLJekj4/1" />
-      <property role="IQ2ns" value="6062623272280710666" />
-      <property role="20kJfa" value="signal" />
-      <ref role="20lvS9" node="7CX82aLH4Mm" resolve="Signal" />
-    </node>
+    <ref role="1TJDcQ" to="yvgz:5o1iPWxUm1h" resolve="DataBlockContainer" />
   </node>
   <node concept="1TIwiD" id="5gyKVURk9ky">
     <property role="EcuMT" value="6062623272280823074" />
