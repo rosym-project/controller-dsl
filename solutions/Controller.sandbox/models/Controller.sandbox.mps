@@ -86,6 +86,7 @@
       <concept id="8808231779588937712" name="Controller.structure.SetPoint" flags="ng" index="3byrvi" />
       <concept id="8808231779588937717" name="Controller.structure.Measurement" flags="ng" index="3byrvn" />
       <concept id="6062623272280710664" name="Controller.structure.State" flags="ng" index="3zr1QQ" />
+      <concept id="6062623272280710661" name="Controller.structure.Feedback" flags="ng" index="3zr1QV" />
       <concept id="6062623272280710657" name="Controller.structure.Delay" flags="ng" index="3zr1QZ">
         <property id="7954788799563398603" name="horizon" index="VnAIf" />
       </concept>
@@ -630,8 +631,8 @@
       <ref role="1OHyup" node="CVosgdZvGN" resolve="state_u" />
     </node>
     <node concept="1OHxBB" id="3PnBpiiDtcb" role="3SlQUq">
-      <ref role="1OHyup" node="4cDC_xhxngY" resolve="actuation" />
       <ref role="1OHxBS" node="CVosgdZvGN" resolve="state_u" />
+      <ref role="1OHyup" node="4cDC_xhxngY" resolve="actuation" />
     </node>
     <node concept="1OHxBB" id="6P2HqMSwRVB" role="3SlQUq">
       <ref role="1OHyup" node="6P2HqMSwRVq" resolve="biasOut" />
@@ -1475,6 +1476,268 @@
       <property role="TrG5h" value="gainOut" />
       <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
       <node concept="10P55v" id="6P2HqMSwRWx" role="1OHwi9" />
+    </node>
+  </node>
+  <node concept="3bykSo" id="1m2JxlzocMW">
+    <property role="TrG5h" value="abag_fixed" />
+    <node concept="1OHxBB" id="1m2JxlzwnW0" role="3SlQUq">
+      <ref role="1OHxBS" node="1m2JxlzwnVR" resolve="error" />
+      <ref role="1OHyup" node="1m2JxlzwnVB" resolve="error" />
+    </node>
+    <node concept="1OHxBB" id="1m2JxlzwTHG" role="3SlQUq">
+      <ref role="1OHxBS" node="1m2JxlzwTH_" resolve="access" />
+      <ref role="1OHyup" node="1m2Jxlzwpee" resolve="abag_gain" />
+    </node>
+    <node concept="1OHxBB" id="1m2JxlzxZBS" role="3SlQUq">
+      <ref role="1OHxBS" node="1m2JxlzxZBH" resolve="actuation" />
+      <ref role="1OHyup" node="1m2JxlzxZAV" resolve="actuation" />
+    </node>
+    <node concept="1OHxBB" id="1m2JxlzxZCv" role="3SlQUq">
+      <ref role="1OHxBS" node="1m2JxlzwURZ" resolve="abag_bias" />
+      <ref role="1OHyup" node="1m2JxlzxZCo" resolve="access" />
+    </node>
+    <node concept="1OHxBB" id="1m2JxlzyyI2" role="3SlQUq">
+      <ref role="1OHxBS" node="1m2JxlzyyB0" resolve="err_sgn" />
+      <ref role="1OHyup" node="1m2JxlzyyHV" resolve="access" />
+    </node>
+    <node concept="lfUiM" id="1m2JxlzwnVR" role="2YOnzZ">
+      <property role="TrG5h" value="error" />
+      <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+      <node concept="10P55v" id="1m2JxlzwnVX" role="1OHwi9" />
+    </node>
+    <node concept="2DKpUX" id="1m2JxlzxZBH" role="2YOnzZ">
+      <property role="TrG5h" value="actuation" />
+      <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+      <node concept="10P55v" id="1m2JxlzxZBP" role="1OHwi9" />
+    </node>
+    <node concept="2__D7_" id="1m2JxlzwmUe" role="3SlQUj">
+      <property role="TrG5h" value="diagram" />
+      <node concept="2_qZNI" id="1m2JxlzwmUl" role="2__D7$">
+        <ref role="2_qZNH" node="1m2JxlzwmUh" resolve="feedback" />
+      </node>
+      <node concept="1pt3V6" id="1m2JxlzwmUh" role="1OHzVH">
+        <property role="TrG5h" value="feedback" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+    </node>
+    <node concept="1psEHa" id="1m2Jxlzs59G" role="1psEGK">
+      <ref role="1psEHb" node="1m2JxlzocMX" resolve="trigger" />
+      <ref role="1psEGP" node="1m2JxlzocN3" resolve="trigger" />
+    </node>
+    <node concept="1psEHa" id="1m2JxlzwmUo" role="1psEGK">
+      <ref role="1psEHb" node="1m2JxlzocN3" resolve="trigger" />
+      <ref role="1psEGP" node="1m2JxlzwmUh" resolve="feedback" />
+    </node>
+    <node concept="3zr1QV" id="1m2JxlzocN2" role="3SlQUd">
+      <property role="TrG5h" value="fb" />
+      <node concept="3bymMO" id="1m2Jxlzwpfk" role="3SlQUm">
+        <property role="TrG5h" value="gainedErrSgn" />
+        <node concept="1OHxBU" id="1m2JxlzwpfZ" role="1ptsVk">
+          <property role="TrG5h" value="ge_sgn" />
+          <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+          <node concept="10P55v" id="1m2Jxlzwpg3" role="1OHwi9" />
+        </node>
+      </node>
+      <node concept="1OHxBB" id="1m2JxlzwnVK" role="3SlQUq">
+        <ref role="1OHxBS" node="1m2JxlzwnVB" resolve="error" />
+        <ref role="1OHyup" node="1m2JxlzwnVp" resolve="input" />
+      </node>
+      <node concept="1OHxBB" id="1m2Jxlzwo7g" role="3SlQUq">
+        <ref role="1OHyup" node="1m2JxlzwnVq" resolve="output" />
+        <ref role="1OHxBS" node="1m2JxlzyyB0" resolve="err_sgn" />
+      </node>
+      <node concept="1OHxBB" id="1m2Jxlzwpf0" role="3SlQUq">
+        <ref role="1OHxBS" node="1m2Jxlzwpee" resolve="abag_gain" />
+        <ref role="1OHyup" node="1m2Jxlzwpe_" resolve="gain" />
+      </node>
+      <node concept="1OHxBB" id="1m2Jxlzwpf7" role="3SlQUq">
+        <ref role="1OHxBS" node="1m2JxlzwpeA" resolve="err_sgn" />
+        <ref role="1OHyup" node="1m2JxlzyyB0" resolve="err_sgn" />
+      </node>
+      <node concept="1OHxBB" id="1m2Jxlzwpg6" role="3SlQUq">
+        <ref role="1OHxBS" node="1m2JxlzwpfZ" resolve="ge_sgn" />
+        <ref role="1OHyup" node="1m2JxlzwpeB" resolve="output" />
+      </node>
+      <node concept="1OHxBB" id="1m2JxlzwUSc" role="3SlQUq">
+        <ref role="1OHxBS" node="1m2JxlzwURZ" resolve="abag_bias" />
+        <ref role="1OHyup" node="1m2JxlzwURh" resolve="bias" />
+      </node>
+      <node concept="1OHxBB" id="1m2JxlzwUSm" role="3SlQUq">
+        <ref role="1OHxBS" node="1m2JxlzwpfZ" resolve="ge_sgn" />
+        <ref role="1OHyup" node="1m2JxlzwURj" resolve="gained_err_sign" />
+      </node>
+      <node concept="1OHxBB" id="1m2JxlzxZBa" role="3SlQUq">
+        <ref role="1OHxBS" node="1m2JxlzxZAV" resolve="actuation" />
+        <ref role="1OHyup" node="1m2JxlzwURf" resolve="output_sum" />
+      </node>
+      <node concept="lfUiM" id="1m2JxlzwnVB" role="2YOnzZ">
+        <property role="TrG5h" value="error" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10P55v" id="1m2JxlzwnVH" role="1OHwi9" />
+      </node>
+      <node concept="2DKpUX" id="1m2JxlzxZAV" role="2YOnzZ">
+        <property role="TrG5h" value="actuation" />
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <node concept="10P55v" id="1m2JxlzxZB7" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="1m2Jxlzwpee" role="2YOnzZ">
+        <property role="TrG5h" value="abag_gain" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10P55v" id="1m2Jxlzwpem" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="1m2JxlzwURZ" role="2YOnzZ">
+        <property role="TrG5h" value="abag_bias" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10P55v" id="1m2JxlzwUS9" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="1m2JxlzyyB0" role="2YOnzZ">
+        <property role="TrG5h" value="err_sgn" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="1m2JxlzyyBe" role="1OHwi9" />
+      </node>
+      <node concept="f4FgI" id="1m2JxlzwnVn" role="3SlQUd">
+        <property role="TrG5h" value="errSign" />
+        <node concept="1pt3V6" id="1m2JxlzwnVo" role="2YOnzW">
+          <property role="TrG5h" value="trigger" />
+          <property role="2_BrWT" value="3EtQu_uj5h/In" />
+        </node>
+        <node concept="1OHxBU" id="1m2JxlzwnVp" role="2YOnzZ">
+          <property role="TrG5h" value="input" />
+          <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+          <node concept="10P55v" id="1m2JxlzwnVx" role="1OHwi9" />
+        </node>
+        <node concept="1OHxBU" id="1m2JxlzwnVq" role="2YOnzZ">
+          <property role="TrG5h" value="output" />
+          <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+          <node concept="10P55v" id="1m2JxlzwnVz" role="1OHwi9" />
+        </node>
+      </node>
+      <node concept="3zsOgx" id="1m2Jxlzwpez" role="3SlQUd">
+        <property role="TrG5h" value="actuation_gain" />
+        <node concept="1pt3V6" id="1m2Jxlzwpe$" role="2YOnzW">
+          <property role="TrG5h" value="trigger" />
+          <property role="2_BrWT" value="3EtQu_uj5h/In" />
+        </node>
+        <node concept="1OHxBU" id="1m2Jxlzwpe_" role="2YOnzZ">
+          <property role="TrG5h" value="gain" />
+          <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+          <node concept="10P55v" id="1m2JxlzwpeP" role="1OHwi9" />
+        </node>
+        <node concept="1OHxBU" id="1m2JxlzwpeA" role="2YOnzZ">
+          <property role="TrG5h" value="err_sgn" />
+          <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+          <node concept="10P55v" id="1m2JxlzwpeR" role="1OHwi9" />
+        </node>
+        <node concept="1OHxBU" id="1m2JxlzwpeB" role="2YOnzZ">
+          <property role="TrG5h" value="output" />
+          <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+          <node concept="10P55v" id="1m2JxlzwpeT" role="1OHwi9" />
+        </node>
+      </node>
+      <node concept="2yRzQl" id="1m2JxlzwURb" role="3SlQUd">
+        <property role="TrG5h" value="actuation_sum" />
+        <node concept="SB1Cm" id="1m2JxlzwURc" role="SB1Ct">
+          <ref role="SB1Ch" node="1m2JxlzwURh" resolve="bias" />
+        </node>
+        <node concept="SB1Cm" id="1m2JxlzwURd" role="SB1Ct">
+          <ref role="SB1Ch" node="1m2JxlzwURj" resolve="gained_err_sign" />
+        </node>
+        <node concept="1pt3V6" id="1m2JxlzwURe" role="2YOnzW">
+          <property role="TrG5h" value="trigger" />
+          <property role="2_BrWT" value="3EtQu_uj5h/In" />
+        </node>
+        <node concept="1OHxBU" id="1m2JxlzwURf" role="2YOnzZ">
+          <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+          <property role="TrG5h" value="output_sum" />
+          <node concept="10P55v" id="1m2JxlzwURg" role="1OHwi9" />
+        </node>
+        <node concept="1OHxBU" id="1m2JxlzwURh" role="2YOnzZ">
+          <property role="TrG5h" value="bias" />
+          <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+          <node concept="10P55v" id="1m2JxlzwURi" role="1OHwi9" />
+        </node>
+        <node concept="1OHxBU" id="1m2JxlzwURj" role="2YOnzZ">
+          <property role="TrG5h" value="gained_err_sign" />
+          <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+          <node concept="10P55v" id="1m2JxlzwURk" role="1OHwi9" />
+        </node>
+      </node>
+      <node concept="1psEHa" id="1m2JxlzwmUy" role="1psEGK">
+        <ref role="1psEHb" node="1m2JxlzwmUw" resolve="trigger" />
+        <ref role="1psEGP" node="1m2JxlzocN3" resolve="trigger" />
+      </node>
+      <node concept="1psEHa" id="1m2Jxlzwo7r" role="1psEGK">
+        <ref role="1psEHb" node="1m2Jxlzwo7m" resolve="error sign" />
+        <ref role="1psEGP" node="1m2JxlzwnVo" resolve="trigger" />
+      </node>
+      <node concept="1psEHa" id="1m2Jxlzwpgq" role="1psEGK">
+        <ref role="1psEHb" node="1m2Jxlzwpgi" resolve="error gain" />
+        <ref role="1psEGP" node="1m2Jxlzwpe$" resolve="trigger" />
+      </node>
+      <node concept="1psEHa" id="1m2JxlzxZB$" role="1psEGK">
+        <ref role="1psEHb" node="1m2JxlzxZBm" resolve="actuation sum" />
+        <ref role="1psEGP" node="1m2JxlzwURe" resolve="trigger" />
+      </node>
+      <node concept="2__D7_" id="1m2JxlzwmUt" role="3SlQUj">
+        <property role="TrG5h" value="abag_sched" />
+        <node concept="1pt3V6" id="1m2JxlzwmUw" role="1OHzVH">
+          <property role="TrG5h" value="trigger" />
+          <property role="2_BrWT" value="3EtQu_uj5h/In" />
+        </node>
+        <node concept="1pt3V6" id="1m2Jxlzwo7m" role="1OHzVH">
+          <property role="TrG5h" value="error sign" />
+          <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+        </node>
+        <node concept="1pt3V6" id="1m2Jxlzwpgi" role="1OHzVH">
+          <property role="TrG5h" value="error gain" />
+          <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+        </node>
+        <node concept="1pt3V6" id="1m2JxlzxZBm" role="1OHzVH">
+          <property role="TrG5h" value="actuation sum" />
+          <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+        </node>
+        <node concept="2_qZNI" id="1m2Jxlzwo7p" role="2__D7$">
+          <ref role="2_qZNH" node="1m2Jxlzwo7m" resolve="error sign" />
+        </node>
+        <node concept="2_qZNI" id="1m2Jxlzwpgm" role="2__D7$">
+          <ref role="2_qZNH" node="1m2Jxlzwpgi" resolve="error gain" />
+        </node>
+        <node concept="2_qZNI" id="1m2JxlzxZBv" role="2__D7$">
+          <ref role="2_qZNH" node="1m2JxlzxZBm" resolve="actuation sum" />
+        </node>
+      </node>
+      <node concept="1pt3V6" id="1m2JxlzocN3" role="2YOnzW">
+        <property role="TrG5h" value="trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+    </node>
+    <node concept="1pt3V6" id="1m2JxlzocMX" role="2YOnzW">
+      <property role="TrG5h" value="trigger" />
+      <property role="2_BrWT" value="3EtQu_uj5h/In" />
+    </node>
+    <node concept="2ZNVk4" id="1m2JxlzwTHz" role="3SlQUm">
+      <property role="TrG5h" value="gain" />
+      <node concept="1OHxBU" id="1m2JxlzwTH_" role="1ptsVk">
+        <property role="TrG5h" value="access" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="1m2JxlzwTHD" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="2ZNVk4" id="1m2JxlzxZCi" role="3SlQUm">
+      <property role="TrG5h" value="bias" />
+      <node concept="1OHxBU" id="1m2JxlzxZCo" role="1ptsVk">
+        <property role="TrG5h" value="access" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="1m2JxlzxZCs" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="2ZNVk4" id="1m2JxlzyyHM" role="3SlQUm">
+      <property role="TrG5h" value="signedError" />
+      <node concept="1OHxBU" id="1m2JxlzyyHV" role="1ptsVk">
+        <property role="TrG5h" value="access" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="1m2JxlzyyHZ" role="1OHwi9" />
+      </node>
     </node>
   </node>
 </model>

@@ -1335,5 +1335,409 @@
       <ref role="1YaFvo" to="g6sh:w_xyS7dN80" resolve="SignFunction" />
     </node>
   </node>
+  <node concept="18kY7G" id="1m2JxlzwWBi">
+    <property role="TrG5h" value="check_Feedback" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <node concept="3clFbS" id="1m2JxlzwWBj" role="18ibNy">
+      <node concept="3cpWs8" id="1m2JxlzwWBq" role="3cqZAp">
+        <node concept="3cpWsn" id="1m2JxlzwWBt" role="3cpWs9">
+          <property role="TrG5h" value="numActuaionPort" />
+          <node concept="10Oyi0" id="1m2JxlzwWBp" role="1tU5fm" />
+          <node concept="3cmrfG" id="1m2JxlzwWBR" role="33vP2m">
+            <property role="3cmrfH" value="0" />
+          </node>
+        </node>
+      </node>
+      <node concept="3cpWs8" id="1m2JxlzwXsA" role="3cqZAp">
+        <node concept="3cpWsn" id="1m2JxlzwXsB" role="3cpWs9">
+          <property role="TrG5h" value="numErrorPort" />
+          <node concept="10Oyi0" id="1m2JxlzwXsC" role="1tU5fm" />
+          <node concept="3cmrfG" id="1m2JxlzwXsD" role="33vP2m">
+            <property role="3cmrfH" value="0" />
+          </node>
+        </node>
+      </node>
+      <node concept="3cpWs8" id="1m2JxlzwXsT" role="3cqZAp">
+        <node concept="3cpWsn" id="1m2JxlzwXsU" role="3cpWs9">
+          <property role="TrG5h" value="numSetpointPort" />
+          <node concept="10Oyi0" id="1m2JxlzwXsV" role="1tU5fm" />
+          <node concept="3cmrfG" id="1m2JxlzwXsW" role="33vP2m">
+            <property role="3cmrfH" value="0" />
+          </node>
+        </node>
+      </node>
+      <node concept="3cpWs8" id="1m2Jxlzx8T4" role="3cqZAp">
+        <node concept="3cpWsn" id="1m2Jxlzx8T7" role="3cpWs9">
+          <property role="TrG5h" value="numMeasurement" />
+          <node concept="10Oyi0" id="1m2Jxlzx8T2" role="1tU5fm" />
+          <node concept="3cmrfG" id="1m2Jxlzx8UQ" role="33vP2m">
+            <property role="3cmrfH" value="0" />
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbF" id="1m2JxlzwXu0" role="3cqZAp">
+        <node concept="2OqwBi" id="1m2JxlzwZI9" role="3clFbG">
+          <node concept="2OqwBi" id="1m2JxlzwXCF" role="2Oq$k0">
+            <node concept="1YBJjd" id="1m2JxlzwXtY" role="2Oq$k0">
+              <ref role="1YBMHb" node="1m2JxlzwWBl" resolve="feedback" />
+            </node>
+            <node concept="3Tsc0h" id="1m2JxlzwXSG" role="2OqNvi">
+              <ref role="3TtcxE" to="yvgz:3eP8Zudp5G8" resolve="data_ports" />
+            </node>
+          </node>
+          <node concept="2es0OD" id="1m2Jxlzx1HO" role="2OqNvi">
+            <node concept="1bVj0M" id="1m2Jxlzx1HQ" role="23t8la">
+              <node concept="3clFbS" id="1m2Jxlzx1HR" role="1bW5cS">
+                <node concept="3clFbJ" id="1m2Jxlzx1OV" role="3cqZAp">
+                  <node concept="2OqwBi" id="1m2Jxlzx237" role="3clFbw">
+                    <node concept="37vLTw" id="1m2Jxlzx1Rg" role="2Oq$k0">
+                      <ref role="3cqZAo" node="1m2Jxlzx1HS" resolve="port" />
+                    </node>
+                    <node concept="1mIQ4w" id="1m2Jxlzx2iF" role="2OqNvi">
+                      <node concept="chp4Y" id="1m2Jxlzx2nk" role="cj9EA">
+                        <ref role="cht4Q" to="g6sh:1D32TeNwDkI" resolve="Actuation" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3clFbS" id="1m2Jxlzx1OX" role="3clFbx">
+                    <node concept="3clFbJ" id="1m2Jxlzx6ny" role="3cqZAp">
+                      <node concept="3clFbS" id="1m2Jxlzx6n$" role="3clFbx">
+                        <node concept="2MkqsV" id="1m2Jxlzx7I2" role="3cqZAp">
+                          <node concept="Xl_RD" id="1m2Jxlzx7LE" role="2MkJ7o">
+                            <property role="Xl_RC" value="Actuation of a Feedback block must be an output port" />
+                          </node>
+                          <node concept="37vLTw" id="1m2JxlzxaZ9" role="1urrMF">
+                            <ref role="3cqZAo" node="1m2Jxlzx1HS" resolve="port" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3fqX7Q" id="1m2Jxlzx7Ek" role="3clFbw">
+                        <node concept="2OqwBi" id="1m2Jxlzx7Em" role="3fr31v">
+                          <node concept="2OqwBi" id="1m2Jxlzx7En" role="2Oq$k0">
+                            <node concept="37vLTw" id="1m2Jxlzx7Eo" role="2Oq$k0">
+                              <ref role="3cqZAo" node="1m2Jxlzx1HS" resolve="port" />
+                            </node>
+                            <node concept="3TrcHB" id="1m2Jxlzx7Ep" role="2OqNvi">
+                              <ref role="3TsBF5" to="yvgz:6po$YwiVCCu" resolve="direction" />
+                            </node>
+                          </node>
+                          <node concept="21noJN" id="1m2Jxlzx7Eq" role="2OqNvi">
+                            <node concept="21nZrQ" id="1m2Jxlzx7Er" role="21noJM">
+                              <ref role="21nZrZ" to="yvgz:6po$YwiVCCn" resolve="Out" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="3clFbF" id="1m2Jxlzx2s6" role="3cqZAp">
+                      <node concept="3uNrnE" id="1m2Jxlzx2Bx" role="3clFbG">
+                        <node concept="37vLTw" id="1m2Jxlzx2Bz" role="2$L3a6">
+                          <ref role="3cqZAo" node="1m2JxlzwWBt" resolve="numActuaionPort" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3eNFk2" id="1m2Jxlzx2QI" role="3eNLev">
+                    <node concept="2OqwBi" id="1m2Jxlzx3eG" role="3eO9$A">
+                      <node concept="37vLTw" id="1m2Jxlzx30i" role="2Oq$k0">
+                        <ref role="3cqZAo" node="1m2Jxlzx1HS" resolve="port" />
+                      </node>
+                      <node concept="1mIQ4w" id="1m2Jxlzx3A0" role="2OqNvi">
+                        <node concept="chp4Y" id="1m2Jxlzx3CP" role="cj9EA">
+                          <ref role="cht4Q" to="g6sh:snu4kiadNR" resolve="Error" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="3clFbS" id="1m2Jxlzx2QK" role="3eOfB_">
+                      <node concept="3clFbJ" id="1m2Jxlzxb35" role="3cqZAp">
+                        <node concept="3clFbS" id="1m2Jxlzxb36" role="3clFbx">
+                          <node concept="2MkqsV" id="1m2Jxlzxb37" role="3cqZAp">
+                            <node concept="Xl_RD" id="1m2Jxlzxb38" role="2MkJ7o">
+                              <property role="Xl_RC" value="Error of a Feedback block must be an input port" />
+                            </node>
+                            <node concept="37vLTw" id="1m2Jxlzxb39" role="1urrMF">
+                              <ref role="3cqZAo" node="1m2Jxlzx1HS" resolve="port" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3fqX7Q" id="1m2Jxlzxb3a" role="3clFbw">
+                          <node concept="2OqwBi" id="1m2Jxlzxb3b" role="3fr31v">
+                            <node concept="2OqwBi" id="1m2Jxlzxb3c" role="2Oq$k0">
+                              <node concept="37vLTw" id="1m2Jxlzxb3d" role="2Oq$k0">
+                                <ref role="3cqZAo" node="1m2Jxlzx1HS" resolve="port" />
+                              </node>
+                              <node concept="3TrcHB" id="1m2Jxlzxb3e" role="2OqNvi">
+                                <ref role="3TsBF5" to="yvgz:6po$YwiVCCu" resolve="direction" />
+                              </node>
+                            </node>
+                            <node concept="21noJN" id="1m2Jxlzxb3f" role="2OqNvi">
+                              <node concept="21nZrQ" id="1m2Jxlzxbo1" role="21noJM">
+                                <ref role="21nZrZ" to="yvgz:6po$YwiVCCm" resolve="In" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3clFbF" id="1m2Jxlzx3HW" role="3cqZAp">
+                        <node concept="3uNrnE" id="1m2Jxlzx42U" role="3clFbG">
+                          <node concept="37vLTw" id="1m2Jxlzx42W" role="2$L3a6">
+                            <ref role="3cqZAo" node="1m2JxlzwXsB" resolve="numErrorPort" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3eNFk2" id="1m2Jxlzx49F" role="3eNLev">
+                    <node concept="2OqwBi" id="1m2Jxlzx4tK" role="3eO9$A">
+                      <node concept="37vLTw" id="1m2Jxlzx4cN" role="2Oq$k0">
+                        <ref role="3cqZAo" node="1m2Jxlzx1HS" resolve="port" />
+                      </node>
+                      <node concept="1mIQ4w" id="1m2Jxlzx4OB" role="2OqNvi">
+                        <node concept="chp4Y" id="1m2Jxlzx4RL" role="cj9EA">
+                          <ref role="cht4Q" to="g6sh:7CX82aLH9vK" resolve="SetPoint" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="3clFbS" id="1m2Jxlzx49H" role="3eOfB_">
+                      <node concept="3clFbJ" id="1m2JxlzxbZZ" role="3cqZAp">
+                        <node concept="3clFbS" id="1m2Jxlzxc00" role="3clFbx">
+                          <node concept="2MkqsV" id="1m2Jxlzxc01" role="3cqZAp">
+                            <node concept="Xl_RD" id="1m2Jxlzxc02" role="2MkJ7o">
+                              <property role="Xl_RC" value="SetPoint of a Feedback block must be an input port" />
+                            </node>
+                            <node concept="37vLTw" id="1m2Jxlzxc03" role="1urrMF">
+                              <ref role="3cqZAo" node="1m2Jxlzx1HS" resolve="port" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3fqX7Q" id="1m2Jxlzxc04" role="3clFbw">
+                          <node concept="2OqwBi" id="1m2Jxlzxc05" role="3fr31v">
+                            <node concept="2OqwBi" id="1m2Jxlzxc06" role="2Oq$k0">
+                              <node concept="37vLTw" id="1m2Jxlzxc07" role="2Oq$k0">
+                                <ref role="3cqZAo" node="1m2Jxlzx1HS" resolve="port" />
+                              </node>
+                              <node concept="3TrcHB" id="1m2Jxlzxc08" role="2OqNvi">
+                                <ref role="3TsBF5" to="yvgz:6po$YwiVCCu" resolve="direction" />
+                              </node>
+                            </node>
+                            <node concept="21noJN" id="1m2Jxlzxc09" role="2OqNvi">
+                              <node concept="21nZrQ" id="1m2Jxlzxc0a" role="21noJM">
+                                <ref role="21nZrZ" to="yvgz:6po$YwiVCCm" resolve="In" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3clFbF" id="1m2Jxlzx4Xd" role="3cqZAp">
+                        <node concept="3uNrnE" id="1m2Jxlzx59i" role="3clFbG">
+                          <node concept="37vLTw" id="1m2Jxlzx59k" role="2$L3a6">
+                            <ref role="3cqZAo" node="1m2JxlzwXsU" resolve="numSetpointPort" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3eNFk2" id="1m2Jxlzx8V9" role="3eNLev">
+                    <node concept="2OqwBi" id="1m2Jxlzx9u9" role="3eO9$A">
+                      <node concept="37vLTw" id="1m2Jxlzx9aq" role="2Oq$k0">
+                        <ref role="3cqZAo" node="1m2Jxlzx1HS" resolve="port" />
+                      </node>
+                      <node concept="1mIQ4w" id="1m2Jxlzx9Qs" role="2OqNvi">
+                        <node concept="chp4Y" id="1m2Jxlzxa5A" role="cj9EA">
+                          <ref role="cht4Q" to="g6sh:7CX82aLH9vP" resolve="Measurement" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="3clFbS" id="1m2Jxlzx8Vb" role="3eOfB_">
+                      <node concept="3clFbJ" id="1m2Jxlzxds9" role="3cqZAp">
+                        <node concept="3clFbS" id="1m2Jxlzxdsa" role="3clFbx">
+                          <node concept="2MkqsV" id="1m2Jxlzxdsb" role="3cqZAp">
+                            <node concept="Xl_RD" id="1m2Jxlzxdsc" role="2MkJ7o">
+                              <property role="Xl_RC" value="Measurement of a Feedback block must be an input port" />
+                            </node>
+                            <node concept="37vLTw" id="1m2Jxlzxdsd" role="1urrMF">
+                              <ref role="3cqZAo" node="1m2Jxlzx1HS" resolve="port" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3fqX7Q" id="1m2Jxlzxdse" role="3clFbw">
+                          <node concept="2OqwBi" id="1m2Jxlzxdsf" role="3fr31v">
+                            <node concept="2OqwBi" id="1m2Jxlzxdsg" role="2Oq$k0">
+                              <node concept="37vLTw" id="1m2Jxlzxdsh" role="2Oq$k0">
+                                <ref role="3cqZAo" node="1m2Jxlzx1HS" resolve="port" />
+                              </node>
+                              <node concept="3TrcHB" id="1m2Jxlzxdsi" role="2OqNvi">
+                                <ref role="3TsBF5" to="yvgz:6po$YwiVCCu" resolve="direction" />
+                              </node>
+                            </node>
+                            <node concept="21noJN" id="1m2Jxlzxdsj" role="2OqNvi">
+                              <node concept="21nZrQ" id="1m2Jxlzxdsk" role="21noJM">
+                                <ref role="21nZrZ" to="yvgz:6po$YwiVCCm" resolve="In" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3clFbF" id="1m2JxlzxabC" role="3cqZAp">
+                        <node concept="3uNrnE" id="1m2Jxlzxax4" role="3clFbG">
+                          <node concept="37vLTw" id="1m2Jxlzxax6" role="2$L3a6">
+                            <ref role="3cqZAo" node="1m2Jxlzx8T7" resolve="numMeasurement" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="Rh6nW" id="1m2Jxlzx1HS" role="1bW2Oz">
+                <property role="TrG5h" value="port" />
+                <node concept="2jxLKc" id="1m2Jxlzx1HT" role="1tU5fm" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="1m2Jxlzx5q3" role="3cqZAp">
+        <node concept="3clFbS" id="1m2Jxlzx5q5" role="3clFbx">
+          <node concept="2MkqsV" id="1m2Jxlzx67X" role="3cqZAp">
+            <node concept="Xl_RD" id="1m2Jxlzx68c" role="2MkJ7o">
+              <property role="Xl_RC" value="Feedback block must have exactly 1 Actuation as output port" />
+            </node>
+            <node concept="1YBJjd" id="1m2JxlzxdXr" role="1urrMF">
+              <ref role="1YBMHb" node="1m2JxlzwWBl" resolve="feedback" />
+            </node>
+          </node>
+        </node>
+        <node concept="3y3z36" id="1m2Jxlzx5GZ" role="3clFbw">
+          <node concept="3cmrfG" id="1m2Jxlzx67C" role="3uHU7w">
+            <property role="3cmrfH" value="1" />
+          </node>
+          <node concept="37vLTw" id="1m2Jxlzx5rb" role="3uHU7B">
+            <ref role="3cqZAo" node="1m2JxlzwWBt" resolve="numActuaionPort" />
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="1m2JxlzxLvH" role="3cqZAp">
+        <node concept="3clFbS" id="1m2JxlzxLvJ" role="3clFbx">
+          <node concept="2MkqsV" id="1m2JxlzxMXp" role="3cqZAp">
+            <node concept="Xl_RD" id="1m2JxlzxMXq" role="2MkJ7o">
+              <property role="Xl_RC" value="Feedback block cannot have more than 1 Error, SetPoint, or Measurement port" />
+            </node>
+            <node concept="1YBJjd" id="1m2JxlzxMXr" role="1urrMF">
+              <ref role="1YBMHb" node="1m2JxlzwWBl" resolve="feedback" />
+            </node>
+          </node>
+        </node>
+        <node concept="22lmx$" id="1m2JxlzxMK$" role="3clFbw">
+          <node concept="3eOSWO" id="1m2JxlzxMVC" role="3uHU7w">
+            <node concept="3cmrfG" id="1m2JxlzxMVJ" role="3uHU7w">
+              <property role="3cmrfH" value="1" />
+            </node>
+            <node concept="37vLTw" id="1m2JxlzxMLR" role="3uHU7B">
+              <ref role="3cqZAo" node="1m2Jxlzx8T7" resolve="numMeasurement" />
+            </node>
+          </node>
+          <node concept="22lmx$" id="1m2JxlzxMsB" role="3uHU7B">
+            <node concept="3eOSWO" id="1m2JxlzxMfi" role="3uHU7B">
+              <node concept="37vLTw" id="1m2JxlzxLxU" role="3uHU7B">
+                <ref role="3cqZAo" node="1m2JxlzwXsB" resolve="numErrorPort" />
+              </node>
+              <node concept="3cmrfG" id="1m2JxlzxMeV" role="3uHU7w">
+                <property role="3cmrfH" value="1" />
+              </node>
+            </node>
+            <node concept="3eOSWO" id="1m2JxlzxMJw" role="3uHU7w">
+              <node concept="37vLTw" id="1m2JxlzxMto" role="3uHU7B">
+                <ref role="3cqZAo" node="1m2JxlzwXsU" resolve="numSetpointPort" />
+              </node>
+              <node concept="3cmrfG" id="1m2JxlzxMJB" role="3uHU7w">
+                <property role="3cmrfH" value="1" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3eNFk2" id="1m2JxlzxN03" role="3eNLev">
+          <node concept="3clFbC" id="1m2JxlzxNiZ" role="3eO9$A">
+            <node concept="3cmrfG" id="1m2JxlzxNHC" role="3uHU7w">
+              <property role="3cmrfH" value="1" />
+            </node>
+            <node concept="37vLTw" id="1m2JxlzxN1e" role="3uHU7B">
+              <ref role="3cqZAo" node="1m2JxlzwXsB" resolve="numErrorPort" />
+            </node>
+          </node>
+          <node concept="3clFbS" id="1m2JxlzxN05" role="3eOfB_">
+            <node concept="3clFbJ" id="1m2JxlzxNHX" role="3cqZAp">
+              <node concept="22lmx$" id="1m2JxlzxOzF" role="3clFbw">
+                <node concept="3y3z36" id="1m2JxlzxOHX" role="3uHU7w">
+                  <node concept="3cmrfG" id="1m2JxlzxOIP" role="3uHU7w">
+                    <property role="3cmrfH" value="0" />
+                  </node>
+                  <node concept="37vLTw" id="1m2JxlzxO$u" role="3uHU7B">
+                    <ref role="3cqZAo" node="1m2Jxlzx8T7" resolve="numMeasurement" />
+                  </node>
+                </node>
+                <node concept="3y3z36" id="1m2JxlzxNZU" role="3uHU7B">
+                  <node concept="37vLTw" id="1m2JxlzxNI9" role="3uHU7B">
+                    <ref role="3cqZAo" node="1m2JxlzwXsU" resolve="numSetpointPort" />
+                  </node>
+                  <node concept="3cmrfG" id="1m2JxlzxOqz" role="3uHU7w">
+                    <property role="3cmrfH" value="0" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbS" id="1m2JxlzxNHZ" role="3clFbx">
+                <node concept="2MkqsV" id="1m2JxlzxOJz" role="3cqZAp">
+                  <node concept="Xl_RD" id="1m2JxlzxOJ$" role="2MkJ7o">
+                    <property role="Xl_RC" value="Feedback block has 1 Error port so cannot also have SetPoint or Measurement ports" />
+                  </node>
+                  <node concept="1YBJjd" id="1m2JxlzxOJ_" role="1urrMF">
+                    <ref role="1YBMHb" node="1m2JxlzwWBl" resolve="feedback" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="9aQIb" id="1m2JxlzxOPE" role="9aQIa">
+          <node concept="3clFbS" id="1m2JxlzxOPF" role="9aQI4">
+            <node concept="3clFbJ" id="1m2JxlzxOQH" role="3cqZAp">
+              <node concept="22lmx$" id="1m2JxlzxPGu" role="3clFbw">
+                <node concept="3y3z36" id="1m2JxlzxPQK" role="3uHU7w">
+                  <node concept="3cmrfG" id="1m2JxlzxPRC" role="3uHU7w">
+                    <property role="3cmrfH" value="1" />
+                  </node>
+                  <node concept="37vLTw" id="1m2JxlzxPHh" role="3uHU7B">
+                    <ref role="3cqZAo" node="1m2Jxlzx8T7" resolve="numMeasurement" />
+                  </node>
+                </node>
+                <node concept="3y3z36" id="1m2JxlzxP8H" role="3uHU7B">
+                  <node concept="37vLTw" id="1m2JxlzxOQT" role="3uHU7B">
+                    <ref role="3cqZAo" node="1m2JxlzwXsU" resolve="numSetpointPort" />
+                  </node>
+                  <node concept="3cmrfG" id="1m2JxlzxPzm" role="3uHU7w">
+                    <property role="3cmrfH" value="1" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbS" id="1m2JxlzxOQJ" role="3clFbx">
+                <node concept="2MkqsV" id="1m2JxlzxPSm" role="3cqZAp">
+                  <node concept="Xl_RD" id="1m2JxlzxPSn" role="2MkJ7o">
+                    <property role="Xl_RC" value="Feedback block has no Error port, so must have 1 SetPoint and 1 Measurement ports" />
+                  </node>
+                  <node concept="1YBJjd" id="1m2JxlzxPSo" role="1urrMF">
+                    <ref role="1YBMHb" node="1m2JxlzwWBl" resolve="feedback" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1m2JxlzwWBl" role="1YuTPh">
+      <property role="TrG5h" value="feedback" />
+      <ref role="1YaFvo" to="g6sh:5gyKVURjHS5" resolve="Feedback" />
+    </node>
+  </node>
 </model>
 

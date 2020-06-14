@@ -451,7 +451,7 @@
   </node>
   <node concept="13h7C7" id="WUr5EYF8vP">
     <property role="3GE5qa" value="FunctionBlocks" />
-    <ref role="13h7C2" to="g6sh:7CX82aLH6SU" resolve="ControlDiagram" />
+    <ref role="13h7C2" to="g6sh:7CX82aLH6SU" resolve="FeedBack" />
     <node concept="13i0hz" id="WUr5EYF8w0" role="13h7CS">
       <property role="TrG5h" value="getFunctionListFromSchedule" />
       <node concept="3Tm1VV" id="WUr5EYF8w1" role="1B3o_S" />

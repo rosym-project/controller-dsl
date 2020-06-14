@@ -582,6 +582,9 @@
         <node concept="356sEF" id="5bwHbMc9aUG" role="356sEH">
           <property role="TrG5h" value=" = " />
         </node>
+        <node concept="356sEF" id="1m2Jxlzy$fW" role="356sEH">
+          <property role="TrG5h" value="(" />
+        </node>
         <node concept="356sEF" id="6P2HqMSAbVK" role="356sEH">
           <property role="TrG5h" value="gain" />
           <node concept="5jKBG" id="6P2HqMSAcns" role="lGtFl">
@@ -605,8 +608,14 @@
             <node concept="3clFbT" id="6P2HqMSAd4l" role="v9R3O" />
           </node>
         </node>
+        <node concept="356sEF" id="1m2Jxlzy$cV" role="356sEH">
+          <property role="TrG5h" value=")" />
+        </node>
         <node concept="356sEF" id="6P2HqMSAcfB" role="356sEH">
           <property role="TrG5h" value=" * " />
+        </node>
+        <node concept="356sEF" id="1m2Jxlzy$72" role="356sEH">
+          <property role="TrG5h" value="(" />
         </node>
         <node concept="356sEF" id="6P2HqMSAcmf" role="356sEH">
           <property role="TrG5h" value="input" />
@@ -632,6 +641,9 @@
           </node>
         </node>
         <node concept="2EixSi" id="5bwHbMc99U1" role="2EinRH" />
+        <node concept="356sEF" id="1m2Jxlzy$9Y" role="356sEH">
+          <property role="TrG5h" value=")" />
+        </node>
         <node concept="356sEF" id="30EzaY06jlB" role="356sEH">
           <property role="TrG5h" value=";" />
         </node>
