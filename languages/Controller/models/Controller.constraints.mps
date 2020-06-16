@@ -52,7 +52,9 @@
       </concept>
     </language>
     <language id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints">
+      <concept id="6702802731807351367" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_CanBeAChild" flags="in" index="9S07l" />
       <concept id="6702802731807420587" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_CanBeAParent" flags="ig" index="9SLcT" />
+      <concept id="1202989658459" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_parentNode" flags="nn" index="nLn13" />
       <concept id="4303308395523096213" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_childConcept" flags="ng" index="2DD5aU" />
       <concept id="8401916545537438642" name="jetbrains.mps.lang.constraints.structure.InheritedNodeScopeFactory" flags="ng" index="1dDu$B">
         <reference id="8401916545537438643" name="kind" index="1dDu$A" />
@@ -60,6 +62,7 @@
       <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
         <reference id="1213093996982" name="concept" index="1M2myG" />
         <child id="6702802731807532712" name="canBeParent" index="9SGkU" />
+        <child id="6702802731807737306" name="canBeChild" index="9Vyp8" />
         <child id="1213100494875" name="referent" index="1Mr941" />
       </concept>
       <concept id="1148687176410" name="jetbrains.mps.lang.constraints.structure.NodeReferentConstraint" flags="ng" index="1N5Pfh">
@@ -73,6 +76,9 @@
       </concept>
       <concept id="1180031783296" name="jetbrains.mps.lang.smodel.structure.Concept_IsSubConceptOfOperation" flags="nn" index="2Zo12i">
         <child id="1180031783297" name="conceptArgument" index="2Zo12j" />
+      </concept>
+      <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
+        <child id="1177027386292" name="conceptArgument" index="cj9EA" />
       </concept>
       <concept id="1172326502327" name="jetbrains.mps.lang.smodel.structure.Concept_IsExactlyOperation" flags="nn" index="3O6GUB">
         <child id="1206733650006" name="conceptArgument" index="3QVz_e" />
@@ -119,21 +125,11 @@
                     </node>
                   </node>
                 </node>
-                <node concept="22lmx$" id="CVosgdXaLr" role="3uHU7B">
-                  <node concept="2OqwBi" id="CVosgdX9Y8" role="3uHU7B">
-                    <node concept="2DD5aU" id="CVosgdX9Jb" role="2Oq$k0" />
-                    <node concept="3O6GUB" id="CVosgdXagb" role="2OqNvi">
-                      <node concept="chp4Y" id="CVosgdXaog" role="3QVz_e">
-                        <ref role="cht4Q" to="yvgz:3r7wy8H28rE" resolve="RealConstantDataBlock" />
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="2OqwBi" id="CVosgdXbip" role="3uHU7w">
-                    <node concept="2DD5aU" id="CVosgdXaX8" role="2Oq$k0" />
-                    <node concept="3O6GUB" id="CVosgdXbk_" role="2OqNvi">
-                      <node concept="chp4Y" id="CVosgdXbrZ" role="3QVz_e">
-                        <ref role="cht4Q" to="g6sh:5gyKVURjHS8" resolve="State" />
-                      </node>
+                <node concept="2OqwBi" id="CVosgdX9Y8" role="3uHU7B">
+                  <node concept="2DD5aU" id="CVosgdX9Jb" role="2Oq$k0" />
+                  <node concept="3O6GUB" id="CVosgdXagb" role="2OqNvi">
+                    <node concept="chp4Y" id="CVosgdXaog" role="3QVz_e">
+                      <ref role="cht4Q" to="yvgz:3r7wy8H28rE" resolve="RealConstantDataBlock" />
                     </node>
                   </node>
                 </node>
@@ -159,36 +155,19 @@
       </node>
     </node>
   </node>
-  <node concept="1M2fIO" id="CVosgdYmnL">
+  <node concept="1M2fIO" id="7OFootZR3pu">
     <property role="3GE5qa" value="DataBlocks" />
-    <ref role="1M2myG" to="g6sh:5gyKVURjHS8" resolve="State" />
-    <node concept="9SLcT" id="CVosgdYmnM" role="9SGkU">
-      <node concept="3clFbS" id="CVosgdYmnN" role="2VODD2">
-        <node concept="3clFbJ" id="CVosgdYU$G" role="3cqZAp">
-          <node concept="3clFbS" id="CVosgdYU$I" role="3clFbx">
-            <node concept="3cpWs6" id="CVosgdYVoK" role="3cqZAp">
-              <node concept="2OqwBi" id="CVosgdYm_y" role="3cqZAk">
-                <node concept="2DD5aU" id="CVosgdYmrI" role="2Oq$k0" />
-                <node concept="2Zo12i" id="CVosgdYmWP" role="2OqNvi">
-                  <node concept="chp4Y" id="CVosgdYn1f" role="2Zo12j">
-                    <ref role="cht4Q" to="g6sh:7CX82aLH4Mm" resolve="Signal" />
-                  </node>
-                </node>
+    <ref role="1M2myG" to="g6sh:7OFootZRE1O" resolve="State" />
+    <node concept="9S07l" id="7OFootZR3pv" role="9Vyp8">
+      <node concept="3clFbS" id="7OFootZR3pw" role="2VODD2">
+        <node concept="3clFbF" id="7OFootZR4VY" role="3cqZAp">
+          <node concept="2OqwBi" id="7OFootZR54A" role="3clFbG">
+            <node concept="nLn13" id="7OFootZR4VX" role="2Oq$k0" />
+            <node concept="1mIQ4w" id="7OFootZR5e9" role="2OqNvi">
+              <node concept="chp4Y" id="7OFootZR5k4" role="cj9EA">
+                <ref role="cht4Q" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
               </node>
             </node>
-          </node>
-          <node concept="2OqwBi" id="CVosgdYUUS" role="3clFbw">
-            <node concept="2DD5aU" id="CVosgdYUFS" role="2Oq$k0" />
-            <node concept="2Zo12i" id="CVosgdYVg6" role="2OqNvi">
-              <node concept="chp4Y" id="CVosgdYVnj" role="2Zo12j">
-                <ref role="cht4Q" to="yvgz:29RmJoXeePk" resolve="DataBlock" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3cpWs6" id="CVosgdYVVh" role="3cqZAp">
-          <node concept="3clFbT" id="CVosgdYVZA" role="3cqZAk">
-            <property role="3clFbU" value="true" />
           </node>
         </node>
       </node>

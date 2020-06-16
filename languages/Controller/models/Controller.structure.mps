@@ -72,6 +72,12 @@
     <property role="3GE5qa" value="FunctionBlocks" />
     <property role="34LRSv" value="control diagram" />
     <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
+    <node concept="1TJgyj" id="7OFootZRE1R" role="1TKVEi">
+      <property role="IQ2ns" value="9019409913333325943" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="state" />
+      <ref role="20lvS9" node="7OFootZRE1O" resolve="State" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7CX82aLH9vK">
     <property role="EcuMT" value="8808231779588937712" />
@@ -194,12 +200,6 @@
     <property role="TrG5h" value="Event" />
     <ref role="1TJDcQ" node="7CX82aLH4Mm" resolve="Signal" />
   </node>
-  <node concept="1TIwiD" id="5gyKVURjHS8">
-    <property role="EcuMT" value="6062623272280710664" />
-    <property role="3GE5qa" value="DataBlocks" />
-    <property role="TrG5h" value="State" />
-    <ref role="1TJDcQ" to="yvgz:5o1iPWxUm1h" resolve="DataBlockContainer" />
-  </node>
   <node concept="1TIwiD" id="5gyKVURk9ky">
     <property role="EcuMT" value="6062623272280823074" />
     <property role="3GE5qa" value="FunctionBlocks" />
@@ -281,6 +281,18 @@
     <property role="TrG5h" value="Feedback" />
     <property role="34LRSv" value="feedback" />
     <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
+  </node>
+  <node concept="1TIwiD" id="7OFootZRE1O">
+    <property role="TrG5h" value="State" />
+    <property role="3GE5qa" value="DataBlocks" />
+    <property role="EcuMT" value="6062623272280710664" />
+    <node concept="1TJgyj" id="2Sx8cMU__Tg" role="1TKVEi">
+      <property role="IQ2ns" value="3323974063651970640" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="signals" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <ref role="20lvS9" to="yvgz:bStLry5qcm" resolve="DataBlockRef" />
+    </node>
   </node>
 </model>
 

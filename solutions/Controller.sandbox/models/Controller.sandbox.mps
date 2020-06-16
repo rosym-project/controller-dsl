@@ -46,6 +46,9 @@
         <child id="4953108030111323924" name="data_blocks" index="3SlQUm" />
         <child id="4953108030111323928" name="closures" index="3SlQUq" />
       </concept>
+      <concept id="214051922466153238" name="Algorithm.structure.DataBlockRef" flags="ng" index="3wVtg0">
+        <reference id="214051922466153241" name="data" index="3wVtgf" />
+      </concept>
       <concept id="7374807014778505743" name="Algorithm.structure.DataConnector" flags="ng" index="1OHxBB">
         <reference id="7374807014778505744" name="port1" index="1OHxBS" />
         <reference id="7374807014778516593" name="port2" index="1OHyup" />
@@ -77,10 +80,15 @@
         <reference id="6358669349290676740" name="port" index="SB1Ch" />
       </concept>
       <concept id="8271025701684454153" name="Controller.structure.SignalSplit" flags="ng" index="2ZNVk4" />
-      <concept id="8808231779588927034" name="Controller.structure.ControlDiagram" flags="ng" index="3bykSo" />
+      <concept id="8808231779588927034" name="Controller.structure.ControlDiagram" flags="ng" index="3bykSo">
+        <child id="9019409913333325943" name="state" index="2Xs7K" />
+      </concept>
       <concept id="8808231779588918422" name="Controller.structure.Signal" flags="ng" index="3bymMO" />
       <concept id="8808231779588937712" name="Controller.structure.SetPoint" flags="ng" index="3byrvi" />
       <concept id="8808231779588937717" name="Controller.structure.Measurement" flags="ng" index="3byrvn" />
+      <concept id="6062623272280710664" name="Controller.structure.State" flags="ng" index="3zr1QQ">
+        <child id="3323974063651970640" name="signals" index="2kHRUs" />
+      </concept>
       <concept id="6062623272280710661" name="Controller.structure.Feedback" flags="ng" index="3zr1QV" />
       <concept id="6062623272280710657" name="Controller.structure.Delay" flags="ng" index="3zr1QZ">
         <property id="7954788799563398603" name="horizon" index="VnAIf" />
@@ -1407,6 +1415,20 @@
         <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
         <property role="TrG5h" value="delta" />
         <node concept="10P55v" id="2Sx8cMU_xKO" role="1OHwi9" />
+      </node>
+    </node>
+    <node concept="3zr1QQ" id="7OFootZXmOG" role="2Xs7K">
+      <node concept="3wVtg0" id="7OFoou017tA" role="2kHRUs">
+        <ref role="3wVtgf" node="1m2JxlzxZCi" resolve="bias" />
+      </node>
+      <node concept="3wVtg0" id="7OFoou017tO" role="2kHRUs">
+        <ref role="3wVtgf" node="1m2JxlzwTHz" resolve="gain" />
+      </node>
+      <node concept="3wVtg0" id="7OFoou017tG" role="2kHRUs">
+        <ref role="3wVtgf" node="1m2Jxlzz8Q6" resolve="eBar" />
+      </node>
+      <node concept="3wVtg0" id="7OFoou017tY" role="2kHRUs">
+        <ref role="3wVtgf" node="1m2Jxlzz8P4" resolve="eBarPrev" />
       </node>
     </node>
   </node>
