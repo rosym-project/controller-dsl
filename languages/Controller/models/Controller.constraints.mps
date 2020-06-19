@@ -22,7 +22,6 @@
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
-      <concept id="1080223426719" name="jetbrains.mps.baseLanguage.structure.OrExpression" flags="nn" index="22lmx$" />
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
@@ -45,10 +44,6 @@
       </concept>
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
-      </concept>
-      <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
-        <child id="1081773367579" name="rightExpression" index="3uHU7w" />
-        <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
     </language>
     <language id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints">
@@ -80,9 +75,6 @@
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
       </concept>
-      <concept id="1172326502327" name="jetbrains.mps.lang.smodel.structure.Concept_IsExactlyOperation" flags="nn" index="3O6GUB">
-        <child id="1206733650006" name="conceptArgument" index="3QVz_e" />
-      </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
@@ -100,74 +92,58 @@
       </node>
     </node>
   </node>
-  <node concept="1M2fIO" id="CVosgdX8L$">
-    <property role="3GE5qa" value="FunctionBlocks" />
-    <ref role="1M2myG" to="g6sh:7CX82aLH6SU" resolve="ControlDiagram" />
-    <node concept="9SLcT" id="CVosgdXMf2" role="9SGkU">
-      <node concept="3clFbS" id="CVosgdXMf3" role="2VODD2">
-        <node concept="3clFbJ" id="CVosgdX8UG" role="3cqZAp">
-          <node concept="2OqwBi" id="5Pd2VOU5xDh" role="3clFbw">
-            <node concept="2DD5aU" id="5Pd2VOU68z3" role="2Oq$k0" />
-            <node concept="2Zo12i" id="5Pd2VOU68C$" role="2OqNvi">
-              <node concept="chp4Y" id="5Pd2VOU68Gv" role="2Zo12j">
-                <ref role="cht4Q" to="yvgz:29RmJoXeePk" resolve="DataBlock" />
+  <node concept="1M2fIO" id="1Y2816QmPNE">
+    <property role="3GE5qa" value="DataBlocks" />
+    <ref role="1M2myG" to="g6sh:3bhOHlLt1y_" resolve="State" />
+    <node concept="9S07l" id="1Y2816QmPNF" role="9Vyp8">
+      <node concept="3clFbS" id="1Y2816QmPNG" role="2VODD2">
+        <node concept="3clFbF" id="1Y2816QmPRC" role="3cqZAp">
+          <node concept="2OqwBi" id="1Y2816QmQ3N" role="3clFbG">
+            <node concept="nLn13" id="1Y2816QmPRB" role="2Oq$k0" />
+            <node concept="1mIQ4w" id="1Y2816QmQdm" role="2OqNvi">
+              <node concept="chp4Y" id="1Y2816QmQjh" role="cj9EA">
+                <ref role="cht4Q" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
               </node>
             </node>
-          </node>
-          <node concept="3clFbS" id="CVosgdX8UI" role="3clFbx">
-            <node concept="3clFbJ" id="CVosgdX9EU" role="3cqZAp">
-              <node concept="22lmx$" id="Nf75KMwCz5" role="3clFbw">
-                <node concept="2OqwBi" id="Nf75KMwCVc" role="3uHU7w">
-                  <node concept="2DD5aU" id="Nf75KMwC_e" role="2Oq$k0" />
-                  <node concept="2Zo12i" id="1m2Jxlzwphs" role="2OqNvi">
-                    <node concept="chp4Y" id="1m2JxlzwppD" role="2Zo12j">
-                      <ref role="cht4Q" to="g6sh:7CX82aLH4Mm" resolve="Signal" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="2OqwBi" id="CVosgdX9Y8" role="3uHU7B">
-                  <node concept="2DD5aU" id="CVosgdX9Jb" role="2Oq$k0" />
-                  <node concept="3O6GUB" id="CVosgdXagb" role="2OqNvi">
-                    <node concept="chp4Y" id="CVosgdXaog" role="3QVz_e">
-                      <ref role="cht4Q" to="yvgz:3r7wy8H28rE" resolve="RealConstantDataBlock" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-              <node concept="3clFbS" id="CVosgdX9EW" role="3clFbx">
-                <node concept="3cpWs6" id="CVosgdXb$E" role="3cqZAp">
-                  <node concept="3clFbT" id="CVosgdXb$Q" role="3cqZAk">
-                    <property role="3clFbU" value="true" />
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3cpWs6" id="CVosgdXbE2" role="3cqZAp">
-              <node concept="3clFbT" id="CVosgdXbEs" role="3cqZAk" />
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="CVosgdX8Vm" role="3cqZAp">
-          <node concept="3clFbT" id="CVosgdX8Vl" role="3clFbG">
-            <property role="3clFbU" value="true" />
           </node>
         </node>
       </node>
     </node>
-  </node>
-  <node concept="1M2fIO" id="7OFootZR3pu">
-    <property role="3GE5qa" value="DataBlocks" />
-    <ref role="1M2myG" to="g6sh:7OFootZRE1O" resolve="State" />
-    <node concept="9S07l" id="7OFootZR3pv" role="9Vyp8">
-      <node concept="3clFbS" id="7OFootZR3pw" role="2VODD2">
-        <node concept="3clFbF" id="7OFootZR4VY" role="3cqZAp">
-          <node concept="2OqwBi" id="7OFootZR54A" role="3clFbG">
-            <node concept="nLn13" id="7OFootZR4VX" role="2Oq$k0" />
-            <node concept="1mIQ4w" id="7OFootZR5e9" role="2OqNvi">
-              <node concept="chp4Y" id="7OFootZR5k4" role="cj9EA">
-                <ref role="cht4Q" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
+    <node concept="9SLcT" id="1Y2816Qpn6_" role="9SGkU">
+      <node concept="3clFbS" id="1Y2816Qpn6A" role="2VODD2">
+        <node concept="3clFbJ" id="1Y2816Qpnfl" role="3cqZAp">
+          <node concept="3clFbS" id="1Y2816Qpnfn" role="3clFbx">
+            <node concept="3cpWs6" id="1Y2816QpoAp" role="3cqZAp">
+              <node concept="3clFbT" id="1Y2816QpoBe" role="3cqZAk" />
+            </node>
+          </node>
+          <node concept="2OqwBi" id="1Y2816Qq6Co" role="3clFbw">
+            <node concept="2DD5aU" id="1Y2816Qq6f$" role="2Oq$k0" />
+            <node concept="2Zo12i" id="1Y2816Qq6Pq" role="2OqNvi">
+              <node concept="chp4Y" id="1Y2816Qq6ZZ" role="2Zo12j">
+                <ref role="cht4Q" to="yvgz:5o1iPWxUm1h" resolve="DataBlockContainer" />
               </node>
             </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="1Y2816QqJNp" role="3cqZAp">
+          <node concept="3clFbS" id="1Y2816QqJNr" role="3clFbx">
+            <node concept="3cpWs6" id="1Y2816QqKt1" role="3cqZAp">
+              <node concept="3clFbT" id="1Y2816QqKu0" role="3cqZAk" />
+            </node>
+          </node>
+          <node concept="2OqwBi" id="1Y2816QqK78" role="3clFbw">
+            <node concept="2DD5aU" id="1Y2816QqJOu" role="2Oq$k0" />
+            <node concept="2Zo12i" id="1Y2816QqKnw" role="2OqNvi">
+              <node concept="chp4Y" id="1Y2816QqKrh" role="2Zo12j">
+                <ref role="cht4Q" to="yvgz:3r7wy8H28rE" resolve="RealConstantDataBlock" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="1Y2816Qpn6Z" role="3cqZAp">
+          <node concept="3clFbT" id="1Y2816Qpn6Y" role="3clFbG">
+            <property role="3clFbU" value="true" />
           </node>
         </node>
       </node>

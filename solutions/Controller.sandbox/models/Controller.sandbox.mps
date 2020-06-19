@@ -46,9 +46,6 @@
         <child id="4953108030111323924" name="data_blocks" index="3SlQUm" />
         <child id="4953108030111323928" name="closures" index="3SlQUq" />
       </concept>
-      <concept id="214051922466153238" name="Algorithm.structure.DataBlockRef" flags="ng" index="3wVtg0">
-        <reference id="214051922466153241" name="data" index="3wVtgf" />
-      </concept>
       <concept id="7374807014778505743" name="Algorithm.structure.DataConnector" flags="ng" index="1OHxBB">
         <reference id="7374807014778505744" name="port1" index="1OHxBS" />
         <reference id="7374807014778516593" name="port2" index="1OHyup" />
@@ -56,6 +53,10 @@
       <concept id="7374807014778505746" name="Algorithm.structure.DataPort" flags="ng" index="1OHxBU">
         <property id="7374807014778505758" name="direction" index="1OHxBQ" />
         <child id="7374807014778509153" name="type" index="1OHwi9" />
+      </concept>
+      <concept id="6197317434201432145" name="Algorithm.structure.DataBlockContainer" flags="ng" index="1RU2Ge">
+        <child id="6197317434201432148" name="closures" index="1RU2Gb" />
+        <child id="6197317434201432146" name="data_blocks" index="1RU2Gd" />
       </concept>
     </language>
     <language id="9356c85b-d8d9-4f77-a6c3-7a0852b5bf29" name="Controller">
@@ -80,15 +81,11 @@
         <reference id="6358669349290676740" name="port" index="SB1Ch" />
       </concept>
       <concept id="8271025701684454153" name="Controller.structure.SignalSplit" flags="ng" index="2ZNVk4" />
-      <concept id="8808231779588927034" name="Controller.structure.ControlDiagram" flags="ng" index="3bykSo">
-        <child id="9019409913333325943" name="state" index="2Xs7K" />
-      </concept>
+      <concept id="3661939786202224805" name="Controller.structure.State" flags="ng" index="13DsDK" />
+      <concept id="8808231779588927034" name="Controller.structure.ControlDiagram" flags="ng" index="3bykSo" />
       <concept id="8808231779588918422" name="Controller.structure.Signal" flags="ng" index="3bymMO" />
       <concept id="8808231779588937712" name="Controller.structure.SetPoint" flags="ng" index="3byrvi" />
       <concept id="8808231779588937717" name="Controller.structure.Measurement" flags="ng" index="3byrvn" />
-      <concept id="6062623272280710664" name="Controller.structure.State" flags="ng" index="3zr1QQ">
-        <child id="3323974063651970640" name="signals" index="2kHRUs" />
-      </concept>
       <concept id="6062623272280710661" name="Controller.structure.Feedback" flags="ng" index="3zr1QV" />
       <concept id="6062623272280710657" name="Controller.structure.Delay" flags="ng" index="3zr1QZ">
         <property id="7954788799563398603" name="horizon" index="VnAIf" />
@@ -489,13 +486,101 @@
   </node>
   <node concept="3bykSo" id="1m2JxlzocMW">
     <property role="TrG5h" value="abag" />
+    <node concept="13DsDK" id="1Y2816Qp6P$" role="3SlQUm">
+      <property role="TrG5h" value="abagState" />
+      <node concept="1OHxBB" id="1Y2816Qp6Sd" role="1RU2Gb">
+        <ref role="1OHxBS" node="1Y2816Qp6RZ" resolve="access" />
+        <ref role="1OHyup" node="1Y2816Qp6S6" resolve="gain" />
+      </node>
+      <node concept="1OHxBB" id="1Y2816Qp6Ti" role="1RU2Gb">
+        <ref role="1OHxBS" node="1Y2816Qp6T2" resolve="access" />
+        <ref role="1OHyup" node="1Y2816Qp6T9" resolve="bias" />
+      </node>
+      <node concept="1OHxBB" id="1Y2816Qp6UA" role="1RU2Gb">
+        <ref role="1OHxBS" node="1Y2816Qp6Uk" resolve="access" />
+        <ref role="1OHyup" node="1Y2816Qp6Ur" resolve="signedErr" />
+      </node>
+      <node concept="1OHxBB" id="1Y2816Qp6Xs" role="1RU2Gb">
+        <ref role="1OHxBS" node="1m2Jxlzz8Ql" resolve="access" />
+        <ref role="1OHyup" node="1Y2816Qp6X0" resolve="eBar" />
+      </node>
+      <node concept="1OHxBB" id="1Y2816Qp6X$" role="1RU2Gb">
+        <ref role="1OHxBS" node="1m2Jxlzz8Pg" resolve="access" />
+        <ref role="1OHyup" node="1Y2816Qp6Xd" resolve="ebarPrev" />
+      </node>
+      <node concept="1OHxBU" id="1Y2816Qp6S6" role="1ptsVk">
+        <property role="TrG5h" value="gain" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="1Y2816Qp6Sa" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="1Y2816Qp6T9" role="1ptsVk">
+        <property role="TrG5h" value="bias" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="1Y2816Qp6Tf" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="1Y2816Qp6Ur" role="1ptsVk">
+        <property role="TrG5h" value="signedErr" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="1Y2816Qp6Uz" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="1Y2816Qp6X0" role="1ptsVk">
+        <property role="TrG5h" value="eBar" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="1Y2816Qp6Xa" role="1OHwi9" />
+      </node>
+      <node concept="1OHxBU" id="1Y2816Qp6Xd" role="1ptsVk">
+        <property role="TrG5h" value="ebarPrev" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="10P55v" id="1Y2816Qp6Xp" role="1OHwi9" />
+      </node>
+      <node concept="2ZNVk4" id="1Y2816Qp6RW" role="1RU2Gd">
+        <property role="TrG5h" value="gain" />
+        <node concept="1OHxBU" id="1Y2816Qp6RZ" role="1ptsVk">
+          <property role="TrG5h" value="access" />
+          <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+          <node concept="10P55v" id="1Y2816Qp6S3" role="1OHwi9" />
+        </node>
+      </node>
+      <node concept="2ZNVk4" id="1Y2816Qp6SW" role="1RU2Gd">
+        <property role="TrG5h" value="bias" />
+        <node concept="1OHxBU" id="1Y2816Qp6T2" role="1ptsVk">
+          <property role="TrG5h" value="access" />
+          <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+          <node concept="10P55v" id="1Y2816Qp6T6" role="1OHwi9" />
+        </node>
+      </node>
+      <node concept="2ZNVk4" id="1Y2816Qp6Ub" role="1RU2Gd">
+        <property role="TrG5h" value="signedErr" />
+        <node concept="1OHxBU" id="1Y2816Qp6Uk" role="1ptsVk">
+          <property role="TrG5h" value="access" />
+          <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+          <node concept="10P55v" id="1Y2816Qp6Uo" role="1OHwi9" />
+        </node>
+      </node>
+      <node concept="2ZNVk4" id="1m2Jxlzz8Q6" role="1RU2Gd">
+        <property role="TrG5h" value="eBar" />
+        <node concept="1OHxBU" id="1m2Jxlzz8Ql" role="1ptsVk">
+          <property role="TrG5h" value="access" />
+          <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+          <node concept="10P55v" id="1m2Jxlzz8Qp" role="1OHwi9" />
+        </node>
+      </node>
+      <node concept="3bymMO" id="1m2Jxlzz8P4" role="1RU2Gd">
+        <property role="TrG5h" value="eBarPrev" />
+        <node concept="1OHxBU" id="1m2Jxlzz8Pg" role="1ptsVk">
+          <property role="TrG5h" value="access" />
+          <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+          <node concept="10P55v" id="1m2Jxlzz8Pk" role="1OHwi9" />
+        </node>
+      </node>
+    </node>
     <node concept="1OHxBB" id="2Sx8cMU_w4J" role="3SlQUq">
       <ref role="1OHxBS" node="2Sx8cMU_vJQ" resolve="error_sign" />
-      <ref role="1OHyup" node="1m2JxlzyyHV" resolve="access" />
+      <ref role="1OHyup" node="1Y2816Qp6Ur" resolve="signedErr" />
     </node>
     <node concept="1OHxBB" id="1m2JxlzwTHG" role="3SlQUq">
-      <ref role="1OHxBS" node="1m2JxlzwTH_" resolve="access" />
       <ref role="1OHyup" node="1m2Jxlzwpee" resolve="gain" />
+      <ref role="1OHxBS" node="1Y2816Qp6S6" resolve="gain" />
     </node>
     <node concept="1OHxBB" id="1m2JxlzxZBS" role="3SlQUq">
       <ref role="1OHxBS" node="1m2JxlzxZBH" resolve="actuation" />
@@ -503,47 +588,47 @@
     </node>
     <node concept="1OHxBB" id="1m2JxlzxZCv" role="3SlQUq">
       <ref role="1OHxBS" node="1m2JxlzwURZ" resolve="bias" />
-      <ref role="1OHyup" node="1m2JxlzxZCo" resolve="access" />
+      <ref role="1OHyup" node="1Y2816Qp6T9" resolve="bias" />
     </node>
     <node concept="1OHxBB" id="1m2JxlzwnW0" role="3SlQUq">
       <ref role="1OHyup" node="1m2JxlzwnVp" resolve="input" />
       <ref role="1OHxBS" node="1m2JxlzwnVR" resolve="error" />
     </node>
     <node concept="1OHxBB" id="1m2JxlzyyI2" role="3SlQUq">
-      <ref role="1OHxBS" node="1m2JxlzyyHV" resolve="access" />
       <ref role="1OHyup" node="1m2JxlzwnVq" resolve="output" />
+      <ref role="1OHxBS" node="1Y2816Qp6Ur" resolve="signedErr" />
     </node>
     <node concept="1OHxBB" id="1m2Jxlzz8Pn" role="3SlQUq">
       <ref role="1OHxBS" node="1m2Jxlzz8OG" resolve="alpha" />
       <ref role="1OHyup" node="1m2Jxlzz8Np" resolve="filterFactor" />
     </node>
     <node concept="1OHxBB" id="1m2Jxlzz8PG" role="3SlQUq">
-      <ref role="1OHxBS" node="1m2JxlzyyHV" resolve="access" />
       <ref role="1OHyup" node="1m2Jxlzz8Nr" resolve="signedErr" />
+      <ref role="1OHxBS" node="1Y2816Qp6Ur" resolve="signedErr" />
     </node>
     <node concept="1OHxBB" id="1m2Jxlzz8Px" role="3SlQUq">
-      <ref role="1OHxBS" node="1m2Jxlzz8Pg" resolve="access" />
       <ref role="1OHyup" node="1m2Jxlzz8Nt" resolve="lowPassErrPrev" />
+      <ref role="1OHxBS" node="1Y2816Qp6Xd" resolve="ebarPrev" />
     </node>
     <node concept="1OHxBB" id="1m2Jxlzz8Qs" role="3SlQUq">
-      <ref role="1OHxBS" node="1m2Jxlzz8Ql" resolve="access" />
       <ref role="1OHyup" node="1m2Jxlzz8Nv" resolve="lowPassErr" />
+      <ref role="1OHxBS" node="1Y2816Qp6X0" resolve="eBar" />
     </node>
     <node concept="1OHxBB" id="1m2Jxlzzaco" role="3SlQUq">
-      <ref role="1OHxBS" node="1m2Jxlzz8Ql" resolve="access" />
       <ref role="1OHyup" node="1m2JxlzzaaL" resolve="eBar" />
+      <ref role="1OHxBS" node="1Y2816Qp6X0" resolve="eBar" />
     </node>
     <node concept="1OHxBB" id="1m2JxlzzacB" role="3SlQUq">
-      <ref role="1OHxBS" node="1m2Jxlzz8Pg" resolve="access" />
       <ref role="1OHyup" node="1m2JxlzzaaN" resolve="eBar_prev_1" />
+      <ref role="1OHxBS" node="1Y2816Qp6Xd" resolve="ebarPrev" />
     </node>
     <node concept="1OHxBB" id="1m2JxlzzbFa" role="3SlQUq">
       <ref role="1OHxBS" node="1m2JxlzzbAr" resolve="e_bar" />
-      <ref role="1OHyup" node="1m2Jxlzz8Ql" resolve="access" />
+      <ref role="1OHyup" node="1Y2816Qp6X0" resolve="eBar" />
     </node>
     <node concept="1OHxBB" id="1m2JxlzzbFq" role="3SlQUq">
       <ref role="1OHxBS" node="1m2JxlzzbDa" resolve="adapted_bias" />
-      <ref role="1OHyup" node="1m2JxlzxZCo" resolve="access" />
+      <ref role="1OHyup" node="1Y2816Qp6T9" resolve="bias" />
     </node>
     <node concept="1OHxBB" id="1m2JxlzzbGZ" role="3SlQUq">
       <ref role="1OHyup" node="1m2JxlzzbFX" resolve="xi" />
@@ -555,11 +640,11 @@
     </node>
     <node concept="1OHxBB" id="2Sx8cMU_xIp" role="3SlQUq">
       <ref role="1OHxBS" node="2Sx8cMU_vDh" resolve="e_bar" />
-      <ref role="1OHyup" node="1m2Jxlzz8Ql" resolve="access" />
+      <ref role="1OHyup" node="1Y2816Qp6X0" resolve="eBar" />
     </node>
     <node concept="1OHxBB" id="2Sx8cMU_xK0" role="3SlQUq">
       <ref role="1OHxBS" node="2Sx8cMU_vDn" resolve="adapted_gain" />
-      <ref role="1OHyup" node="1m2JxlzwTH_" resolve="access" />
+      <ref role="1OHyup" node="1Y2816Qp6S6" resolve="gain" />
     </node>
     <node concept="1OHxBB" id="2Sx8cMU_xKp" role="3SlQUq">
       <ref role="1OHxBS" node="2Sx8cMU_vDj" resolve="gain_threshold" />
@@ -1341,46 +1426,6 @@
       <property role="TrG5h" value="trigger" />
       <property role="2_BrWT" value="3EtQu_uj5h/In" />
     </node>
-    <node concept="2ZNVk4" id="1m2JxlzwTHz" role="3SlQUm">
-      <property role="TrG5h" value="gain" />
-      <node concept="1OHxBU" id="1m2JxlzwTH_" role="1ptsVk">
-        <property role="TrG5h" value="access" />
-        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
-        <node concept="10P55v" id="1m2JxlzwTHD" role="1OHwi9" />
-      </node>
-    </node>
-    <node concept="2ZNVk4" id="1m2JxlzxZCi" role="3SlQUm">
-      <property role="TrG5h" value="bias" />
-      <node concept="1OHxBU" id="1m2JxlzxZCo" role="1ptsVk">
-        <property role="TrG5h" value="access" />
-        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
-        <node concept="10P55v" id="1m2JxlzxZCs" role="1OHwi9" />
-      </node>
-    </node>
-    <node concept="2ZNVk4" id="1m2JxlzyyHM" role="3SlQUm">
-      <property role="TrG5h" value="signedError" />
-      <node concept="1OHxBU" id="1m2JxlzyyHV" role="1ptsVk">
-        <property role="TrG5h" value="access" />
-        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
-        <node concept="10P55v" id="1m2JxlzyyHZ" role="1OHwi9" />
-      </node>
-    </node>
-    <node concept="3bymMO" id="1m2Jxlzz8P4" role="3SlQUm">
-      <property role="TrG5h" value="eBarPrev" />
-      <node concept="1OHxBU" id="1m2Jxlzz8Pg" role="1ptsVk">
-        <property role="TrG5h" value="access" />
-        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
-        <node concept="10P55v" id="1m2Jxlzz8Pk" role="1OHwi9" />
-      </node>
-    </node>
-    <node concept="2ZNVk4" id="1m2Jxlzz8Q6" role="3SlQUm">
-      <property role="TrG5h" value="eBar" />
-      <node concept="1OHxBU" id="1m2Jxlzz8Ql" role="1ptsVk">
-        <property role="TrG5h" value="access" />
-        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
-        <node concept="10P55v" id="1m2Jxlzz8Qp" role="1OHwi9" />
-      </node>
-    </node>
     <node concept="rNKj8" id="1m2JxlzzbFW" role="3SlQUm">
       <property role="TrG5h" value="bias_threshold" />
       <property role="rNKj9" value="0.5" />
@@ -1415,20 +1460,6 @@
         <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
         <property role="TrG5h" value="delta" />
         <node concept="10P55v" id="2Sx8cMU_xKO" role="1OHwi9" />
-      </node>
-    </node>
-    <node concept="3zr1QQ" id="7OFootZXmOG" role="2Xs7K">
-      <node concept="3wVtg0" id="7OFoou017tA" role="2kHRUs">
-        <ref role="3wVtgf" node="1m2JxlzxZCi" resolve="bias" />
-      </node>
-      <node concept="3wVtg0" id="7OFoou017tO" role="2kHRUs">
-        <ref role="3wVtgf" node="1m2JxlzwTHz" resolve="gain" />
-      </node>
-      <node concept="3wVtg0" id="7OFoou017tG" role="2kHRUs">
-        <ref role="3wVtgf" node="1m2Jxlzz8Q6" resolve="eBar" />
-      </node>
-      <node concept="3wVtg0" id="7OFoou017tY" role="2kHRUs">
-        <ref role="3wVtgf" node="1m2Jxlzz8P4" resolve="eBarPrev" />
       </node>
     </node>
   </node>

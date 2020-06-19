@@ -13,8 +13,6 @@
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="xfxr" ref="r:47c19eeb-604b-4ce7-bab1-09ee0ee52e0d(Controller.behavior)" implicit="true" />
     <import index="yvgz" ref="r:3b411c10-569a-4299-9505-176144359d3b(Algorithm.structure)" implicit="true" />
-    <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
-    <import index="utd1" ref="r:71d9a8e5-dab8-426e-bc30-99d08412227e(Algorithm.editor)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -1398,82 +1396,6 @@
           <property role="1413C4" value="body-brace" />
         </node>
       </node>
-    </node>
-  </node>
-  <node concept="24kQdi" id="7OFootZWNUh">
-    <property role="3GE5qa" value="FunctionBlocks" />
-    <ref role="1XX52x" to="g6sh:7CX82aLH6SU" resolve="ControlDiagram" />
-    <node concept="3EZMnI" id="7OFootZWNUx" role="2wV5jI">
-      <node concept="PMmxH" id="1m2Jxlzuoy7" role="3EZMnx">
-        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
-      </node>
-      <node concept="3F0A7n" id="3EtQu_xWtI" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="3F0ifn" id="3EtQu_xWtJ" role="3EZMnx">
-        <property role="3F0ifm" value="{" />
-        <node concept="3mYdg7" id="3EtQu_xWtK" role="3F10Kt">
-          <property role="1413C4" value="body-brace" />
-        </node>
-        <node concept="ljvvj" id="3EtQu_xWtL" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3EZMnI" id="3EtQu_xWtM" role="3EZMnx">
-        <node concept="l2Vlx" id="3EtQu_xWtN" role="2iSdaV" />
-        <node concept="lj46D" id="3EtQu_xWtO" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="3F0ifn" id="7OFootZWNYx" role="3EZMnx">
-          <property role="3F0ifm" value="state" />
-        </node>
-        <node concept="3F0ifn" id="7OFootZWNYX" role="3EZMnx">
-          <property role="3F0ifm" value=":" />
-          <node concept="ljvvj" id="7OFootZWNZd" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-        </node>
-        <node concept="1iCGBv" id="7OFootZWNZf" role="3EZMnx">
-          <ref role="1NtTu8" to="g6sh:7OFootZRE1R" resolve="state" />
-          <node concept="1sVBvm" id="7OFootZWNZh" role="1sWHZn">
-            <node concept="3F2HdR" id="7OFootZWNZv" role="2wV5jI">
-              <ref role="1NtTu8" to="g6sh:2Sx8cMU__Tg" resolve="signals" />
-              <node concept="l2Vlx" id="7OFootZZgmM" role="2czzBx" />
-              <node concept="pj6Ft" id="7OFootZZMJy" role="3F10Kt">
-                <property role="VOm3f" value="true" />
-              </node>
-            </node>
-          </node>
-          <node concept="lj46D" id="7OFootZWNZy" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-          <node concept="ljvvj" id="7OFootZWNZ$" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-        </node>
-        <node concept="3F0ifn" id="7OFootZWNYj" role="3EZMnx">
-          <node concept="ljvvj" id="7OFootZWNYp" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-        </node>
-        <node concept="PMmxH" id="7OFootZUkmr" role="3EZMnx">
-          <ref role="PMmxG" to="utd1:7OFootZUkmp" resolve="FBlockContainer_Comp" />
-          <node concept="ljvvj" id="7OFootZUkYh" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="3EtQu_xWv0" role="3EZMnx">
-        <property role="3F0ifm" value="}" />
-        <node concept="3mYdg7" id="3EtQu_xWv1" role="3F10Kt">
-          <property role="1413C4" value="body-brace" />
-        </node>
-        <node concept="ljvvj" id="2Sx8cMUzVi4" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0ifn" id="2Sx8cMUzVmL" role="3EZMnx" />
-      <node concept="l2Vlx" id="7OFootZWNUC" role="2iSdaV" />
     </node>
   </node>
 </model>
