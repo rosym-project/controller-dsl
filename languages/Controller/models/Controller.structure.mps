@@ -26,6 +26,7 @@
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
         <property id="4628067390765956802" name="abstract" index="R5$K7" />
+        <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
@@ -69,6 +70,7 @@
     <property role="TrG5h" value="ControlDiagram" />
     <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="34LRSv" value="control diagram" />
     <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
   </node>
   <node concept="1TIwiD" id="7CX82aLH9vK">
@@ -177,12 +179,7 @@
     <property role="EcuMT" value="6062623272280710660" />
     <property role="3GE5qa" value="FunctionBlocks" />
     <property role="TrG5h" value="Feedforward" />
-    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
-  </node>
-  <node concept="1TIwiD" id="5gyKVURjHS5">
-    <property role="EcuMT" value="6062623272280710661" />
-    <property role="3GE5qa" value="FunctionBlocks" />
-    <property role="TrG5h" value="Feedback" />
+    <property role="34LRSv" value="feedforward" />
     <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
   </node>
   <node concept="1TIwiD" id="5gyKVURjHS6">
@@ -197,17 +194,12 @@
     <property role="TrG5h" value="Event" />
     <ref role="1TJDcQ" node="7CX82aLH4Mm" resolve="Signal" />
   </node>
-  <node concept="1TIwiD" id="5gyKVURjHS8">
-    <property role="EcuMT" value="6062623272280710664" />
-    <property role="3GE5qa" value="DataBlocks" />
-    <property role="TrG5h" value="State" />
-    <ref role="1TJDcQ" to="yvgz:5o1iPWxUm1h" resolve="DataBlockContainer" />
-  </node>
   <node concept="1TIwiD" id="5gyKVURk9ky">
     <property role="EcuMT" value="6062623272280823074" />
     <property role="3GE5qa" value="FunctionBlocks" />
     <property role="TrG5h" value="Adapter" />
-    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+    <property role="34LRSv" value="adapter" />
+    <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
   </node>
   <node concept="1TIwiD" id="5gyKVURk9kz">
     <property role="EcuMT" value="6062623272280823075" />
@@ -276,6 +268,19 @@
       <property role="TrG5h" value="more_than_pos_threshold" />
       <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="5gyKVURjHS5">
+    <property role="EcuMT" value="6062623272280710661" />
+    <property role="3GE5qa" value="FunctionBlocks" />
+    <property role="TrG5h" value="Feedback" />
+    <property role="34LRSv" value="feedback" />
+    <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
+  </node>
+  <node concept="1TIwiD" id="3bhOHlLt1y_">
+    <property role="EcuMT" value="3661939786202224805" />
+    <property role="3GE5qa" value="DataBlocks" />
+    <property role="TrG5h" value="State" />
+    <ref role="1TJDcQ" to="yvgz:5o1iPWxUm1h" resolve="DataBlockContainer" />
   </node>
 </model>
 
