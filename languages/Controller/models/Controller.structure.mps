@@ -282,5 +282,16 @@
     <property role="TrG5h" value="State" />
     <ref role="1TJDcQ" to="yvgz:5o1iPWxUm1h" resolve="DataBlockContainer" />
   </node>
+  <node concept="1TIwiD" id="5DmgM5FuKB9">
+    <property role="EcuMT" value="6509464122226837961" />
+    <property role="3GE5qa" value="DataPorts" />
+    <property role="TrG5h" value="ArrayPort" />
+    <ref role="1TJDcQ" to="yvgz:6po$YwiVCCi" resolve="DataPort" />
+    <node concept="1TJgyi" id="5DmgM5FuKBa" role="1TKVEl">
+      <property role="IQ2nx" value="6509464122226837962" />
+      <property role="TrG5h" value="index" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
 </model>
 
