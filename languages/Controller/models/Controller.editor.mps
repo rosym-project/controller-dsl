@@ -65,7 +65,6 @@
       <concept id="1219418625346" name="jetbrains.mps.lang.editor.structure.IStyleContainer" flags="ng" index="3F0Thp">
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
       </concept>
-      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
       <concept id="1225898583838" name="jetbrains.mps.lang.editor.structure.ReadOnlyModelAccessor" flags="ng" index="1HfYo3">
         <child id="1225898971709" name="getter" index="1Hhtcw" />
@@ -1397,40 +1396,6 @@
           <property role="1413C4" value="body-brace" />
         </node>
       </node>
-    </node>
-  </node>
-  <node concept="24kQdi" id="bStLry2ZkF">
-    <property role="3GE5qa" value="DataPorts" />
-    <ref role="1XX52x" to="g6sh:5DmgM5FuKB9" resolve="ArrayPort" />
-    <node concept="3EZMnI" id="6jvQBgXGnUb" role="2wV5jI">
-      <node concept="3F0A7n" id="6jvQBgXGnUi" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="3F0ifn" id="bStLry2Zm5" role="3EZMnx">
-        <property role="3F0ifm" value=":" />
-      </node>
-      <node concept="3F0ifn" id="bStLry2ZlN" role="3EZMnx">
-        <property role="3F0ifm" value="{" />
-      </node>
-      <node concept="3F0A7n" id="bStLry2Zn7" role="3EZMnx">
-        <ref role="1NtTu8" to="g6sh:5DmgM5FuKBa" resolve="index" />
-      </node>
-      <node concept="3F0ifn" id="bStLry2Zof" role="3EZMnx">
-        <property role="3F0ifm" value="}" />
-      </node>
-      <node concept="3F1sOY" id="6jvQBgXGnUw" role="3EZMnx">
-        <ref role="1NtTu8" to="yvgz:6po$YwiVDtx" resolve="type" />
-      </node>
-      <node concept="3F0ifn" id="6jvQBgXGnUE" role="3EZMnx">
-        <property role="3F0ifm" value="[" />
-      </node>
-      <node concept="3F0A7n" id="6jvQBgXGnUQ" role="3EZMnx">
-        <ref role="1NtTu8" to="yvgz:6po$YwiVCCu" resolve="direction" />
-      </node>
-      <node concept="3F0ifn" id="6jvQBgXGnV4" role="3EZMnx">
-        <property role="3F0ifm" value="]" />
-      </node>
-      <node concept="l2Vlx" id="6jvQBgXGnUe" role="2iSdaV" />
     </node>
   </node>
 </model>
