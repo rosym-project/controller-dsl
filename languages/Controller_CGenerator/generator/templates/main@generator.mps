@@ -2235,6 +2235,10 @@
   <node concept="jVnub" id="1Y2816Qp95Y">
     <property role="TrG5h" value="switch_ControllerDBlockVarDeclare" />
     <ref role="phYkn" to="2g3d:5QQcZL$HVDQ" resolve="switch_DataBlockVarDeclare" />
+    <node concept="1N15co" id="2q_WWCj9Ms2" role="1s_3oS">
+      <property role="TrG5h" value="initialize" />
+      <node concept="10P_77" id="2q_WWCj9MvF" role="1N15GL" />
+    </node>
     <node concept="3aamgX" id="1Y2816Qp95Z" role="3aUrZf">
       <property role="36QftV" value="true" />
       <ref role="30HIoZ" to="g6sh:3bhOHlLt1y_" resolve="State" />
