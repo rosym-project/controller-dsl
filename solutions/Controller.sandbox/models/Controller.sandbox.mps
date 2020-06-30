@@ -882,6 +882,14 @@
           <node concept="10P55v" id="1m2Jxlzwpg3" role="1OHwi9" />
         </node>
       </node>
+      <node concept="3bymMO" id="2q_WWCj6a8y" role="3SlQUm">
+        <property role="TrG5h" value="actuation" />
+        <node concept="1OHxBU" id="2q_WWCj6a8C" role="1ptsVk">
+          <property role="TrG5h" value="access" />
+          <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+          <node concept="10P55v" id="2q_WWCj6a8G" role="1OHwi9" />
+        </node>
+      </node>
       <node concept="1OHxBB" id="1m2Jxlzwpf0" role="3SlQUq">
         <ref role="1OHxBS" node="1m2Jxlzwpee" resolve="gain" />
         <ref role="1OHyup" node="1m2Jxlzwpe_" resolve="gain" />
@@ -903,8 +911,20 @@
         <ref role="1OHyup" node="1m2JxlzwURj" resolve="gained_err_sign" />
       </node>
       <node concept="1OHxBB" id="1m2JxlzxZBa" role="3SlQUq">
-        <ref role="1OHxBS" node="1m2JxlzxZAV" resolve="actuation" />
         <ref role="1OHyup" node="1m2JxlzwURf" resolve="output_sum" />
+        <ref role="1OHxBS" node="2q_WWCj6a8C" resolve="access" />
+      </node>
+      <node concept="1OHxBB" id="2q_WWCj6a7K" role="3SlQUq">
+        <ref role="1OHyup" node="2q_WWCj6a7i" resolve="input" />
+        <ref role="1OHxBS" node="2q_WWCj6a8C" resolve="access" />
+      </node>
+      <node concept="1OHxBB" id="2q_WWCj6a7T" role="3SlQUq">
+        <ref role="1OHyup" node="2q_WWCj6a7k" resolve="output" />
+        <ref role="1OHxBS" node="2q_WWCj6a8C" resolve="access" />
+      </node>
+      <node concept="1OHxBB" id="2q_WWCj6a8T" role="3SlQUq">
+        <ref role="1OHxBS" node="1m2JxlzxZAV" resolve="actuation" />
+        <ref role="1OHyup" node="2q_WWCj6a8C" resolve="access" />
       </node>
       <node concept="lfUiM" id="2Sx8cMU_vJQ" role="2YOnzZ">
         <property role="TrG5h" value="error_sign" />
@@ -976,6 +996,25 @@
           <node concept="10P55v" id="1m2JxlzwURk" role="1OHwi9" />
         </node>
       </node>
+      <node concept="fsEbk" id="2q_WWCj6a7g" role="3SlQUd">
+        <property role="TrG5h" value="saturate_actuation" />
+        <property role="qeJDQ" value="-1.0" />
+        <property role="qeJDO" value="1.0" />
+        <node concept="1pt3V6" id="2q_WWCj6a7h" role="2YOnzW">
+          <property role="TrG5h" value="trigger" />
+          <property role="2_BrWT" value="3EtQu_uj5h/In" />
+        </node>
+        <node concept="1OHxBU" id="2q_WWCj6a7i" role="2YOnzZ">
+          <property role="TrG5h" value="input" />
+          <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+          <node concept="10P55v" id="2q_WWCj6a7j" role="1OHwi9" />
+        </node>
+        <node concept="1OHxBU" id="2q_WWCj6a7k" role="2YOnzZ">
+          <property role="TrG5h" value="output" />
+          <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+          <node concept="10P55v" id="2q_WWCj6a7l" role="1OHwi9" />
+        </node>
+      </node>
       <node concept="1psEHa" id="1m2JxlzwmUy" role="1psEGK">
         <ref role="1psEHb" node="1m2JxlzwmUw" resolve="trigger" />
         <ref role="1psEGP" node="1m2JxlzocN3" resolve="trigger" />
@@ -987,6 +1026,10 @@
       <node concept="1psEHa" id="1m2JxlzxZB$" role="1psEGK">
         <ref role="1psEHb" node="1m2JxlzxZBm" resolve="actuation sum" />
         <ref role="1psEGP" node="1m2JxlzwURe" resolve="trigger" />
+      </node>
+      <node concept="1psEHa" id="2q_WWCj6b4R" role="1psEGK">
+        <ref role="1psEHb" node="2q_WWCj6b4D" resolve="saturate actuation" />
+        <ref role="1psEGP" node="2q_WWCj6a7h" resolve="trigger" />
       </node>
       <node concept="2__D7_" id="1m2JxlzwmUt" role="3SlQUj">
         <property role="TrG5h" value="sched" />
@@ -1002,11 +1045,18 @@
           <property role="TrG5h" value="actuation sum" />
           <property role="2_BrWT" value="3EtQu_uj5i/Out" />
         </node>
+        <node concept="1pt3V6" id="2q_WWCj6b4D" role="1OHzVH">
+          <property role="TrG5h" value="saturate actuation" />
+          <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+        </node>
         <node concept="2_qZNI" id="1m2Jxlzwpgm" role="2__D7$">
           <ref role="2_qZNH" node="1m2Jxlzwpgi" resolve="error gain" />
         </node>
         <node concept="2_qZNI" id="1m2JxlzxZBv" role="2__D7$">
           <ref role="2_qZNH" node="1m2JxlzxZBm" resolve="actuation sum" />
+        </node>
+        <node concept="2_qZNI" id="2q_WWCj6b4M" role="2__D7$">
+          <ref role="2_qZNH" node="2q_WWCj6b4D" resolve="saturate actuation" />
         </node>
       </node>
       <node concept="1pt3V6" id="1m2JxlzocN3" role="2YOnzW">
