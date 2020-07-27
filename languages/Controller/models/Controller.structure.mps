@@ -180,7 +180,7 @@
     <property role="3GE5qa" value="FunctionBlocks" />
     <property role="TrG5h" value="Feedforward" />
     <property role="34LRSv" value="feedforward" />
-    <ref role="1TJDcQ" to="yvgz:3eP8Zudp5G4" resolve="FunctionBlock" />
+    <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
   </node>
   <node concept="1TIwiD" id="5gyKVURjHS6">
     <property role="EcuMT" value="6062623272280710662" />
