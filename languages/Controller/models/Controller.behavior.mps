@@ -154,6 +154,9 @@
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
       </concept>
       <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
+      <concept id="1138661924179" name="jetbrains.mps.lang.smodel.structure.Property_SetOperation" flags="nn" index="tyxLq">
+        <child id="1138662048170" name="value" index="tz02z" />
+      </concept>
       <concept id="1138757581985" name="jetbrains.mps.lang.smodel.structure.Link_SetNewChildOperation" flags="nn" index="zfrQC">
         <reference id="1139880128956" name="concept" index="1A9B2P" />
       </concept>
@@ -2402,6 +2405,98 @@
             <node concept="TSZUe" id="3r7wy8GYzx5" role="2OqNvi">
               <node concept="37vLTw" id="3r7wy8GYzx6" role="25WWJ7">
                 <ref role="3cqZAo" node="3r7wy8GYzwH" resolve="signalOutPort" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="1kNBGaYQvlF">
+    <property role="3GE5qa" value="DataPorts" />
+    <ref role="13h7C2" to="g6sh:1D32TeNwDkI" resolve="Actuation" />
+    <node concept="13hLZK" id="1kNBGaYQvlG" role="13h7CW">
+      <node concept="3clFbS" id="1kNBGaYQvlH" role="2VODD2">
+        <node concept="3clFbF" id="1kNBGaYQvlR" role="3cqZAp">
+          <node concept="2OqwBi" id="1kNBGaYQvOh" role="3clFbG">
+            <node concept="2OqwBi" id="1kNBGaYQvvb" role="2Oq$k0">
+              <node concept="13iPFW" id="1kNBGaYQvlQ" role="2Oq$k0" />
+              <node concept="3TrcHB" id="1kNBGaYQvEk" role="2OqNvi">
+                <ref role="3TsBF5" to="yvgz:6po$YwiVCCu" resolve="direction" />
+              </node>
+            </node>
+            <node concept="tyxLq" id="1kNBGaYQvV0" role="2OqNvi">
+              <node concept="21nZrQ" id="1kNBGaYQvWR" role="tz02z">
+                <ref role="21nZrZ" to="yvgz:6po$YwiVCCn" resolve="Out" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="1kNBGaYQw7s">
+    <property role="3GE5qa" value="DataPorts" />
+    <ref role="13h7C2" to="g6sh:snu4kiadNR" resolve="Error" />
+    <node concept="13hLZK" id="1kNBGaYQw7t" role="13h7CW">
+      <node concept="3clFbS" id="1kNBGaYQw7u" role="2VODD2">
+        <node concept="3clFbF" id="1kNBGaYQw7C" role="3cqZAp">
+          <node concept="2OqwBi" id="1kNBGaYQwAd" role="3clFbG">
+            <node concept="2OqwBi" id="1kNBGaYQwgO" role="2Oq$k0">
+              <node concept="13iPFW" id="1kNBGaYQw7B" role="2Oq$k0" />
+              <node concept="3TrcHB" id="1kNBGaYQwsg" role="2OqNvi">
+                <ref role="3TsBF5" to="yvgz:6po$YwiVCCu" resolve="direction" />
+              </node>
+            </node>
+            <node concept="tyxLq" id="1kNBGaYQwGM" role="2OqNvi">
+              <node concept="21nZrQ" id="1kNBGaYQwID" role="tz02z">
+                <ref role="21nZrZ" to="yvgz:6po$YwiVCCm" resolve="In" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="1kNBGaYSHxM">
+    <property role="3GE5qa" value="DataPorts" />
+    <ref role="13h7C2" to="g6sh:7CX82aLH9vP" resolve="Measurement" />
+    <node concept="13hLZK" id="1kNBGaYSHxN" role="13h7CW">
+      <node concept="3clFbS" id="1kNBGaYSHxO" role="2VODD2">
+        <node concept="3clFbF" id="1kNBGaYSHxY" role="3cqZAp">
+          <node concept="2OqwBi" id="1kNBGaYSI1b" role="3clFbG">
+            <node concept="2OqwBi" id="1kNBGaYSHFa" role="2Oq$k0">
+              <node concept="13iPFW" id="1kNBGaYSHxX" role="2Oq$k0" />
+              <node concept="3TrcHB" id="1kNBGaYSHQA" role="2OqNvi">
+                <ref role="3TsBF5" to="yvgz:6po$YwiVCCu" resolve="direction" />
+              </node>
+            </node>
+            <node concept="tyxLq" id="1kNBGaYSI8l" role="2OqNvi">
+              <node concept="21nZrQ" id="1kNBGaYSIac" role="tz02z">
+                <ref role="21nZrZ" to="yvgz:6po$YwiVCCm" resolve="In" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="1kNBGaYSIJH">
+    <property role="3GE5qa" value="DataPorts" />
+    <ref role="13h7C2" to="g6sh:7CX82aLH9vK" resolve="SetPoint" />
+    <node concept="13hLZK" id="1kNBGaYSIJI" role="13h7CW">
+      <node concept="3clFbS" id="1kNBGaYSIJJ" role="2VODD2">
+        <node concept="3clFbF" id="1kNBGaYSIK4" role="3cqZAp">
+          <node concept="2OqwBi" id="1kNBGaYSJev" role="3clFbG">
+            <node concept="2OqwBi" id="1kNBGaYSITg" role="2Oq$k0">
+              <node concept="13iPFW" id="1kNBGaYSIK2" role="2Oq$k0" />
+              <node concept="3TrcHB" id="1kNBGaYSJ4y" role="2OqNvi">
+                <ref role="3TsBF5" to="yvgz:6po$YwiVCCu" resolve="direction" />
+              </node>
+            </node>
+            <node concept="tyxLq" id="1kNBGaYSJmp" role="2OqNvi">
+              <node concept="21nZrQ" id="1kNBGaYSJog" role="tz02z">
+                <ref role="21nZrZ" to="yvgz:6po$YwiVCCm" resolve="In" />
               </node>
             </node>
           </node>
