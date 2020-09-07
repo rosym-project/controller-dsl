@@ -280,7 +280,7 @@
     <property role="EcuMT" value="3661939786202224805" />
     <property role="3GE5qa" value="DataBlocks" />
     <property role="TrG5h" value="State" />
-    <ref role="1TJDcQ" to="yvgz:5o1iPWxUm1h" resolve="DataBlockContainer" />
+    <ref role="1TJDcQ" to="yvgz:29RmJoXeePk" resolve="DataBlock" />
   </node>
 </model>
 
