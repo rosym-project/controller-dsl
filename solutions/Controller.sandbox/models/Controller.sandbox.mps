@@ -5,6 +5,7 @@
     <use id="9356c85b-d8d9-4f77-a6c3-7a0852b5bf29" name="Controller" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="9" />
     <use id="4209fc66-8ed6-4cfe-bc99-5976c8a8f0b5" name="Controller_CGenerator" version="0" />
+    <use id="a8f70f9e-ef01-499f-885c-c79273fa1695" name="Algorithm" version="0" />
     <engage id="4209fc66-8ed6-4cfe-bc99-5976c8a8f0b5" name="Controller_CGenerator" />
   </languages>
   <imports />
@@ -18,7 +19,7 @@
     </language>
     <language id="a8f70f9e-ef01-499f-885c-c79273fa1695" name="Algorithm">
       <concept id="774599295535771616" name="Algorithm.structure.ArrayAccess" flags="ng" index="274C8k" />
-      <concept id="349167071911517046" name="Algorithm.structure.FixedSizeArrayDataBlock" flags="ng" index="slerG">
+      <concept id="349167071911517046" name="Algorithm.structure.FixedSizeArrayType" flags="ig" index="slerG">
         <property id="349167071911849189" name="size" index="sit5Z" />
       </concept>
       <concept id="2483553733153713492" name="Algorithm.structure.DataBlock" flags="ng" index="vjVuy">
@@ -35,7 +36,7 @@
       </concept>
       <concept id="65996431591631847" name="Algorithm.structure.EmtpyDataBlock" flags="ng" index="2_B1M0" />
       <concept id="3725923812855012100" name="Algorithm.structure.FunctionBlock" flags="ng" index="2YOnzN">
-        <child id="3725923812855012107" name="trigger_ports" index="2YOnzW" />
+        <child id="3725923812855012107" name="trigger_port" index="2YOnzW" />
         <child id="3725923812855012104" name="data_ports" index="2YOnzZ" />
       </concept>
       <concept id="8661093765501646195" name="Algorithm.structure.ReferenceType" flags="ig" index="1j8hun">
@@ -48,7 +49,7 @@
       <concept id="7268768516385006770" name="Algorithm.structure.TriggerPort" flags="ng" index="1pt3V6">
         <property id="65996431591721054" name="direction" index="2_BrWT" />
       </concept>
-      <concept id="9203943671252472483" name="Algorithm.structure.FunctionBlockContainer" flags="ng" index="1u3Uyy">
+      <concept id="9203943671252472483" name="Algorithm.structure.ImperativeFunctionBlock" flags="ng" index="1u3Uyy">
         <child id="7268768516385108292" name="triggers" index="1psEGK" />
         <child id="4953108030111323919" name="function_blocks" index="3SlQUd" />
         <child id="4953108030111323921" name="scheduler_blocks" index="3SlQUj" />

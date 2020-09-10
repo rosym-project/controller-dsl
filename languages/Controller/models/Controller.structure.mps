@@ -71,7 +71,7 @@
     <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="FunctionBlocks" />
     <property role="34LRSv" value="control diagram" />
-    <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
+    <ref role="1TJDcQ" to="yvgz:29RmJoXeePe" resolve="AlgorithmBlock" />
   </node>
   <node concept="1TIwiD" id="7CX82aLH9vK">
     <property role="EcuMT" value="8808231779588937712" />
@@ -180,7 +180,7 @@
     <property role="3GE5qa" value="FunctionBlocks" />
     <property role="TrG5h" value="Feedforward" />
     <property role="34LRSv" value="feedforward" />
-    <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
+    <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="ImperativeFunctionBlock" />
   </node>
   <node concept="1TIwiD" id="5gyKVURjHS6">
     <property role="EcuMT" value="6062623272280710662" />
@@ -199,7 +199,7 @@
     <property role="3GE5qa" value="FunctionBlocks" />
     <property role="TrG5h" value="Adapter" />
     <property role="34LRSv" value="adapter" />
-    <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
+    <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="ImperativeFunctionBlock" />
   </node>
   <node concept="1TIwiD" id="5gyKVURk9kz">
     <property role="EcuMT" value="6062623272280823075" />
@@ -274,7 +274,7 @@
     <property role="3GE5qa" value="FunctionBlocks" />
     <property role="TrG5h" value="Feedback" />
     <property role="34LRSv" value="feedback" />
-    <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="FunctionBlockContainer" />
+    <ref role="1TJDcQ" to="yvgz:7YUYw4xHlaz" resolve="ImperativeFunctionBlock" />
   </node>
   <node concept="1TIwiD" id="3bhOHlLt1y_">
     <property role="EcuMT" value="3661939786202224805" />
